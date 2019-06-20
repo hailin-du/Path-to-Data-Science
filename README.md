@@ -1,3 +1,3 @@
 # SQL-Fundamentals
 
-git branch -m new-name
+git status	
