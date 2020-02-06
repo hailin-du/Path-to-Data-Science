@@ -7,3 +7,6 @@ Notes for Python Beginners
 
 ### Chapter 2 
 print("Hello Python world!"), string,\n,\t, number, integer, float
+
+### Chapter 3
+List (access, change, add, delete, sorting)
