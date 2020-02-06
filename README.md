@@ -6,4 +6,4 @@ Notes for Python Beginners
 * [Chapter 2](#Chapter)
 
 ### Chapter 2 
-print function, number, string
+print("Hello Python world!"), string,\n,\t, number, integer, float
