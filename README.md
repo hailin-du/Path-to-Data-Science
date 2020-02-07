@@ -1,6 +1,6 @@
 Python Crash Course
 ===========================
-Notes for Python Beginners
+Notes for Python Beginners - I will try my best to update it everyday.
 
 ## Content
 * [Chapter2](#Chapter2)
