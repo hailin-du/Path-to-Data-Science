@@ -8,9 +8,11 @@ print(bicycles)
 ## 3.1.1 Access List
 ```print(bicycles[0])``` 
 
-```teak```
+```return teak```
 
 ```print(bicycles[0].title())```
+
+```return Teak```
 
 ## 3.1.2 Start with 0 not 1
 ```print(bicycles[1])```
