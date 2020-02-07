@@ -12,10 +12,10 @@ print(message)
 ```
 message_1 not 1_message
 ```
-#### no space
-#### no key word and function naming
-#### short 
-#### careful with 1 and small l, 0 and  captial O
+* no space
+* no key word and function naming
+* short 
+* careful with 1 and small l, 0 and  captial O
 
 ## 2.2.2
 ```
