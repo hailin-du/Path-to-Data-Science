@@ -27,7 +27,7 @@ print(bicycles)
 message = "My first bicycle was a " + bicycles[0].title() + "."
 print(message)
 ```
-
+***
 # 3.2 Change, add, delete elements from List
 ## 3.2.1 Change
 ```
@@ -131,7 +131,7 @@ print('\nA ' + too_expensive.title() + ' is too expensive for me.')
 #### remove only delete one single element, if the element in the list appear mutliple times, you may need a loop to decide if you are going to delete all of them.
 
 ### position always change when you pop or delete
-
+***
 ## 3.3 Organize List
 #### List order is unpredicatble baase on the input of user, you can adjust the order
 
@@ -173,7 +173,7 @@ cars = ['bmw','audi','toyota','subaru']
 len(cars)
 print(len(cars))
 ```
-
+***
 ## 3.4 Avoid Error in List
 ```
 motorcycle = ['honda','yamaha','suzuku']
