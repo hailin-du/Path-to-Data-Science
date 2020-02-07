@@ -1,6 +1,6 @@
 # 3.1 List
-#### Can be 0-9, family names, or elements no relationship
-#### use [] to create list
+* Can be 0-9, family names, or elements no relationship
+* use bracket [] to create list
 ```
 bicycles = ['teak','canondale','redline','specialized']
 print(bicycles)
@@ -8,19 +8,22 @@ print(bicycles)
 ## 3.1.1 Access List
 ```print(bicycles[0])``` 
 
-##### teak
+```teak```
 
 ```print(bicycles[0].title())```
 
 ## 3.1.2 Start with 0 not 1
 ```print(bicycles[1])```
-##### canondale
+
+```return canondale```
+
 ```print(bicycles[3])```
-##### specialized
+
+```return specialized```
 
 ```print(bicycles[-1])```
-##### -1 last position
-##### specialized
+* -1 last position
+* specialized
 
 ## 3.1.3 use list elemnt
 ```
@@ -104,9 +107,9 @@ first_owned = motorcycle.pop(0)
 print('The first motorcycle I owned was a ' + first_owned.title() + '.')
 ```
 
-#### remember once you used pop, the element is NOT in the list anymore
-#### Del - not going to use element anymore
-#### Pop - after delete you want to use the element
+* remember once you used pop, the element is NOT in the list anymore
+* Del - not going to use element anymore
+* Pop - after delete you want to use the element
 
 ### remove function - not knowing element position
 ```
