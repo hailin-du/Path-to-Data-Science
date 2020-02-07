@@ -8,24 +8,24 @@ print(bicycles)
 ## 3.1.1 Access List
 ```print(bicycles[0])``` 
 
-```return teak```
+##### return teak
 
 ```print(bicycles[0].title())```
 
-```return Teak```
+#####  return Teak
 
 ## 3.1.2 Start with 0 not 1
 ```print(bicycles[1])```
 
-```return canondale```
+##### return canondale
 
 ```print(bicycles[3])```
 
-```return specialized```
+##### return specialized 
 
 ```print(bicycles[-1])```
 * -1 last position
-* specialized
+##### return specialized
 
 ## 3.1.3 use list elemnt
 ```
