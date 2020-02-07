@@ -28,7 +28,9 @@ for magician in magicians:
 #### new line inserted everytime for clean and neat purpose
 
 ## 4.1.3 After the For Loop
+```
 print('Thank you, everyone. That was a great magic show!')
+```
 #### Only excute once
 #### Using for loop - go over every game character, then after the loop add play now
 ***
