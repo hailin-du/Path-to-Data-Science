@@ -108,7 +108,7 @@ print(number)
 even_number = list(range(2,11,2))
 print(even_number)
 ```
-#### start with 2, and continue adding 2 until to reach or pass 11
+#### start with 2, and continue adding 2 until the list reach or pass 11
 
 
 ##### squares
@@ -216,7 +216,7 @@ print(friend_foods)
 #### Elements in List are changable, but Not in Tuple
 
 ## 4.5.1 Define Tuple
-#### Tuple is parentheses () instead [], after assigning the values, we can get access to it as list
+#### Tuple is parentheses ( ) instead bracket [ ], after assigning the values, we can get access to it as list
 #### create a dimension that is unchangeable
 ```
 dimensions = (200,50)
