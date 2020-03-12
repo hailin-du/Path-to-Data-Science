@@ -3,6 +3,7 @@
 
 >     Hello Python World!
 ***
+***
 # 2.2 Variable
 ```
 message = 'Hello Python World!'
@@ -29,6 +30,7 @@ print(mesage)
 ```
 >     NameError: name 'mesage' is not defined
 #### Error - not defined
+***
 ***
 # 2.3 String
 ```
@@ -109,6 +111,7 @@ Or
 Using '   ""   ' within the space
 
 ***
+***
 # 2.4 Number
 ## 2.4.1 Integer
 ```
@@ -162,13 +165,14 @@ message = "Happy " + str(age) + "rd Birthday!" # must be string
 print(message)
 ```
 >     Happy 23rd Birthday!
-
-# import this
-## simple
-## complex
-## readable
-## same solution
-## now begin!!
+***
+***
+# import this (The Zen of Python)
+## Simple > Complex
+## Complex > Complicated
+## Readability Count!
+## Same Solution (Choose Simple One)
+## Now Begin!!
 ```
 Beautiful is better than ugly.
 Explicit is better than implicit.
