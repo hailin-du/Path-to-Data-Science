@@ -1,30 +1,36 @@
-# 2.1 print is a function
-```print('Hello Python world!')```
+# 2.1 print() is a function
+```print('Hello Python World!')```
+
+>     Hello Python World!
 ***
 # 2.2 Variable
 ```
 message = 'Hello Python World!'
 print(message)
-message = 'Hello Python Crash Course world!'
+message = 'Hello Python Crash Course World!'
 print(message)
 ```
-## 2.2.1 Rule
-```
-message_1 not 1_message
-```
-* no space
-* no key word and function naming
-* short 
-* careful with 1 and small l, 0 and  captial O
+>     Hello Python World!
+>     Hello Python Crash Course World!
 
-## 2.2.2
+## 2.2.1 Variable Naming Rule
 ```
-message = 'Hello Python Crash Course world!'
+message_1 NOT 1_message
+```
+* No space between wording
+* Not using key word or function name 
+* Not too short
+* Be careful with 1 and small "l", 0 and  captial "O"
+
+## 2.2.2 Aviod Varibale Nameing Error
+```
+message = 'Hello Python Crash Course World!'
 print(mesage) 
 ```
+>     NameError: name 'mesage' is not defined
 #### Error - not defined
 ***
-# 2.3 string
+# 2.3 String
 ```
 "This is a string."
 'This is also a string.'
@@ -36,48 +42,72 @@ print(mesage)
 "One of Python's strengths is its diverse and supportive community."
 ```
 
-## 2.3.1 Change String
+## 2.3.1 Change String with Lower and Upper Case
 ```name = 'ada lovelace'
 print(name.title())
+```
+>     Ada Lovelace
+```
 name = 'Ada Lovelace'
 print(name.upper())
 print(name.lower())
 ```
-
+>     ADA LOVELACE
+>     ada lovelace
 ## 2.3.2 Combine String
 ```
 first_name = 'ada'
 last_name = 'lovelace'
 full_name = first_name + " " + last_name
 print(full_name)
+```
+>     ada lovelace
+```
 print("Hello, " + full_name.title() + "!")
 message = "Hello, " + full_name.title() + "!"
 print(message)
 ```
-
-## 2.3.3 Add Space
+    Hello, Ada Lovelace!
+## 2.3.3 Add Space with Tab and New Line
 ```
 print('Python')
 print('\tPython') # tab
+```
+>     Python
+>         Python
+```
 print("Languages:\nPython\nC\nJavaScript") # new line
 print("Languages:\n\tPython\n\tC\n\tJavaScript") # tab + new line
 ```
-
+>     Languages:
+>     Python
+>     C
+>     JavaScript
+    
+>     Languages:
+>         Python
+>         C
+>         JavaScript
 ## 2.3.4 Delete Space
 ```
 favorite_language = 'python '
-favorite_language = favorite_language.rstrip() # assign
+favorite_language = favorite_language.rstrip() # assign - end space remove
 favorite_language
-favorite_language.lstrip() # leading space remove
-favorite_language.strip() # leading and ending space remove
+favorite_language.lstrip() # begin space remove
+favorite_language.strip() # begin and end space remove
 ```
-
-## 2.35 Aviod Error
+>     'python ' 
+>     'python'
+## 2.35 Aviod String Error
 ```
 message = 'One of Pthon's strengths is its diverse community'
 print(message) # quotation
 ```
-#### Error
+>     Error
+Using "   ''   " 
+Or
+Using '   ""   ' within the space
+
 ***
 # 2.4 Number
 ## 2.4.1 Integer
@@ -90,34 +120,48 @@ print(message) # quotation
 3**3 # 27
 10**6 # 1000000
 ```
-
+>     5
+>     1
+>     6
+>     1.5
+>     9
+>     27
+>     1000000
 ```
 2+3*4 # 14
 (2+3)*4 # 20
 ```
+>     14
+>     20
 
-## 2.4.2
+## 2.4.2 Float
 ```
 0.1 + 0.1 # 0.2
 0.2 + 0.2 # 0.4 
 2 * 0.1 # 0.2 
 2 * 0.2 # 0.4
 ```
-
+>     0.2
+>     0.4
+>     0.2
+>     0.4
 ```
 0.2 + 0.1 # 0.30000000000000004 included decimal different
 3 * 0.1 # 0.30000000000000004
 ```
 
-## 2.4.3
-```
-age =23
+## 2.4.3 Using String to Aviod Data Type Error
+``` 
+age = 23
 message = "Happy " + age + "rd Birthday!"
 print(message)
-# Error
+```
+>     Error
+```
 message = "Happy " + str(age) + "rd Birthday!" # must be string
 print(message)
 ```
+>     Happy 23rd Birthday!
 
 # import this
 ## simple
