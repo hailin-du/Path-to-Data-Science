@@ -172,7 +172,7 @@ print(message)
 ## Complex > Complicated
 ## Readability Count!
 ## Same Solution (Choose Simple One)
-## Now Begin!!
+## Now Begin!! (Now is better than never)
 ```
 Beautiful is better than ugly.
 Explicit is better than implicit.
