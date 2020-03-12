@@ -33,6 +33,7 @@ print(message)
 ```
 > My first bicycle was a Trek
 ***
+***
 # 3.2 Change, Add, Delete Elements from the List
 ## 3.2.1 Change
 ```
@@ -156,7 +157,7 @@ print('\nA ' + too_expensive.title() + ' is too expensive for me.')
 
 ### Position always change when you are using pop() or del() [delete function]
 ***
-
+***
 ## 3.3 Organize List
 #### List order is unpredicatble baaed on the input of a user, you can adjust the order 
 
@@ -212,6 +213,7 @@ len(cars)
 print(len(cars))
 ```
 > 4
+***
 ***
 ## 3.4 Avoid Error in the List
 ```
