@@ -32,7 +32,7 @@ message = "My first bicycle was a " + bicycles[0].title() + "."
 print(message)
 ```
 > My first bicycle was a Trek
-
+***
 # 3.2 Change, Add, Delete Elements from the List
 ## 3.2.1 Change
 ```
