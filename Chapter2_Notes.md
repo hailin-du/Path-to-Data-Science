@@ -146,7 +146,7 @@ Using '   ""   ' within the space
 >     0.2
 >     0.4
 ```
-0.2 + 0.1 # 0.30000000000000004 included decimal different
+0.2 + 0.1 # 0.30000000000000004 # included decimal will cause the number become float tpye
 3 * 0.1 # 0.30000000000000004
 ```
 
@@ -156,7 +156,7 @@ age = 23
 message = "Happy " + age + "rd Birthday!"
 print(message)
 ```
->     Error
+>     TypeError: Can't convert 'int' object to str implicitly
 ```
 message = "Happy " + str(age) + "rd Birthday!" # must be string
 print(message)
