@@ -1,4 +1,4 @@
-# 4.1 Go Over the Whole :ist
+# 4.1 Go Over the Whole List
 ### Using for loop: to Handle Repeat Work
 ```
 magicians = ['alice','david','carolina']
