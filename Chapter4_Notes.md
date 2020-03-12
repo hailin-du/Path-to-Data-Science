@@ -336,7 +336,13 @@ dimensions = (200,50)
 print('Original dimensions:')
 for dimension in dimensions:
     print(dimension)
+
+dimensions = (400,100) # changing the value manually
+print('\nModified dimensions:')
+for dimension in dimensions:
+    print(dimension)
 ```
+
 >     Original dimensions:
 >     200
 >     50
@@ -344,12 +350,6 @@ for dimension in dimensions:
 >     Modified dimensions:
 >     400
 >     100
-```
-dimensions = (400,100)
-print('\nModified dimensions:')
-for dimension in dimensions:
-    print(dimension)
-```
 #### Store new elements in variable called dimensions
 #### For Life Cylce - is good to use tuple (life = fixed period)
 ***
