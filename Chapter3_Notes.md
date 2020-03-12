@@ -147,10 +147,11 @@ too_expensive = 'ducati'
 motorcycle.remove(too_expensive)
 print(motorcycle)
 print('\nA ' + too_expensive.title() + ' is too expensive for me.')
+```
 > ['honda', 'yamaha','suzuki']
 > 
 > A Ducati is too expensive for me.
-```
+
 #### remove() can only delete ONE single element at a time, if the element in the list appear mutliple times, you may need a LOOP to decide if you are going to delete all of them.
 
 ### Position always change when you are using pop() or del() [delete function]
@@ -182,14 +183,14 @@ print(sorted(cars))
 print('Here is the original list again:')
 print(cars)
 ```
-> Here is the original list:
-> ['bmw','audi','toyota','subaru']
+>     Here is the original list:
+>     ['bmw','audi','toyota','subaru']
 > 
-> Here is the sorted list:
-> [audi', bmw', 'subaru', 'toyota']
+>     Here is the sorted list:
+>     [audi', bmw', 'subaru', 'toyota']
 >
-> Here is the original list again:
-> ['bmw','audi','toyota','subaru']
+>     Here is the original list again:
+>     ['bmw','audi','toyota','subaru']
 #### Sometimes lower case and upper case order are more complicated in sorting
 
 ### 3.3.3 reverse() function
@@ -200,8 +201,8 @@ print(cars)
 cars.reverse()
 print(cars)
 ```
-> ['bmw', 'audi', 'toyota', 'subaru']
-> ['subaru', 'toyota', 'audi', 'bmw']
+>     ['bmw', 'audi', 'toyota', 'subaru']
+>     ['subaru', 'toyota', 'audi', 'bmw']
 #### revese() will forever changing the order of a list
 
 ### 3.3.4 len() fcuntion - count the length of the list
