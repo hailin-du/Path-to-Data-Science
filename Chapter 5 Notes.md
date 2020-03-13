@@ -131,7 +131,7 @@ print('pepperoni' in requested_toppings) # False
 > False
 
 ## 5.2.7 Check if a Specific Element NOT in the List
-### Not In
+### `not in`
 * In the real case, we can check which user is not beining banned to speak in the forums
 ```python
 banned_users = ['andrew','carolina','david']
