@@ -354,7 +354,7 @@ for dimension in dimensions:
 #### For Life Cylce - is good to use tuple (life = fixed period)
 ***
 ***
-# Conclusion 4.6
+# 4.6 Conclusion 
 * Carefully using tab and spaces, sometimes it will cause trouble (indent error)
 * Therefore, only select one to use, not using them both at the same time 
 * Also, there are other rules in PEP 8, such as length of your codes 
