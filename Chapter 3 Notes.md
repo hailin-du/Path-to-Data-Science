@@ -221,17 +221,17 @@ motorcycle = ['honda', 'yamaha', 'suzuki']
 print(motorcycle[3])
 ```
 > IndexError: list index out of range
-### Error - out of range - always remeber start from 0, in this case, only 0, 1, and 2
+Error - out of range - always remeber start from 0, in this case, only 0, 1, and 2
 
 ```
 print(motorcycle[-1])
 ```
 > suzuki
-### use -1 to get access to the last element even the length of list changed
+use -1 to get access to the last element even the length of list changed
 
 ```
 motorcycle = []
 print(motorcycle[-1])
 ```
 > IndexError: list index out of range
-### Error - when error happened - check the length of the list
+Error - when error happened - check the length of the list
