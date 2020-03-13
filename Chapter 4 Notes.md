@@ -121,7 +121,7 @@ This type of error is not easy to discover, sometimes takes an hour to find out
 #### Storing a number has many reasons
 #### For example: tracking characters' positions, tracking players' score
 
-## 4.3.1 Using range() function
+## 4.3.1 Using `range() function`
 ```
 for value in range(1,5):
     print(value) 
