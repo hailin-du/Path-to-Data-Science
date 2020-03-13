@@ -65,7 +65,7 @@ print(motorcycle2)
 ```
 > ['honda', 'yamaha', 'suzuki']
 
-### insert() function
+`insert() function`
 ```
 motorcycle = ['honda', 'yamaha', 'suzukui']
 ```
@@ -89,7 +89,7 @@ print(motorcycle)
 ```
 > ['honda', 'suzuki']
 
-### pop() function (using pop to delete)
+`pop() function` (using pop to delete)
 #### pop() allow you to delete the last element but still able to use it (taking it out)
 ```
 motorcycle = ['honda','yamaha','suzuki']
@@ -125,7 +125,7 @@ print('The first motorcycle I owned was a ' + first_owned.title() + '.')
 * Del - not going to use element anymore (deleting it forever)
 * Pop - after the delete you still want to use the element (stored)
 
-### remove() function (don't know the element position)
+### `remove() function` (don't know the element position)
 ```
 motorcycle = ['honda', 'yamaha', 'suzuki', 'ducati']
 print(motorcycle)
@@ -155,13 +155,13 @@ print('\nA ' + too_expensive.title() + ' is too expensive for me.')
 
 #### remove() can only delete ONE single element at a time, if the element in the list appear mutliple times, you may need a LOOP to decide if you are going to delete all of them.
 
-### Position always change when you are using pop() or del() [delete function]
+### Position always change when you are using `pop()` or `del()` [delete function]
 ***
 ***
 ## 3.3 Organize List
 #### List order is unpredicatble baaed on the input of a user, you can adjust the order 
 
-## 3.3.1 sort() function
+## 3.3.1 `sort() function`
 ```
 cars = ['bmw', 'audi', 'toyota',' subaru']
 cars.sort() # sorted based on alphabet
@@ -174,7 +174,7 @@ print(cars)
 ```
 > ['toyota', 'subaru', 'bmw', 'audi']
 
-### 3.3.1 sorted() function (sort the list without affecting the original list)
+### 3.3.1 `sorted() function` (sort the list without affecting the original list)
 ```
 cars = ['bmw','audi','toyota','subaru']
 print('Here is the original list:')
@@ -194,7 +194,7 @@ print(cars)
 >     ['bmw','audi','toyota','subaru']
 #### Sometimes lower case and upper case order are more complicated in sorting
 
-### 3.3.3 reverse() function
+### 3.3.3 `reverse() function`
 #### for example - assume car is being purchased based on time (oldest to latest)
 ```
 cars = ['bmw','audi','toyota','subaru']
