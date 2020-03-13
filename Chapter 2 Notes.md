@@ -5,7 +5,7 @@
 ***
 ***
 # 2.2 Variable
-```
+```python
 message = 'Hello Python World!'
 print(message)
 message = 'Hello Python Crash Course World!'
@@ -15,7 +15,7 @@ print(message)
 >     Hello Python Crash Course World!
 
 ## 2.2.1 Variable Naming Rule
-```
+```python
 message_1 NOT 1_message
 ```
 * No space between wording
@@ -24,7 +24,7 @@ message_1 NOT 1_message
 * Be careful with 1 and small "l", 0 and  captial "O"
 
 ## 2.2.2 Aviod Varibale Nameing Error
-```
+```python
 message = 'Hello Python Crash Course World!'
 print(mesage) 
 ```
@@ -45,11 +45,12 @@ print(mesage)
 ```
 
 ## 2.3.1 Change String with Lower and Upper Case
-```name = 'ada lovelace'
+```python
+name = 'ada lovelace'
 print(name.title())
 ```
 >     Ada Lovelace
-```
+```python
 name = 'Ada Lovelace'
 print(name.upper())
 print(name.lower())
@@ -57,27 +58,27 @@ print(name.lower())
 >     ADA LOVELACE
 >     ada lovelace
 ## 2.3.2 Combine String
-```
+```python
 first_name = 'ada'
 last_name = 'lovelace'
 full_name = first_name + " " + last_name
 print(full_name)
 ```
 >     ada lovelace
-```
+```python
 print("Hello, " + full_name.title() + "!")
 message = "Hello, " + full_name.title() + "!"
 print(message)
 ```
     Hello, Ada Lovelace!
 ## 2.3.3 Add Space with Tab and New Line
-```
+```python
 print('Python')
 print('\tPython') # tab
 ```
 >     Python
 >         Python
-```
+```python
 print("Languages:\nPython\nC\nJavaScript") # new line
 print("Languages:\n\tPython\n\tC\n\tJavaScript") # tab + new line
 ```
@@ -91,7 +92,7 @@ print("Languages:\n\tPython\n\tC\n\tJavaScript") # tab + new line
 >         C
 >         JavaScript
 ## 2.3.4 Delete Space
-```
+```python
 favorite_language = 'python '
 favorite_language = favorite_language.rstrip() # assign - end space remove
 favorite_language
@@ -101,7 +102,7 @@ favorite_language.strip() # begin and end space remove
 >     'python ' 
 >     'python'
 ## 2.35 Aviod String Error
-```
+```python
 message = 'One of Pthon's strengths is its diverse community'
 print(message) # quotation
 ```
@@ -114,7 +115,7 @@ Using '   ""   ' within the space
 ***
 # 2.4 Number
 ## 2.4.1 Integer
-```
+```python
 2+3 # 5
 3-2 # 1
 2*3 # 6
@@ -130,7 +131,7 @@ Using '   ""   ' within the space
 >     9
 >     27
 >     1000000
-```
+```python
 2+3*4 # 14
 (2+3)*4 # 20
 ```
@@ -138,7 +139,7 @@ Using '   ""   ' within the space
 >     20
 
 ## 2.4.2 Float
-```
+```python
 0.1 + 0.1 # 0.2
 0.2 + 0.2 # 0.4 
 2 * 0.1 # 0.2 
@@ -148,19 +149,19 @@ Using '   ""   ' within the space
 >     0.4
 >     0.2
 >     0.4
-```
+```python
 0.2 + 0.1 # 0.30000000000000004 # included decimal will cause the number become float tpye
 3 * 0.1 # 0.30000000000000004
 ```
 
 ## 2.4.3 Using String to Aviod Data Type Error
-``` 
+```python
 age = 23
 message = "Happy " + age + "rd Birthday!"
 print(message)
 ```
 >     TypeError: Can't convert 'int' object to str implicitly
-```
+```python
 message = "Happy " + str(age) + "rd Birthday!" # must be string
 print(message)
 ```
