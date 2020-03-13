@@ -1,6 +1,6 @@
 # 6.1 A Simple Dictionary
 Lets take a look of a game, it includes some aliens, aliens have different colors and points.
-```
+```python
 alien_0 = {'color':'green','points':5}
 print(alien_0['color'])
 print(alien_0['points'])
@@ -17,25 +17,25 @@ print(alien_0['points'])
 
 
 #### In dictionary, you can save as many key-value pairs as you want
-```
+```python
 alien_0 = {'color': 'green', 'points': 5}
 ```
 The above code, color is a key, green is a associated value
 
 # 6.2.1 Accessing Dictionary's Value
-```
+```python
 alien_0 = {'color': 'green'}
 print(alien_0['color'])
 ```
 > green
 Return color's associated value, which is green
-```
+```python
 alien_0 = {'color': 'green', 'points': 5} 
 ```
 Dictionary can included multiple key-value pair 
 
 #### Case: If a player eliminated an alien, then you can use below code to ensure how many point the player scored
-```
+```python
 new_points = alien_0['points'] # calling the paired element from 'points'
 print('You just earned ' + str(new_points) + ' points!')
 ```
@@ -48,11 +48,11 @@ print('You just earned ' + str(new_points) + ' points!')
 * Dictionary is dynamic, you can always add a key-value pair
 * To add a pair, use dictionary name with a key ending with bracket, then assign the element (value) to the key
 * Adding alien's coordinate, so we can display the alien in a specific position
-```
+```python
 print(alien_0)
 ```
 > {'color': 'green', 'points': 5}
-```
+```python
 alien_0['x_position'] = 0
 alien_0['y_position'] = 25
 print(alien_0) 
@@ -64,7 +64,7 @@ print(alien_0)
 ## 6.2.3 Create a Empty Dictionary First
 * Sometime we need to create a empty dictionary first
 * Then we add key and value step by step
-```
+```python
 alien_0 = {}
 
 alien_0['color'] = 'green'
@@ -73,7 +73,7 @@ print(alien_0)
 ```
 
 ## 6.2.4 Changing Dictionary's Values
-```
+```python
 alien_0 = {'color': 'green'}
 print('The alien is ' + alien_0['color'] + '.')
 alien_0['color'] = 'yellow' # Changing color to yellow
@@ -82,13 +82,13 @@ print('The alien is now ' + alien_0['color'] + '.')
 >     The alien is green.
 >     The alien is now yellow.
 Tracking Alien's position
-```
+```python
 alien_0 = {'x_position':0,'y_position': 25, 'speed':'medium'}
 print('Original x-position: ' + str(alien_0['x_position']))
 ```
 * Moving the alien to the right
 * Moving speed determine how far the alien should move
-```
+```python
 if alien_0['speed'] == 'slow':
     x_increment = 1
 elif alien_0['speed'] == 'medium':
@@ -98,7 +98,7 @@ else:
     x_increment = 3
 ```
 * New position = old position plus increment
-```
+```python
 alien_0['x_position'] = alien_0['x_position'] + x_increment
 print('New x-position: ' + str(alien_0['x_position']))
 ```
@@ -113,12 +113,12 @@ print('New x-position: ' + str(alien_0['x_position']))
 
 ## 6.2.5 Delete Key-Pair in the Dictionary
 We can use del statement to delete 
-```
+```python
 alien_0 = {'color':'green','points': 5}
 print(alien_0)
 ```
 > {'color': 'green', 'points': 5}
-```
+```python
 del alien_0['points']
 print(alien_0)
 ```
@@ -126,7 +126,7 @@ print(alien_0)
 Deleted the key - points
 
 ## 6.2.6 Dictionary that Has Similar Objects' Key-Pairs
-```
+```python
 favorite_languages = {
     'jen':'python',
     'sarah':'c',
@@ -134,7 +134,7 @@ favorite_languages = {
     'phil':'python', # utting comma for next object key-pair
 }
 ```
-```
+```python
 print("Sarah's favorite language is " + 
        favorite_languages['sarah'].title() + 
        '.')
@@ -146,14 +146,14 @@ We used favorite_languages['sarah'] to call Sarah's paired element (value), C
 Dictionary can have millions of keys and pairs
 
 ## 6.3.1 Going Over Each Key-Pair
-```
+```python
 user_0 = {
     'username':'efermi',
     'first':'enrico',
     'last':'fermi'
 }
 ```
-```
+```python
 for key, value in user_0.items():
     print('\nKey: ' + key)
     print('Value: ' + value)
@@ -169,7 +169,7 @@ for key, value in user_0.items():
 * Created two variables to call key and pair, named as key or k, value or v to 
 * `items() function` is calling (returning) the key-pair list
 * Each loop assign the value of key into Key, and the value of paired-value into Value
-```
+```python
 favorite_languages = {
     'jen':'python',
     'sarah':'c',
@@ -177,7 +177,7 @@ favorite_languages = {
     'phil':'python', # utting comma for next object key-pair
 }
 ```
-```
+```python
 for name, language in favorite_languages.items():
     print(name.title() + "'s favorite language is " + language.title() + ".")
 ```
@@ -189,7 +189,7 @@ for name, language in favorite_languages.items():
 
 ## 6.3.2 Going Over Each Key
 Use `keys() function`
-```
+```python
 for name in favorite_languages.keys():
     print(name.title())
 ```
@@ -198,12 +198,12 @@ for name in favorite_languages.keys():
 >     Phill
 >     Edward
 * Same Result
-```
+```python
 for name in favorite_languages:
     print(name.title())
 ```
 The reason using keys() is to allow the code to be more reable and comprehensive
-```
+```python
 friends = ['phil','sarah']
 for name in favorite_languages.keys():
     print(name.title())
@@ -221,7 +221,7 @@ for name in favorite_languages.keys():
 >     Sarah
 >      Hi Sarah, I see your favorite language is Python!
 >     Jen
-```
+```python
 if 'erin' not in favorite_languages.keys(): # checking if Erin in the dictionary list
     print('Erin, please take our poll!')
 ```
@@ -229,7 +229,7 @@ if 'erin' not in favorite_languages.keys(): # checking if Erin in the dictionary
 
 ## 6.3.3 Going Over the Key by Order
 Use `orted function`
-```
+```python
 for name in sorted(favorite_languages.keys()):
     print(name.title() + ", thank you for taking the poll.")
 ```
@@ -241,7 +241,7 @@ Sorted the key **by order**
 
 ## 6.3.4 Going Over Each Paired Value
 Use `values() function`
-```
+```python
 print('The following languages have been mentioned:')
 for language in favorite_languages.values():
     print(language.title())
@@ -254,7 +254,7 @@ for language in favorite_languages.values():
 * Values maybe repeated
 
 Use `set() function` to avoid repeated values
-```
+```python
 for language in set(favorite_languages.values()):
     print(language.title())
 ```
@@ -263,8 +263,8 @@ for language in set(favorite_languages.values()):
 >     C
 >     Ruby
 set() function only return unique value
-**
-**
+***
+***
 # 6.4 Storing 
 #### Saving a series of dictionary in a list or, saving a list as a paired value in dictionary
 You can:
@@ -274,7 +274,7 @@ You can:
 
 ## 6.4.1 Dictionray List
 Creating a list inclue every alien, every alien is a dictionary
-```
+```python
 alien_0 = {'color':'green','points':5}
 alien_1 = {'color':'yellow','points':10}
 alien_2 = {'color':'red','points':15}
@@ -289,7 +289,7 @@ for alien in aliens:
 >     {'color':'red','points':15}
 In the real case, we may need to create 30 aliens
 
-```
+```python
 aliens = []
 for alien_number in range(30): # creating 30 green aliens
     new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
@@ -310,7 +310,7 @@ print('Total numberof aliens: ' + str(len(aliens)))
 
 * To python, each alien is unique, even their values are same
 * We can use **for loop** and **if statement** to change some aliens color
-```
+```python
 for alien in aliens[0:3]: # calling the first 3 aliens and change their colors, speeds, and points
     if alien['color'] == 'green':
         alien['color'] = 'yellow'
@@ -329,7 +329,7 @@ print('...')
 >      ...
 
 We can further expand the code even more
-```
+```python
 for alien in aliens[2:5]: 
     if alien['color'] == 'green':
         alien['color'] = 'yellow'
@@ -349,7 +349,7 @@ for alien in aliens[:5]:
 * So you can go over the list with the same method
 ## 6.4.2 Storing List Inside the Dictionray
 We can include other infomration for a pizza, not just its toppings
-```
+```python
 pizza = {
     'crust':'thick',
     'toppings':['mushrooms','extgra cheese']
@@ -366,7 +366,7 @@ for topping in pizza['toppings']:
 * When we need a a dictionray that contains key with multiple values, we can can use lists
 * For example, each key has multiple values
 * When we go over the dictionary, each person associate with a list that contains multiple values
-```
+```python
 favorite_languages = {
     'jen':['python','ruby'],
     'sarah':['c'],
@@ -401,7 +401,7 @@ for name, languages in favorite_languages.items():
 We are adjusing the code for Sarah, because she only liked one language, so we use "is" instead of "are"
 * Adjusting the Code for Sarah - use `len() function`
 
-```
+```python
 for name, languages in favorite_languages.items():
     if len(languages) < 2:
         print('\n' + name.title() + "'s favorite languages is:")
@@ -416,7 +416,7 @@ for name, languages in favorite_languages.items():
 ## 6.4.3 Store Dictionary Inside the Dictionary
 * Complicated but happen
 * Username as key, and store each user info inside the dictionary
-```
+```python
 users = {
     'aeinstein': {
         'first':'albert',
