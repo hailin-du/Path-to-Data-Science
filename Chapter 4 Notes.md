@@ -1,6 +1,6 @@
 # 4.1 Go Over the Whole List
 ### Using for loop: to Handle Repeat Work
-```
+```python
 magicians = ['alice','david','carolina']
 for magician in magicians:
     print(magician)
@@ -22,7 +22,7 @@ for magician in magicians:
 * for item in list_of_items:
 
 ## 4.1.2 Adding Works In for loop:
-```
+```python
 magicians = ['alice','david','carolina']
 for magician in magicians:
     print(magician.title() + ", that was a great trick!")
@@ -43,7 +43,7 @@ for magician in magicians:
 >     I can't wait to see your next trick
 
 ## 4.1.3 After the for loop:
-```
+```python
 print('Thank you, everyone. That was a great magic show!') # outside the for loop:
 ```
 #### Only excute once
@@ -54,7 +54,7 @@ print('Thank you, everyone. That was a great magic show!') # outside the for loo
 #### Must indent!!
 
 ## 4.2.1 Forget Indent
-```
+```python
 magicians = ['alice','david','carolina']
 for magician in magicians:
 print(magician)
@@ -62,7 +62,7 @@ print(magician)
 > IndentationError: expected an indented block
 
 ## 4.2.2 Forget Indent for Other Lines
-```
+```python
 magicians = ['alice', 'david', 'carolina']
 for magician in magicians:
     print(magician.title() + ", that was a great trick!")
@@ -77,14 +77,14 @@ print("I can't wait to see your next trick, " + magician.title() + ".\n")
 #### This is an logical error, the code only executed for carolina
 
 ## 4.2.3 Unnecessary Indent
-```
+```python
 message = "Hello Python world!"
     print(message)
 ```
 > IndentationError: unexpected indent
 
 ## 4.2.4 Unnecessary Indent After the for loop:
-```
+```python
 magicians = ['alice', 'david', 'carolina']
 for magician in magicians:
     print(magician.title() + ", that was a great trick!")
@@ -108,7 +108,7 @@ for magician in magicians:
 #### Similarly, this an logical error!
 
 ## 4.2.5 Forget Colon
-```
+```python
 magicians = ['alice','david','carolina']
 for magician in magicians
     print(magician.title() + ", that was a great trick!")
@@ -122,7 +122,7 @@ This type of error is not easy to discover, sometimes takes an hour to find out
 #### For example: tracking characters' positions, tracking players' score
 
 ## 4.3.1 Using `range() function`
-```
+```python
 for value in range(1,5):
     print(value) 
 ```
@@ -131,7 +131,7 @@ for value in range(1,5):
 >     3
 >     4
 #### Not include 5
-```
+```python
 for value in range(1,6):
     print(value) 
 ```
@@ -144,13 +144,13 @@ for value in range(1,6):
 
 ## 4.3.2 Using Range to Create a Number List
 #### When creating a number list, we can use list() to change range() into a list
-```
+```python
 number = list(range(1,6))
 print(number)
 ```
 > [1, 2, 3, 4 ,5]
 #### even number
-```
+```python
 even_number = list(range(2,11,2))
 print(even_number)
 ```
@@ -159,7 +159,7 @@ print(even_number)
 
 
 ##### Squares
-```
+```python
 squares = []
 for value in range(1,11):
     square = value ** 2 # 1
@@ -168,7 +168,7 @@ print(squares)
 ```
 > [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 #### We can avoid using temporary square variable
-```
+```python
 squares = []
 for value in range(1,11):
     squares.append(value**2) # Same as notation 1 and 2
@@ -177,7 +177,7 @@ print(squares)
 #### While writing code, try to make sure the code is readable, then we can combine them like the one above
 
 ## 4.3.3 Using Number List for Calculation
-```
+```python
 digits = [1,2,3,4,5,6,7,8,9,0]
 print(min(digits))
 print(max(digits))
@@ -191,7 +191,7 @@ print(sum(digits))
 ## 4.3.4 List Comprehension - Complex
 #### List comprehension only allow you to write one line of code.
 #### Put together - create new elements + for loop, and add new elments automatically
-```
+```python
 squares2 = [value ** 2 for value in range(1,11)]
 print(squares2)
 ```
@@ -205,30 +205,30 @@ print(squares2)
 ***
 # 4.4 Using Part from The List - Slicing
 ## 4.4.1 Slicing
-```
+```python
 players = ['charles', 'martina', 'michael', 'florence', 'eli']
 print(players[0:3]) # return 0,1,2 elements
 ```
 > ['charles', 'martina', 'michael']
-```
+```python
 print(players[1:4]) # getting number 1 to number 3 elements, without 4
 ```
 > ['martina', 'michael', 'florence']
-```
+```python
 print(players[:4]) # without start = start with 0 
 ```
 > ['charles', 'martina', 'michael', 'florence']
-```
+```python
 print(players[2:]) # start with number 3 to the end
 ```
 > ['michael', 'florence', 'eli']
-```
+```python
 print(players[-3:]) # getting the last three players
 ```
 > ['michael', 'florence', 'eli']
 
 ## 4.4.2 Goving Over the List for Slicing
-```
+```python
 players = ['charles','martina','michael','florence','eli']
 print('Here are the first three players on my team:')
 for player in players[:3]:
@@ -244,11 +244,11 @@ for player in players[:3]:
 ## 4.4.3 Copying the List
 #### Using [:] to copy the whole list - start to end
 #### For example - a list include your favorite food, and a list include yours and your friend's food
-```
+```python
 my_foods = ['pizza', 'falafel', 'carrote cake']
 friend_foods = my_foods[:]
 ```
-```
+```python
 print("My favorite food are:")
 print(my_foods)
 print("\nMy friend's favorite foods are:")
@@ -261,7 +261,7 @@ print(friend_foods)
 >     ['pizza', 'falafel', 'carrote cake']
 
 #### To vertify we have two identical list, we will add a food in each list
-```
+```python
 my_foods.append('cannoli')
 friend_foods.append('ice cream')
 
@@ -277,7 +277,7 @@ print(friend_foods)
 >     ['pizza', 'falafel', 'carrote cake', 'ice cream']
 
 #### Example Without Slicing!!!
-```
+```python
 my_foods = ['pizza','falafel','carrote cake']
 friend_foods = my_foods # we use = instead of [:]
 
@@ -307,14 +307,14 @@ print(friend_foods)
 ## 4.5.1 Define Tuple
 #### Tuple is parentheses ( ) instead bracket [ ], after assigning the values, we can get access to tuple as list
 #### Create a dimension that is unchangeable
-```
+```python
 dimensions = (200,50)
 print(dimensions[0])
 print(dimensions[1])
 ```
 >     200
 >     5
-```
+```python
 dimensions[0] = 250
 ```
 > TypeError: 'tuple' object does not support item assignment
@@ -322,7 +322,7 @@ dimensions[0] = 250
 
 ## 4.5.2 Go Over the Whole Tuple
 #### Use for loop:
-```
+```python
 dimensions = (200,50)
 for dimension in dimensions:
     print(dimension)
@@ -331,7 +331,7 @@ for dimension in dimensions:
 >     5
 ## 4.5.3 Changing Tuple Elements
 #### Even we cannot change the elements, we can reassign the value in the tuple
-```
+```python
 dimensions = (200,50)
 print('Original dimensions:')
 for dimension in dimensions:
