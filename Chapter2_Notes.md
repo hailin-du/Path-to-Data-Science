@@ -1,4 +1,4 @@
-# 2.1 print() is a function
+# 2.1 `print()` is a function
 ```print('Hello Python World!')```
 
 >     Hello Python World!
