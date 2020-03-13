@@ -453,7 +453,7 @@ for username, user_info in users.items():
 If the structure key of each user is **different**, the for loop will be more complicated
 ***
 ***
-6.5 Conclusion
+# 6.5 Conclusion
 This chapter include:
 * Defining Dictionary
 * Using Dictionary to store elements (values)
