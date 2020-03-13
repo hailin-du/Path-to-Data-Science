@@ -262,7 +262,7 @@ for language in set(favorite_languages.values()):
 >     Python
 >     C
 >     Ruby
-set() function only return unique value
+`set() function` only return unique value
 ***
 ***
 # 6.4 Storing 
