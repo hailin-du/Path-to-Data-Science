@@ -118,7 +118,7 @@ print(age_0 >= 21 or age_1 >= 21)
 
 ## 5.2.6 Check if a Specific Element within the List
 #### In the real case, we can check to see if the username already exist in the username list
-### In
+### `in`
 * Use in to check if a element exist in the list
 ```python
 requested_toppings = ['mushrooms','onions','pineapple']
