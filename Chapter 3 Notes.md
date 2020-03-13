@@ -98,7 +98,7 @@ print(motorcycle)
 `pop() function` (using pop to delete)
 #### pop() allow you to delete the last element but still able to use it (taking it out)
 ```python
-motorcycle = ['honda','yamaha','suzuki']
+motorcycle = ['honda', 'yamaha', 'suzuki']
 print(motorcycle)
 ```
 > ['honda', 'yamaha', 'suzuki']
@@ -111,8 +111,8 @@ popped_motorcycle = motorcycle.pop()
 print(motorcycle)
 print(popped_motorcycle)
 ```
-> ['honda', 'yamaha']
-> suzuki
+>      ['honda', 'yamaha']
+>      suzuki
 
 ```python
 motorcycle = ['honda', 'yamaha', 'suzuki']
