@@ -109,6 +109,7 @@ Even number cannbe perfectly divided by 2, so when a number divided by 2 using %
 >     Enter a number, and I'll tell you if it's even or odd: 42
 >
 >     The number 42 is even.
+
 ***
 ***
 
@@ -214,7 +215,7 @@ while active: # while active True
 ```
 
 ## 7.2.4 Use `break` Statement to Exist the `while` Loop
-```
+```python
 prompt = "\nPlease enter the name of a city you have visited:"
 prompt += "\n(Enter 'quit when you are finished.) "
 
@@ -245,7 +246,7 @@ else:
 * `continue` statement doesn't like `break`, `break` *will not* execute the remaining code
 
 Lets see how `continue statement` works by counting 1 to 10, we will only print out the odd number
-```
+```python
 current_number = 0
 while current_number < 10:
     current_number += 1
@@ -270,7 +271,7 @@ x = 1
 while x <= 5:
     print(x)
     x += 1
-``
+```
 #### But if you forgot the code x += 1, the loop will be running forever!
 ```python
 x = 1
@@ -383,7 +384,7 @@ for name, response in responses.items():
 >     What is your name? Lynn
 >     Which mountain would you like to climb someday? Devil's Thumb
 >     Would you like to let another person respond? (yes/ no) no
-
+>
 >     --- Poll Results ---
 >     Lynn would like to climb Devil's Thumb.
 >     Eric would like to climb Denali.
