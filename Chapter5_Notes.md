@@ -1,71 +1,78 @@
-# 5.1 Simple If Statement
+# 5.1 Simple if Statement
 ```
-cars = ['audi','bmw','subaru','toyota']
+cars = ['audi', 'bmw', 'subaru', 'toyota']
 for car in cars:
     if car == 'bmw':
         print(car.upper())
     else:
         print(car.title())
 ```
+>     Audi
+>     BMW
+>     Subaru
+>     Toyota
+***
+***
 # 5.2 Condition Testing
 * True & False
-* True - excute
-* Flase - ignore the codes
+* True - execute the code
+* Flase - ignore the code
 
-## 5.2.1 Checking if it Equals
+## 5.2.1 Checking if Elements (Values) are Equal
 ```
 car = 'bmw'
 print(car == 'bmw')
 ```
-#### True
+> True
 
 ```
 car = 'audi'
 print(car == 'bmw')
 ```
-#### False
+> False
 
-## 5.2.2 Checking if it Equals Without considersing Upper and Lower Case
+## 5.2.2 Checking if Elements (Values) are Equal without Considersing Upper and Lower Case
 ```
 car = 'Audi'
 print(car == 'audi')
 ```
-#### False
-
+> False
 ```
 car = 'Audi'
 print(car.lower() == 'audi')
 ```
-#### True
+> True
 ```
 print(car) 
 ```
-#### Audi
+> Audi
 * Didn't affect the car variable
-* For Website Development purpose, we save users' usernames, then we can convert them to compare
-* For example, John, covert to lower case, john == john (if john already exist), then reject user during registration
+* For Website Development purpose, we save users' usernames, then we can convert them to compare if values are matching
+* For example, John, covert to lower case, john == john (if john already exist), then reject user during the registration
 
-## 5.2.3 Checking if it Unequal
+## 5.2.3 Checking if Elements (Values) are Unequal
 ```
 requested_topping = 'mushrooms'
 ```
 ```
-if requested_topping != 'anchovies': #### if a != b equal to True, then excute the line #####
+if requested_topping != 'anchovies': # if a != b equal is True, then excute the line
     print('Hold the anchovies!')
 ```    
-## 5.2.4 Compare Number
+> Hold the anchovies!
+## 5.2.4 Comparing Number
 ```
 age = 18
-print(age==18)
+print(age == 18)
 ```
-#### True
+> True
 
 ```
 answer = 17
 if answer != 42:
     print('That is not the correct answer. Please try again!')
 ```
-#### can include less than, greather than or others.
+> That is not the correct answer. Please try again!
+#### Can include less than <, greather than > or others such as >= or <=
 ```
 age = 19
 print(age<21) 
@@ -73,6 +80,10 @@ print(age<=21)
 print(age>21)
 print(age>=21)
 ```
+>     True
+>     True
+>     False
+>     False
 
 ## 5.2.5 Checking Multiple Conditions
 ### And
@@ -81,10 +92,14 @@ print(age>=21)
 ```
 age_0 = 22
 age_1 = 18
-print(age_0 >= 21 and age_1 >= 21) #### False
-age_1 = 22
-print(age_0 >= 21 and age_1 >= 21) #### True
+print(age_0 >= 21 and age_1 >= 21) # False
 ```
+> False
+```
+age_1 = 22
+print(age_0 >= 21 and age_1 >= 21) # True
+```
+>     True
 ### OR
 * Use or to check at least one condition meets
 * If one of the condition pass, the whole epxression is True
@@ -94,42 +109,49 @@ age_0 = 22
 age_1 = 18
 print(age_0 >= 21 or age_1 >= 21) 
 ```
-#### True
+> True
 ```
 age_0 = 18
 print(age_0 >= 21 or age_1 >= 21) 
 ```
-#### True
+> Flase
 
-## 5.2.6 Check if a specific element within the List
-#### In real case, we can check if the username already exist in the username list
+## 5.2.6 Check if a Specific Element within the List
+#### In the real case, we can check to see if the username already exist in the username list
 ### In
 * Use in to check if a element exist in the list
 ```
 requested_toppings = ['mushrooms','onions','pineapple']
-print('mushrooms' in requested_toppings) #### True ####
-print('pepperoni' in requested_toppings) #### False ####
+print('mushrooms' in requested_toppings) # True 
 ```
+> True
+```
+print('pepperoni' in requested_toppings) # False
+```
+> False
 
-## 5.2.7 Check if a specific element NOT in the List
+## 5.2.7 Check if a Specific Element NOT in the List
 ### Not In
-* In real case, we can check which user is not banned to speak in forums
+* In the real case, we can check which user is not beining banned to speak in the forums
 ```
 banned_users = ['andrew','carolina','david']
 user ='marie'
 if user not in banned_users: #### if user not in the list, which is True, then excute ####
     print(user.title() + ", you can post a response if you wish.")
 ```
+> Marie, you can post a response if you wish.
+
 ## 5.2.8 Boolean Expression
 * Same as condition, either True or False
 * Boolean expression usually is used for recording condition
-* Such as, if the game is ruunning normally, or if user can edit the webpage
+* Such as, if the game is ruunning normally, or if the user can edit the webpage
 ```
 game_active = True
 can_edit = False
 ```
 #### Boolean Expression provides a effective way to track a program status
-
+***
+***
 # 5.3 if Statement
 ```
 if conditional_test:
@@ -141,8 +163,9 @@ if age >= 18:
     print('You are old enough to vote!')
     print('Have you registered to vote yet?')
 ```
+> You are old enough to vote!
 ## 5.3.2 if-else Statment
-#### if condition didn't pass, we use else to excute another operation
+#### if a condition didn't pass, we use else (another) condition to excute another operation
 ```
 age = 17
 if age >= 18: # Condition True - excute this part
@@ -152,11 +175,14 @@ else: # Condition False - excute this park
     print('Sorry, you are too young to vote.')
     print("Please register to vote as oon as you turn 18!")
 ```
+>     Sorry, you are too young to vote.
+>     Please register to vote as oon as you turn 18!
+
 ## 5.3.3 if-elif-else Strcuture
 * More than two conditions
 * Test every structure within the if-elif-else and check every condition until it pass the condition
 
-#### Case:
+#### Case: Ticket Admissions
 * Below Age 4 = Free Admission
 * Age Between 4 - 17 = $5 Admission Fee
 * Age 18 or Above = $10 Admission Fee
@@ -169,10 +195,11 @@ elif age < 18: #### Only excute when if condition didn't pass - True ####
 else: # skipped, becuase elif condition passed
     print('Your admission cost is $10.')
 ```
-#### Cleaner Code - setting price only without printing the whole sentence
+> Your admission cost is $5.
+#### Cleaner Code - Setting the cost only without printing the whole sentence
 ```
 age = 12 
-if age < 4: #### setting price variable in the strcuture
+if age < 4: # assigning the price variable in the structure
     price = 0
 elif age < 18: 
     price = 5
@@ -181,9 +208,8 @@ else:
 ```
 #### Easier to change the code and more efficent
 ```
-print('Your admission cost is $' + str(price) + '.')
+print('Your admission cost is $' + str(price) + '.') # Outside the if-else statement
 ```
-
 ## 5.3.4 Using Multiple elif Block
 #### Adding elderly price
 ```
@@ -199,8 +225,8 @@ else:
 print('Your admission cost is $' + str(price) + '.')
 ```
 
-## 5.3.5 Ignore else 
-#### We don't have to use else at the end, we can change to elif to make code more clearly
+## 5.3.5 Avoid Using else 
+#### We don't have to use else at the end, we can change to elif to make the code more clearly
 ```
 age = 12
 if age < 4: 
@@ -214,11 +240,11 @@ elif age >=65: # assigning the condition
 print('Your admission cost is $' + str(price) + '.')
 ```
 #### else can be anything!
-#### if you know the end-result is, you should consider using elif instead of else
+#### If you know the end-result is, you should consider using elif instead of else
 
 ## 5.3.6 Testing Multiple Conditions
 ```
-requested_toppings =['mushrooms','extra cheese'] # customer order
+requested_toppings = ['mushrooms',' extra cheese'] # customer order
 ```
 ```
 if 'mushrooms' in requested_toppings:
@@ -231,6 +257,14 @@ if 'extra cheese' in requested_toppings: # same here, no matter the above condit
 ```
 print('\nFinished making your pizza!')
 ```
+>     Adding mushrooms.
+>     Adding extra cheese.
+>
+>     Finished making your pizza!
+
+* Below code cannnot execute normally
+* When Checking the first if, the list contains mushroom
+* So it will skip the rest of the code (lines)
 ```
 if 'mushrooms' in requested_toppings:
     print('Adding mushrooms.')
@@ -242,33 +276,47 @@ elif 'extra cheese' in requested_toppings: # skipped - the first condition passe
 ```
 print('\nFinished making your pizza!')
 ```
+>     Adding mushrooms.
+>
+>     Finished making your pizza!
+***
+***
 # 5.4 Using if to Handle List
 ## 5.4.1 Checking Specific Element
 #### Pizza Toppings
 ```
-requested_toppings = ['mushrooms','green peppers','extra cheese']
+requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']
 ```
 ```
 for requested_topping in requested_toppings:
     print('Adding ' + requested_topping + ".")
 print('\nFinished making your pizza!')
 ```
+>     Adding mushrooms.
+>     Adding green peppers.
+>     Adding extra cheese.
+>
+>     Finished making your pizza!
 #### Running out Green Peppers
 ```
-requested_toppings = ['mushrooms','green peppers','extra cheese']
+requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']
 ```
 ```
 for requested_topping in requested_toppings:
-    if requested_topping == 'green peppers': #### checking if customer ordered green peppers ####
+    if requested_topping == 'green peppers': # checking to see if the customer ordered green peppers 
         print('Sorry, we are out of green peppers right now.')
     else:
         print('Adding ' + requested_topping + ".")
 print('\nFinished making your pizza!')
 ```
-
-## 5.4.2 Ensure the list is not empty
-* Check if the order list is empty, if it is empty ask customer wants a plain pizza
-* If not empty, then continue adding toppings
+>     Adding mushrooms.
+>     Sorry, we are out of green peppers right now.
+>     Adding extra cheese.
+>
+>     Finished making your pizza!
+## 5.4.2 Making Sure the List is Not Empty
+* Check if the order list is empty, if it is empty ask the customer if he or she wants a plain pizza 
+* If the list is not empty, then continue adding toppings
 ```
 requested_toppings = []
 ```
@@ -280,14 +328,15 @@ if requested_toppings:
 else:
     print('Are you sure you want a plain pizza?')
 ```
-#### In Python, when using if condition with list
-* if the list contain at least one element return True
-* if the list has nothing, return false
+> Are you sure you want a plain pizza?
+#### In Python, when you are using a if condition with list
+* If the list contain `at least ONE element` return **True**
+* If the list has nothing inside, return **False**
 
 ## 5.4.3 Using Mutiple List
 ```
-available_toppings = ['mushrooms','olives','green peppers','pepperoni','pineapple','extra cheese']
-requested_toppings = ['mushroom','french fries','extra cheese']
+available_toppings = ['mushrooms', 'olives', 'green peppers', 'pepperoni', 'pineapple', 'extra cheese']
+requested_toppings = ['mushroom', 'french fries', 'extra cheese']
 ```
 ```
 for requested_topping in requested_toppings:
@@ -297,10 +346,15 @@ for requested_topping in requested_toppings:
         print("Sorry, we don't have " + requested_topping + '.')
 print('\nFinished making your pizza!')
 ```
-* If available toppings is fixed, we can use tuple
-* Second list is customer order - pay attention to french fries
-* We have go over the requested_toppings list to see if the topping available in available_toppings list
-* If requested topping not exist, then we tell the customer we don't provide
+>     Adding mushrooms
+>     Sorry, we don't have french fries.
+>     Adding extra cheese.
+>     
+>     Finished making your pizza!
+* If available toppings is **Fixed**, we can use **Tuple**
+* Second list is the customer order list - pay attention to french fries
+* We have to go over the requested_toppings list to see if the topping available in the available_toppings list
+* If requested topping element is not exist in the available_topping list, then we tell the customer we don't provide that element (topping)
 
 
 # 5.5 if Statement Format
