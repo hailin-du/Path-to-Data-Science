@@ -23,7 +23,7 @@ Above code is an example of how we just defined a function
 * To use the function, we can **call** the function by calling the **function name** and **use parentheses with necessary information**
 
 
-## 8.1.1 Passing Data to the Function
+## 8.1.1 Passing Data (Element) to the Function
 
 We will add `username` inside the parentheses of the function `greet_users()`
 * By adding `username`, the function will accept any element you give to the username
@@ -40,7 +40,7 @@ greet_users('jesse')
 * `greet_users('jesse')` use the function `greet_user()`
 * Passing the infomration that is needed for the `print()` statement
 
-## 8.1.2 Argument (Data You Pass) and Parameter (Variable - Data Needed to Perform A Specific Task)
+## 8.1.2 Argument (Data (Element) You Pass) and Parameter (Variable - Data (Element) Needed to Perform A Specific Task)
 * `username` is a **parameter**, data you are going to pass
 * Data is `jesse`, which is a **argument**
 * Argument is used when using the function, it pass data to the function
@@ -48,23 +48,29 @@ greet_users('jesse')
 * In `greet-user('jesse')`, we are passing 'jesse' to `greet_user()` function, and the value will be stored in `username`
 ***
 ***
-# 8.2 Passing Argument
-#### function can contain multiple parameter
-#### Thefore, when using function, we can contain multiple parameter
-#### We can use position argument - argument's order and parameter's order are same
-#### Or, keyword argument, every parameter is created by variable name and its value
-#### Or, use list and dictionary
+# 8.2 Passing Argument (Data)
+Function can contain multiple parameters
+* Therefore, when using a function, we can pass **multiple elements** to it 
+* We can **order** the **argument** - the argument's order and the parameter's order are the same
+* Or, uses **keyword argument**, every parameter is created by the variable name, so we can just **assign the element** to the parameter when calling the function
+* We can even use list or dictionary
 
-## 8.2.1 Position Argument
-#### WHen using function, python must use function's every argument that is associated with the parameter
-#### So the position/order can be used to associate these values
+## 8.2.1 Argument Position (Position/Order)
+When we use the function, python must associate every argument with the correct parameter
 
-""" def describe_pet(animal_type, pet_name):
-    # Display Pet info
+So the position/order is the key that can be used to create the association
+
+```python
+def describe_pet(animal_type, pet_name):
+    # Display pet info
     print("\nI have a " + animal_type + '.')
     print('My ' + animal_type + "'s name is " + pet_name.title() + '.')
 
-describe_pet('hamster','harry') """
+describe_pet('hamster','harry')
+```
+>     I have a hamster.
+>     My hamster's name is Harry.
+
 #### The function defined that it needs a animal tpye and a name
 #### When using the function, we need to provide a animal type and a name
 #### 'hamster'(arugment) stored in animal_type(paremeter)
