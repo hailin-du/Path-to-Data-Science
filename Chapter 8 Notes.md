@@ -748,7 +748,7 @@ Every `import statement` should be put at the beginning of the file, except the 
 ***
 ***
 
-8.8 Conclusion
+# 8.8 Conclusion
 * You learned how to write a function
 * Passing arguments, and let the function access the arguments
 * Understand the Arguments Positions and Key-Word Arguments Associations
