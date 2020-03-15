@@ -467,5 +467,251 @@ To keep the `unprinted_designs` list, we can do the same
 ```python
 print_models(unprinted_designs[:], completed_models)
 ```
+***
+***
 
-## 8.5 Passing as many as Augments You Want
+# 8.5 Passing Any Amount of Arguments
+Sometimes, you don't know the function will receive how many arguments
+* Python function allows you to collect as many as arguments you want
+* For example, a function to make a pizza, it needs to take many toppings
+* But you don't know how many toppings the customer is going to order
+
+The below function only has one parameter, which `*toppings`
+* No matter how many arguments are being provided, the parameters will collect them
+
+```python
+def make_pizza(*toppings):
+    # printing all the toppings that the customer has ordered
+    print(toppings)
+
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
+```
+
+>     ('pepperoni',)
+>     ('mushrooms', 'green peppers', 'extra cheese')
+
+The Parameter `*toppings`, the `*` star created a topping empty tuple, and put all the topping elements inside the tuple
+* The `print statement` proves that python can handle one, three, or even more arguments
+* The function used a similar way to handle different calling
+* Remember, the python has put the arguments into a tuple, even it is receiving one argument
+
+Now, we will replace the `print statement` with a loop, to go over the topping list and describe the customer pizza
+```python
+def make_pizza(*toppings):
+    # describe the pizza
+    print('\nMaking a pizza with the following toppings:')
+    for topping in toppings:
+        print('- ' + topping)
+
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
+```
+
+>     Making a pizza with the following toppings:
+>     - pepperoni
+>     
+>     Making a pizza with the following toppings:
+>     - mushrooms
+>     - green peppers
+>     - extra cheese
+
+No matter how many arguments the function is receiving, this grammar will always work!
+
+## 8.5.1 Combine Argument Position Association with Any Amount of Arguments You Want
+* For function to receive different types of arguments, we must put the parameters that receive any amount of arguments **at the end**
+* Python will first match the position argument or key-word argument
+* Then, put the rest of the arguments into the last parameters
+
+```python
+def make_pizza(size, *toppings):
+        # describe the pizza
+        print('\nMaking a ' + str(size) +
+              '-inch pizza with the following toppings:')
+        for topping in toppings:
+            print('- ' + topping)
+
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')   
+```
+
+>     Making a 16-inch pizza with the following toppings:
+>     - pepperoni
+
+>     Making a 12-inch pizza with the following toppings:
+>     - mushrooms
+>     - green peppers
+>     - extra cheese
+
+Python will first receive the argument and store that into `size`, and put the rest into a tuple named `toppings`
+* First is `size`, then is `toppings`
+
+## 8.5.2 Use Any Amount of Arguments with Key-Word 
+Sometimes, a function needs to receive any amount of arguments without knowing what kind of elements will be passed
+* Under this condition, we can define the function to receive any amount of key-value paired element (no matter how many amounts being passed)
+* For example, creating a user profile - you know that you will receive user's info, but not knowing what kind of info you will be receiving
+
+Below is the code show the `build_profile()` function to receive first and last name, and any amount of key-word arguments
+
+```python
+def build_profile(first, last, **user_info):
+
+    # create a dictionary, that includes the info we know about the user
+    
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+
+user_profile = build_profile('albert','einstein',
+                             location = 'princeton',
+                             field = 'physics')
+
+print(user_profile)
+```
+
+> {'first_name': 'albert', 'last_name': 'einstein', 'location': 'princeton', 'field': 'physics'}
+
+
+* `build_profile()` function will require us to provide first and last name arguments
+* It allows the users to provide as many as key-word paired elements
+* `**` double stars created an empty dictionary, and put any key-word paired elements inside
+* Inside the function, it can access the element in the `user_info` like any other dictionaries
+
+Understanding the Process
+1. Inside the `build_profile()` function, we created an empty profile dictionary to store basic user info
+1. We put first and last name inside that dictionary, because the function will definitely receive those two elements
+1.  `for key, value in user_info.items():` allows us to go over each key-word paired element and add them into `profile` dictionary
+1. Lastly, we return those elements back to the `profile` dictionary
+1. We called the function by providing:
+   1. first name `albert`
+   1. last name `einstein`
+   1. key-word paired element, location = `princeton`
+   1. key-word paired element, field = 'physics')
+1. It will return to the `user_profile` through the function and print out the output
+
+No matter how many key-word paired elements are provided, the function can handle them correctly
+
+# 8.6 Saving Function in the Module
+Function can separate a block of codes from the main program
+
+By giving a descriptive name to the function, the main program can understand the task of that function easily
+* We can save that function as a module in a separate file, and load that module into the main program
+* `import statement` allows you to use the code of a module at your current program file
+
+By saving the function in a separate file, we can **hide the detail** of the code, and focus on **a higher logical layer**
+* It also allows you to use the function repeatedly
+* Plus, you can share the module with different programmers instead of sharing the whole program file
+
+```python
+def make_pizza(size, *toppings):
+        # describe the pizza
+        print('\nMaking a ' + str(size) +
+              '-inch pizza with the following toppings:')
+        for topping in toppings:
+            print('- ' + topping)
+```       
+We created a function saved in the `pizza.py` file
+
+```python
+import pizza
+
+pizza.make_pizza(16, 'pepperoni')
+pizza.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese') 
+```
+Then, we create second file, name `making_pizzas.py` 
+
+When reading the file, `import pizza` open the file named `pizza.py` 
+* It will copy the function into the current program file (you don't see the copied code)
+* Python will run these codes behind the screen
+* All you need to know is, in `making_pizza`, you can use the function from `pizza.py file`
+
+
+To call the function of a module, you can call the module name you want to import and the function name, using . period to connect them
+# module `piiza`, function name `make_pizza()`
+# To use `module_name.function_name()`, which `pizza.make_pizza()`
+
+# 8.6.2 `import` Specifc Function
+You can `import` specifc function from a module
+```python
+from module_name import function_name
+```
+You can import as many as functions you want using , comma
+```python
+from module_name import function_0, function1, function_2
+```
+
+For the previous example, if we want to import specific function
+
+```python
+from pizza import make_pizza
+
+pizza.make_pizza(16, 'pepperoni')
+pizza.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese') 
+```
+
+If you use this method, you don't need the period when you call the function
+
+Because we have `import` the function by calling the function name, so we can just use the function directly 
+
+# 8.6.3 Using `as` to Assign Different Function Name
+If the name of the function you imported has conflicts with variables or functions  in the current program file, we can give a different name to a function
+* If the function name is too long, we can consider given a different name as well
+
+```python
+from pizza import make_pizza as mp
+
+
+mp(16, 'pepperoni')
+m[(12, 'mushrooms', 'green peppers', 'extra cheese') 
+```
+
+We have renamed the function `make_pizza()` as `mp()`
+## When we use the function, we can just call `mp()`
+## It will avoid the conflict, if the current program file contain variable or function name named `make_pizza()`
+
+```python
+from module_name import function_name as fn
+```
+
+## 8.6.4 Using `as` to Assign Different Module Name
+Similar, if the module name is too long, we can assign a shorter name
+```python
+import pizza as p
+p.make_pizza(16, 'pepperoni')
+p.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese') 
+```
+
+We assigned a different name for the module
+* When we call the function, we can use `p.make_pizza`, not `pizza.make_pizza()`
+* By doing this, we can pay more attention to function name (it is always more important than the module)
+
+```python
+import module_name as mn
+```
+
+## 8.5.5 `import` All the Functions from a Module
+### Using `*` star to allow python to import all the functions
+```python
+from pizza import *
+
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese') 
+```
+
+1. The star '*'  in `import statement` will copy all the functions into the current program file
+1. Because we have imported every function, we can just use the function by calling the function name
+1. However, when importing a large module, we should avoid this method because:
+    1. Because the function name may have conflict with you current program file
+   1. Python encounter simialr function names and variables, and replace them, not import them
+
+The best way is only to import the function you need or import the module with a `.` period 
+* This allows you to read the code more clearer and more understandable
+```python
+from module_name import *
+```
+
+## 8.7
+
