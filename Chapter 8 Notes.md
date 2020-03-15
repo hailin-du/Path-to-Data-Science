@@ -629,9 +629,9 @@ When reading the file, `import pizza` open the file named `pizza.py`
 * All you need to know is, in `making_pizza`, you can use the function from `pizza.py file`
 
 
-To call the function of a module, you can call the module name you want to import and the function name, using . period to connect them
-# module `piiza`, function name `make_pizza()`
-# To use `module_name.function_name()`, which `pizza.make_pizza()`
+To call the function of a module, you can call the module name you want to import and the function name, using `.` period to connect them
+* module `piiza`, function name `make_pizza()`
+* To use `module_name.function_name()`, which `pizza.make_pizza()`
 
 # 8.6.2 `import` Specifc Function
 You can `import` specifc function from a module
