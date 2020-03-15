@@ -566,8 +566,8 @@ def build_profile(first, last, **user_info):
     return profile
 
 user_profile = build_profile('albert','einstein',
-                             location = 'princeton',
-                             field = 'physics')
+                             location='princeton',
+                             field='physics')
 
 print(user_profile)
 ```
@@ -728,3 +728,32 @@ When calling the function, we should also follow this rule
 ```python
 function_name(value_0, parameter_1='value`)
 ```
+
+[PEP 8](https://www.python.org/dev/peps/pep-0008/) recommends that each line of code should not exceed 79 characters
+
+If there are many parameters, causing the function exceeding 79 characters, we can press `Enter` key at the left parenthesis ( and press `Tab` key twice to indent the parameters
+
+```python
+def function_name(
+        parameter_0, parameter_1, parameter_2,
+        parameter_3, parameter_4, parameter_5):
+    function body...
+```
+Usually, your python editor allows you to line the code up
+
+If a program or a module includes many functions, we can use double space lines to separate these functions, so we know when a function starts and ends
+
+Every `import statement` should be put at the beginning of the file, except the beginning of the file is used to describe what the program does
+
+***
+***
+
+8.8 Conclusion
+* You learned how to write a function
+* Passing arguments, and let the function access the arguments
+* Understand the Arguments Positions and Key-Word Arguments Associations
+* Receive Any Amount of Arguments
+* Function that handles input and function shows the output
+* Combine function with list, dictionary, if statement, and while loop
+* Store function in a separate file known as module
+* Keeping the program file simple and easy to read
