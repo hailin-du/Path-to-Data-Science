@@ -327,7 +327,10 @@ while True:
 
 We have added a message to tell the user when to quit. Every time the user input something, the program will check if the user has entered a quit value. 
 * If it does, we quit the program
-* If the input is not 'q', we continue the program
+* If the input is not 'q', we continue the program 
+
+***
+***
 
 # 8.4 Passing the List
 Sometimes, passing the list to a function is very efficient. The list can include any possible data, such as name, number, or even a complicated object like the dictionary
