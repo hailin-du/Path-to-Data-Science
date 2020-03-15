@@ -466,7 +466,6 @@ To keep the `unprinted_designs` list, we can do the same
 
 ```python
 print_models(unprinted_designs[:], completed_models)
+```
 
-#### Slicing cancreate a copy
-
-## 8.5 Passing any variable auguments
+## 8.5 Passing as many as Augments You Want
