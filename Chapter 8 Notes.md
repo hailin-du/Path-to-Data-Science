@@ -580,7 +580,7 @@ print(user_profile)
 * `**` double stars created an empty dictionary, and put any key-word paired elements inside
 * Inside the function, it can access the element in the `user_info` like any other dictionaries
 
-Understanding the Process
+**Understanding the Process**
 1. Inside the `build_profile()` function, we created an empty profile dictionary to store basic user info
 1. We put first and last name inside that dictionary, because the function will definitely receive those two elements
 1.  `for key, value in user_info.items():` allows us to go over each key-word paired element and add them into `profile` dictionary
@@ -705,7 +705,7 @@ make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 1. Because we have imported every function, we can just use the function by calling the function name
 1. However, when importing a large module, we should avoid this method because:
     1. Because the function name may have conflict with you current program file
-   1. Python encounter simialr function names and variables, and replace them, not import them
+    1. Python encounter simialr function names and variables, and replace them, not import them
 
 The best way is only to import the function you need or import the module with a `.` period 
 * This allows you to read the code more clearer and more understandable
@@ -713,5 +713,18 @@ The best way is only to import the function you need or import the module with a
 from module_name import *
 ```
 
-## 8.7
+## 8.7 Function Writing Guide
+There are a few things you should remember when writing a function
+* Give a descriptive name to the function, and only using lower case and `_` underline - this will help you and others to understand what does the function do
+* Every function should include notation/comments to describe its task -
+* A well-written documented notation allows others to use the function by reading along
+* Others should only know the function name, the arguments, and the return elements type when using the function
 
+When writing parameters, equal sides should not contain empty space
+```python
+def function_name(parameter_0, parameter_1='default value`)
+```
+When calling the function, we should also follow this rule
+```python
+function_name(value_0, parameter_1='value`)
+```
