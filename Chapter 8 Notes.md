@@ -175,74 +175,95 @@ describe_pet()
 ***
 ***
 
-# 8.3 Return Value
-#### Function can also handle data processing, and return one or a series of values
-#### Use return statement to return the value back when you are using the fucntion
+# 8.3 Return Element/Value
+Function can also handle data processing, and return one or a series of values
+* We can move those difficult tasks inside the function, and let function to handle for us
+We can use `return statement` to return the value back to you
 
-## 8.3.1
-""" def get_formatted_name(first_name, last_name):
+## 8.3.1 Return Simple Element/Value
+```python
+def get_formatted_name(first_name, last_name):
     full_name = first_name + ' ' + last_name
     return full_name.title()
 
 musician = get_formatted_name('jimi','hendrix')
-print(musician) """
-#### Getting info by setting arguments
-#### Combine first and last name
-#### Return the value (in captials)
-#### Returned value stored in musician, then print out musician
+print(musician)
+```
+> Jimi Hendrix
+* Function defined to receive parameters, `first_name` and `last_name`
+* Then, the function combine first and last name, and add a space between it
+* Return the value (in capitals) using `return statement`
+* Returned value stored in `musician`, then print out `musician`
 
-#### Even though the follow code is the same
-""" print('Jimi Hendrix') """
-#### But when we need to store large amount of data, function like this is very useful
+Even though the follow code has the same output
+```python
+print('Jimi Hendrix')
+```
+But when we need to store a large amount of data, function like this is very useful
+* When you have stored the first and the last name separately, we can call this function can combine them for us
 
 ## 8.3.2 Making Arguments Selectable
-#### For example, if we adding middle name to the function
-""" def get_formatted_name(first_name, middle_name, last_name):
+For example, if we are adding the middle name to the function
+```python
+def get_formatted_name(first_name, middle_name, last_name):
     full_name = first_name + ' ' + middle_name + ' ' + last_name
     return full_name.title()
 
-musician = get_formatted_name('john','lee','hooker')
-print(musician) """
+musician = get_formatted_name('john', 'lee', 'hooker')
+print(musician)
+```
+> John Lee Hooker
+Hoever, not everyone has a middle name
+* If no `middle_name` argument is not provided, an error will occur
+* Therefore, we can set a default value to middle_name
+* The default value will be an **empty string**
+* Plus, we will move the `middle_name` **to the end** 
 
-#### Hoever, not everyone has a middle name
-#### If no middle_name info provided, an error will pop out
-#### Therefore, we can set a default value to middle_name
-#### The default value will be a empty string
-
-def get_formatted_name(first_name, last_name, middle_name=''):
-    if middle_name:
+```python
+def get_formatted_name(first_name, last_name, middle_name=''): # empty string = False
+    # return nice full name
+    if middle_name: # if string provided = True
         full_name = first_name + ' ' + middle_name + ' ' + last_name
     else:
         full_name = first_name + ' ' + last_name
     return full_name.title()
-
-musician = get_formatted_name('jimi','hendrix')
-print(musician)
-musician = get_formatted_name('john','hooker', 'lee')
+    
+musician = get_formatted_name('jimi', 'hendrix')
 print(musician)
 
-#### We define the first name and last name, because everyone has one
-#### Since middle name is not necessary, we put that on the last
+musician = get_formatted_name('john', 'hooker', 'lee')
+print(musician)
+```
+>     Jimi Hendrix
+>     John Lee Hooker
 
-#### Inside the function, we check if middle name being provided
-#### Python read any non-empty string as True
-#### So if middle_name provided, will return the value
+In this case, `full_name` is created based on three possible arguments
+* We have defined the `first_name` and `last_name`, because everyone has one
+* Since `middle_name` is selectable, we put that at the end
+* Inside the function, we are using `if statement` to check if the argument of `middle_name` is being provided
 
-#### If no middle name provided, the if middle_name reviewed as False
-#### Then else statment will be exectued
+Python read any **non-empty string as True**
+* So if the argument of `middle_name` is provided, will return the value **True** and execute the code
+* If no argument is provided, the `middle_name` will be reviewed as **False**
+* Then `else statement` will be executed
 
-#### Hoever, make sure the middle name is in the last position when setting put arguments
+However, make sure the `middle_name` is at the **END** (the last position) when defining your function
 
 ## 8.3.3 Return Dictionary
-#### Function can return any type of value, include list, dictionary (more complicated data strcuture)
+Function can return any type of element/value, including list, dictionary or even a more complicated data structure
+```python
 def build_person(first_name, last_name):
-    # return a dictionary, include a person's info
-    person = {'first': first_name, 'last':last_name}
+    # return a dictionary that includes a person's info
+    person = {'first': first_name, 'last': last_name}
     return person
 
-musician = build_person('jimi','hendrix')
+musician = build_person('jimi', 'hendrix')
 print(musician)
-#### We can easily expand the code to store more info
+```
+> {'first': ' jimi', 'last': 'hendrix'}
+
+We can easily expand the code to store more data, such as middle name, age, career, or any other data you want
+```python
 def build_person(first_name, last_name, age=''):
     person = {'first': first_name, 'last':last_name}
     if age:
@@ -251,27 +272,37 @@ def build_person(first_name, last_name, age=''):
 
 musician = build_person('jimi','hendrix', age=27)
 print(musician)
-#### In default, if no age info provided, the function still save a person's first and last name
+```
+We have used `if statement`, if no argument is provided to `age`, the function will still save a person's first name and last name
 
-## 8.3.4 Combining Function with While Loop
-""" def get_formatted_name(first_name, last_name):
+## 8.3.4 Combining Function with `while` Loop
+```python
+def get_formatted_name(first_name, last_name):
     full_name = first_name + ' ' + last_name
     return full_name.title()
- """
-# Infinite Loop
-""" while True:
+
+# This is an infinite loop
+while True:
     print('\nPlease tell me your name:')
     f_name = input('First name: ')
     l_name = input('Last name: ')
 
     formatted_name = get_formatted_name(f_name, l_name)
-    print('\nHello, ' + formatted_name + '!') """
+    print('\nHello, ' + formatted_name + '!')
+```
+The loop is missing a method to quit/stop the program
 
-#### However, always remeber set a rule to stop the loop
+Always remember **set a rule to stop the loop**
 
-""" while True:
+```python
+def get_formatted_name(first_name, last_name):
+    full_name = first_name + ' ' + last_name
+    return full_name.title()
+
+while True:
     print('\nPlease tell me your name:')
     print("(enter 'q' at any time to quit)")
+    
     f_name = input('First name: ')
     if f_name == 'q':
         break
@@ -281,66 +312,158 @@ print(musician)
         break
 
     formatted_name = get_formatted_name(f_name, l_name)
-    print('\nHello, ' + formatted_name + '!') """
+    print('\nHello, ' + formatted_name + '!')
+```
+>     Please tell me your name:
+>     (enter 'q' at any time to quit)
+>     First name: eric
+>     Last name: matthes
+>
+>     Hello, Eric Matthes!
+>
+>     Please tell me your name:
+>     (enter 'q' at any time to quit)
+>     First name: q
 
-# 8.4 Passing List
-#### We will pass the list to a function and greet everyone
+We have added a message to tell the user when to quit. Every time the user input something, the program will check if the user has entered a quit value. 
+* If it does, we quit the program
+* If the input is not 'q', we continue the program
+
+# 8.4 Passing the List
+Sometimes, passing the list to a function is very efficient. The list can include any possible data, such as name, number, or even a complicated object like the dictionary
+* After passing the list, the function can access the element directly
+
+The below code will pass the list to a function and greet everyone
+```python
 def greet_user(names):
+    # Greet everyone in the list
     for name in names:
         msg = "Hello, " + name.title() + '!'
         print(msg)
 
-usernames = ['hannah','ty', 'margot']
+usernames = ['hannah', 'ty', 'margot'] # username list
 greet_user(usernames)
+```
+>      Hello, Hannah!
+>      Hello, Ty!
+>      Hello, Margot!
+* We created a `greet_user(names)` function, the function will receive a list of names and stored in `names`
+* The function will go over the list and print a greeting message for each user
 
-## 8.4.1 Editing List Inside the Function
-#### After passing the list, we can edit the list in the function
-#### The change is forever, helpful to manage large data
+## 8.4.1 Editing the List inside the Function
+We can edit list inside a function
 
-#### A 3D Printer Company need to print the design
-#### The design save in a list
-#### After the design is printed, pass it to another list
-""" 
-unprinted_designs = ['iphone case','robot pendant','dodecahedron']
+The edit/change is **forever**, it is helpful to manage a large amount of data
+
+For example - A 3D Printer Company need to print design model
+* The design model will be saved in a list
+* After the design model is printed, pass that model to another list
+```python
+# First, create a list that includes the design model that needed to print
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
 completed_models = []
+
+# imitate we are printing the model
+# After we printed the model, move it to the completed_models list
 while unprinted_designs:
     current_design = unprinted_designs.pop()
-
+    
+    # pretend there is a printing process the model
     print('Printing model: ' + current_design)
     completed_models.append(current_design)
 
-print("\nThe following models have been printed")
+# showing the models that is being printed
+print("\nThe following models have been printed:")
 for completed_model in completed_models:
-    print(completed_model) """
+    print(completed_model)
+```
+>     Printing model: dodecahedron
+>     Printing model: robot pendant
+>     Printing model: iphone case
+>
+>     The following models have been printed
+>     dodecahedron
+>     robot pendant
+>     iphone case
+* We first created a `unprinted_designs` list, and a **empty** `completed_model` list to store future element
+* As long as the `unprinted_designs` still has an element, the `while` will continue
+* Each loop will delete a design model using `pop function`, and stored a variable called `current_design`
+* Then it shows a message of printing the model and move that element into `completed_model`
 
-#### We will resign the code by writing two functioins
+We can organize the code by separating the tasks into two functions
 
+```python
 def print_modesl(unprinted_designs, completed_models):
+
+    # imitate we are printing the model
+    # after we printed the model, move it to the completed_models list
+    
     while unprinted_designs:
         current_design = unprinted_designs.pop()
-
+        
+        # pretend there is a printing process the model
         print('Printing model: ' + current_design)
         completed_models.append(current_design)
 
+# Second Function
 def show_completed_models(completed_models):
+
+    # showing the models that is being printed
+    
     print("\nThe following models have been printed")
     for completed_model in completed_models:
         print(completed_model)
 
-unprinted_designs = ['iphone case','robot pendant','dodecahedron']
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
 completed_models = []
 
-print_modesl(unprinted_designs[:], completed_models) ##### create a copy #####
+print_modesl(unprinted_designs, completed_models) 
 show_completed_models(completed_models)
-#### Every function has it owns mission
-#### We first defined two functions
-#### Then we just need to pass the correct arugments while using the function
+```
+First Function
+* The first function needs two arguments, which a `unprinted_designs` list and a `completed_models` list
+* This function will pretend the printing process, and remove the element one by one from the `unprint_designs`
+* Each element will be added into `completed_models` list
 
-## 8.4.2 Stopping function to edit the list
-#### We can create a copy of the list instead of the oringal one
-#### For example, we want to keep the unprinted_desgisns
+Second Function
+* The second function only need one argument, which the `completed_models` lust
+* The function will print the name of each model
 
-#function_name(list_name[:])
+The above functions will have the same output as the previous one, but more is organized and easy to read
+
+```python
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+
+print_modesl(unprinted_designs, completed_models) 
+show_completed_models(completed_models)
+```
+* We have created a `unprinted_designs` list, and an **empty** `completed_models` list to store model that is being printed
+* Because we have defined two functions, we just need to pass the correct arguments to the correct parameters
+* We called the `print_models()` function, and pass the correct arguments to it - to show the printing process
+* Then, we called the `show_completed_models()`, and pass the `completed_models` list to it - to print out the model names
+
+This allows us to understand the code easily, and easy to expand or maintain the program
+* If need to print other design models, we can just call the `print_models()` function again
+* Each function will handle one specific task
+
+## 8.4.2 Stopping the Function to Edit the List
+Sometimes, we need to stop the function to edit the list
+
+For example, we may want to keep the `unprinted_designs` list for future references
+* To solve that, we can create a copy of the list, not the original list
+
+```python
+function_name(list_name[:])
+```
+
+**Slicing** allows us to create a copy of a list
+
+To keep the `unprinted_designs` list, we can do the same
+
+```python
+print_models(unprinted_designs[:], completed_models)
+
 #### Slicing cancreate a copy
 
 ## 8.5 Passing any variable auguments
