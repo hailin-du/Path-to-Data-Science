@@ -55,7 +55,7 @@ Function can contain multiple parameters
 * Or, uses **keyword argument**, every parameter is created by the variable name, so we can just **assign the element** to the parameter when calling the function
 * We can even use list or dictionary
 
-## 8.2.1 Argument Position (Position/Order)
+## 8.2.1 Argument Position (Position/Order) Association 
 When we use the function, python must associate every argument with the correct parameter
 
 So the position/order is the key that can be used to create the association
@@ -71,41 +71,69 @@ describe_pet('hamster','harry')
 >     I have a hamster.
 >     My hamster's name is Harry.
 
-#### The function defined that it needs a animal tpye and a name
-#### When using the function, we need to provide a animal type and a name
-#### 'hamster'(arugment) stored in animal_type(paremeter)
-#### 'harry'(arugment) stored in pet_name(paremeter)
-#### In the function, it used both paremeter
+* The function is being defined that requires `animal_type` and `pet_name` 
+* When using the function, we need to provide elements for `animal_type` and `pet_name`
+* `'hamster'` as a argument, stored in `animal_type` in a parameter
+* `'harry'` as a argument, stored in `pet_nam` in a parameter
+* In the function, it used both paremeter
 
-#### 1 Using the function mutiple time
-""" describe_pet('dog','willie') """
-#### We can use the fucntion mutiple time by passing the info
-#### Increase effiecency
+#### 1 Using the Function Multiple Time
+```python
+describe_pet('dog','willie')
+```
+>     I have a dog.
+>     My dog's name is Wille.
+We can use the function multiple time by passing elements again, which has increased our efficiency
 
-#### 2 The order of Arugment is Important
-""" describe_pet('harry','hamster') """
-#### Assigned wrong value to parameter
+#### 2 The Order of Argument is Important
+```python
+describe_pet('harry','hamster')
+```
+>     I have a harry.
+>     My harry's name is Hamster.
+we have assigned wrong elements to parameters
 
-## 8.2.2 Key-Word Arugment
-#### Matching - so the arugment will be matched with the correct value
-#### You don't need to care about the order, because you have specify it
+## 8.2.2 Key-Word Argument Association 
+* We are matching the elements with the parameters, so arguments can be passed to the correct parameter
+* In this case, you DON'T need to care about the order of arguments, because we just pointed the parameters out
 
-""" describe_pet(pet_name='harry', animal_type='hamster') """
+```python
+describe_pet(pet_name='harry', animal_type='hamster') 
+```
+```python
+describe_pet(animal_type='hamster', pet_name='harry',) 
+```
+Both function calls will return the same outputs, the order does not matter
 
-## 8.2.3 By Deafult
-#### While wrtiing function, we can give parameter a default value
-#### When we use the function, unless we provide a arugment, otherwise function will use default value
-#### We can skip giving a argument 
-""" def describe_pet(pet_name, animal_type='dog'):
+## 8.2.3 A Default Element/Value
+We can give the parameter a default value
+* When we use the function, unless we provide an arugment, the function will use the default element
+* We can skip the part giving an argument to `animal_type`
+
+```python
+def describe_pet(pet_name, animal_type='dog'):
     print("\nI have a " + animal_type + '.')
     print('My ' + animal_type + "'s name is " + pet_name.title() + '.')
 
-describe_pet(pet_name='willie') """
-#### If no animal_type provide, python will set the default as 'dog'
-#### Keep in mind, the order has been changed 
-#### If we put animal_type first, the function will still take single arugment, causing erro
-#### So the parameter only talking one arugment (the pet name), therefore we need to put the parameter pet_name first
-""" describe_pet(pet_name='harry',animal_type='hamster') """
+describe_pet(pet_name='willie')
+```
+>     I have a god.
+>     My dog's name is Willie.
+```python
+describe_pet('willie`)
+````
+Above code will have the same output
+```python
+describe_pet(pet_name='harry', animal_type='hamster') 
+```
+We have provided an argument, so the function will ignore the default element `dog`
+
+* If no `animal_type` is being provided, python will set the default as `dog`
+* Keep in mind that, the **order is IMPORTANT here
+* We have to put parameter that is WITHOUT a default element at the beginning, then we put the one with default element at the end
+* This allows python to read the argument correctly and associate with the correct parameter
+* In this case, we put `pet_name` first, `animal_type='dog'` at the end
+
 #### Arugment provided, ignoring the default value
 
 ## 8.2.4 Using the function other ways
