@@ -119,14 +119,18 @@ describe_pet(pet_name='willie')
 ```
 >     I have a god.
 >     My dog's name is Willie.
+
 ```python
 describe_pet('willie`)
 ````
+
 Above code will have the same output
+
 ```python
 describe_pet(pet_name='harry', animal_type='hamster') 
 ```
-We have provided an argument, so the function will ignore the default element `dog`
+
+We have provided an argument, so the function will **ignore** the default element `dog`
 
 * If no `animal_type` is being provided, python will set the default as `dog`
 * Keep in mind that, the **order is IMPORTANT here
@@ -134,31 +138,42 @@ We have provided an argument, so the function will ignore the default element `d
 * This allows python to read the argument correctly and associate with the correct parameter
 * In this case, we put `pet_name` first, `animal_type='dog'` at the end
 
-#### Arugment provided, ignoring the default value
 
-## 8.2.4 Using the function other ways
-# def describe_pet(pet_name, animal_type='dog')
-#### Under this condition, we must provide a arugment to pet_name
-#### If the animal_type is not default value, then we must provide a arugment too
+## 8.2.4 Using the Function Other Ways
+We can use Argument Position Association, Key-Word Argument Association, and set Default Element/Value at the same time
+```python
+def describe_pet(pet_name, animal_type='dog')
+```
+* Under this condition, we must provide an argument to `pet_name`
+* If you don't want the default value from the `animal_type`, then we must provide an argument too
 
-#### Below are mutliple ways using function with same result
-# name Willie
-""" describe_pet('willie')
-describe_pet(pet_name='wille') """
+Below are multiple ways using the function with the same output
+```python
+# A dog name Willie
+describe_pet('willie')
+describe_pet(pet_name='willie')
 
-""" # name harry, but hamster
-describe_pet('harry','hamster')
-describe_pet(pet_name='harry',animal_type='hamster')
-describe_pet(animal_type='hamster',pet_name='harry') """
+# A hamster name Harry
+describe_pet('harry', 'hamster')
+describe_pet(pet_name='harry', animal_type='hamster')
+describe_pet(animal_type='hamster', pet_name='harry')
+```
 
-## 8.2.5 Avioding Arugment Error
-#### For example, if function without necessary info, will cause error
-""" def describe_pet(pet_name, animal_type):
+## 8.2.5 Avoiding Argument Error
+For example, if the function cannot identify the argument, or you pass too much or too little argument to the function, it will have an association error
+
+```python
+def describe_pet(pet_name, animal_type):
     print("\nI have a " + animal_type + '.')
     print('My ' + animal_type + "'s name is " + pet_name.title() + '.')
-describe_pet() """
-#### The trackback will tell us where is missing
-#### Therefore, naming your paremater is important, because it will what info is needed
+describe_pet()
+```
+>     TypeError: describe_pet() missing 2 required positional arguments: `animal_type` and `pet_name`
+* The trackback which parameter is a missing argument
+* Therefore, naming your parameter correctly is important, because it will tell us what element is needed
+
+***
+***
 
 # 8.3 Return Value
 #### Function can also handle data processing, and return one or a series of values
