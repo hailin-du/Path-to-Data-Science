@@ -768,7 +768,7 @@ class ElectricCar(Car):
         # Create new battery instance 
         self.battery = Battery()
 ```
-Now, we will create new file name `my_electric_car.py`and load the ElectricCar class to create an electric car
+Now, we will create new file name `my_electric_car.py` and load the `ElectricCar` class to create an electric car
 
 **my_electric_car.py**
 ```python
@@ -837,6 +837,7 @@ Sometimes, we have to separate `class` into different modules to avoid the modul
 * Therefore, we can import a module from one module to another
 
 Below, we have saved the `Car` class in a module and saved the `ElectricCcar` and `Battery` in another module (file) name as `electric_car.py`
+
 **electric_car.py**
 ```python
 # Class that represent Electric Car
