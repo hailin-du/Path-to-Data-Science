@@ -15,7 +15,7 @@ An object can represent a thing or a scenario from the real world
 * Our class, `dog` will include all these data
 * The class `dog` will let python knows how to create the dog's objects
 
-# 9.1.1 Create `Dog` Class
+## 9.1.1 Create `Dog` Class
 Based on `Dog` Class, each instance will store name and age, and assign the ability of `sit()`` and `rollover()`
 ```python
 class Dog():
@@ -63,7 +63,7 @@ There are things we need to pay attention here!
 * But for game design purpose, we can add the effect under these functions
 * Or the way to control the dog to do certain actions
 
-# 9.1.2 Based on Class to Create Instance
+## 9.1.2 Based on Class to Create Instance
 Class `Dog`, is a series of instruction, letting the python know how to create dog instance
 
 ```python
@@ -123,7 +123,8 @@ your_dog.sit()
 * Even though we give the same name and age for the second dog, python will still base on class `Dog` to create another instance
 * You can base on clas to create as many as instances you want, but each instance must be stored in a **different variable (different variable name)**
 * Or **take a space** of a `list` or `dictionary`
-
+***
+***
 # 9.2 Use Class and Instance
 1. You can use `class` to simulate any scenario in the real world
 1. After you have finished defining your class, most of the time will be using `class` to create an instance
@@ -155,7 +156,7 @@ We used the similar method `__init__()` to receive three parameters `make`, `mod
 * Based on class `Car`, we store the instance in `my_new_car`
 * Then we call the method `get_descriptive_name()` to see which kind of car we are having
 
-# 9.2.2 Assign Default Value to Property
+## 9.2.2 Assign Default Value to Property
 Every property inside a class must have an initial value, no matter it is a 0 or empty string
 1. Under some circumstances, we can set a default value inside `__init__()`, so we don't need to provide an initial value to that property
      * We will add `odometer_reading` property, given a default value `0`
@@ -187,7 +188,7 @@ my_new_car.read_odometer()
 * However, not all the car have a 0 mile when the car arrives at the distributor
 * So, we will add a way to edit the value
 
-# 9.2.3 Edit Property's Value
+## 9.2.3 Edit Property's Value
 There are three different ways to edit the property's value
 1. Edit the value through instance
 1. Edit the value through setting a rule inside a method
@@ -349,7 +350,8 @@ We have added a new method `increment_odometer()` to receive a unit of miles as 
 * Lastly, we called the method `increase_odometer()` and pass the value 100
 
 You can edit this value to make sure the increase is positive only not negative
-
+***
+***
 # 9.3 Inheritance
 When writing class, you don't need to start from the zero
 * If you are **writing a class** that is a special version for the class that **already exists**, you can use **inheritance**
@@ -357,7 +359,7 @@ When writing class, you don't need to start from the zero
 * The original class is called the **father** class, and the new class is called **son** class
 * The son class will inherit all the properties and methods from the father class and can also define its own property and method
 
-# 9.3.1 Son Object's Method `__init()`
+## 9.3.1 Son Object's Method `__init()`
 When creating the son object instance, python will first need to complete the task, which passing all methods and properties to the son class
 * Therefore, the son class needs the method `__init__()`  to inherit father class's methods and properties
 * For example, we stimulate an electric car, but an electric car is a special car different than the traditional cars, so we will need to create a new class first based on previous class `Car()`
@@ -409,7 +411,7 @@ Part 2 Testing
 * We provided arguments 'tesla`, `model s`, and `2016`.
 * Except that, the electric car has not yet been provided with a special property, we just want to confirm if the electric car has the same properties as a normal car
 
-# 9.3.3 Define Son Class's Property and Method
+## 9.3.3 Define Son Class's Property and Method
 After the inheritance, we can add new property and method to distinguish the son and the father class
 * We are adding a special property for an electric car, and a method that describes it
 ```python
@@ -463,7 +465,7 @@ We add the new property, `self.battery_size` and set the default value to 70
 There is no limitation for creating special things, you can base on the need to add property or method
 1. If a property or method also have in common with all other cars, then it should be added under `Car` class, not the `ElectricCar` class       
 
-# 9.3.4 Rewrite Father Class Method
+## 9.3.4 Rewrite Father Class Method
 For the father class's method, if it doesn't match with the son class's behavior, then we can always **rewrite it**
 * So, we can define a method in the son class, that method has the **same name** as the one in the father class method
 * Then, python will not consider father class's method, only follow the rule on son class's new defined method
@@ -480,7 +482,7 @@ class ElectricCar(Car):
 In Inheritance, son class can keep father class's good property, and ignore the bad ones
 * Now, if someone calls that method for an electric car, python will ignore the `Car` class's method, and run the above code `print` only
 
-# 9.3.5 Use Instance as Property
+## 9.3.5 Use Instance as Property
 When using code to stimulate an instance in real life, you may realize you have added more and more details, such as property, and method, the file getting longer and longer
 * Under this circumstance, we may need to take out a part of the class as a special class, which dividing the class into small classes
 * For example, when we adding details for the electric car, we may realize that there are so many special properties and methods to be added
@@ -633,7 +635,7 @@ my_tesla.battery.get_range()
 >     This car has a 70-kWh battery.
 >     This car can go approximately 240 miles on a full charge.
 
-# 9.3.6 Simulate Creating A Real World Instance
+## 9.3.6 Simulate Creating A Real World Instance
 Simulate creating a real object is always difficult, like range mile is a property for `Battery` or `ElectricCar`
 * For example, under the production line perspective, we should move `get_range()` under `ElectricCar` class; so `get_range` will base on battery volume to determine range mile, but report only ONE type of car with different batteries
 * We can also keep `get_range` under `Battery`, but passing a reference like `car_model`, so `get_range` will base on battery volume and car's model to report range mile
@@ -642,7 +644,8 @@ When you get into this level, you have to think in a higher logical layer
 * You will not only focus on python grammar but also need to think about how to use code to present the real object
 * In the real world, the method of creating a model has no right or wrong answer
 * Only with a model more efficient than others, so you have to practice to find the best one
-
+***
+***
 # 9.4 Load the Class
 As your file getting longer and longer, we can store class in the module
 
@@ -700,7 +703,7 @@ Similar, we use `import statement` to import the whole `Car` class
 * By importing the class, we can keep the file short and focus on the logic of the current file
 * After you have determined how the class should work, you can ignore that class file and focus on a higher logical layer
 
-# 9.4.2 Saving Multiple Class in a Module
+## 9.4.2 Saving Multiple Class in a Module
 We can save as many as class we want
 * We are adding `Battery` and `ElectricCar` in the Module
 
@@ -926,7 +929,8 @@ As you see, when organizing a big project of codes, python provides many options
 * Understanding these options allow to your organize your project and also understand how other programmers develop their projects
 * First, we should keep the code structure as simple as possible and complete everything in one single documents
 * Then we can separate them into different modules
-
+***
+***
 ## 9.5 Python Package
 Python Package is a series of modules. They are included when you installed python.
 * These modules are completed by other programmers, we can use any function or class by using the `import` statement
@@ -962,7 +966,8 @@ for name, language in favorite_languages.items():
 It is a very good class that includes the feature of dictionary and list, but also keeping the value in order
 
 As you develop your skill, you may realize that an ordered dictionary will solve some of your coding questions
-
+***
+***
 # 9.6 Style of Coding A Class
 You have to be familiar with the style of coding a class, especially when you coding something very complicated
 * The class name should follow **Camel-Case** rule, which 
@@ -982,7 +987,8 @@ When importing class, you should
 1. Import the standard module's class first,
 1. Then add a space, and import the class from your well-written module
 * So when others reading the program, they know which module belongs to where
-
+***
+***
 # 9.7 Conclusion
 In this chapter, you learned:
 * How to write class,
