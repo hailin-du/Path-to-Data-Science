@@ -19,18 +19,18 @@ An object can represent a thing or a scenario from the real world
 Based on `Dog` Class, each instance will store name and age, and assign the ability of `sit()`` and `rollover()`
 ```python
 class Dog():
-    # First try pretending training a dog
+    # First try simulating training a dog
     def __init__(self, name, age):
         # initial property of name and age
         self.name = name
         self.age = age
 
     def sit(self):
-        # pretentding ttraning a dog to sit
+        # simulating ttraning a dog to sit
         print(self.name.title() + ' is now sitting.')
 
     def roll_over(self):
-        # pretending training a dog to roll over
+        # simulating training a dog to roll over        # Return a neat descriptive info
         print(self.name.title() + ' rolled over!')
 ```
 There are things we need to pay attention here!
@@ -132,14 +132,14 @@ your_dog.sit()
 1. Or write a way inside the method to edit it
 ```python
 class Car():
-    # Pretend there is a car
+    # Simulate there is a car
     def __init__(self, make, model, year):
         self.make = make
         self.model = model
         self.year = year
     
     def get_descriptive_name(self):
-        # Return a neat descritpive info
+        # Return a neat descriptive info
         long_name = str(self.year) + " " + self.make + " " + self.model
         return long_name.title()
 
@@ -163,7 +163,7 @@ Every property inside a class must have an initial value, no matter it is a 0 or
      
 ```python
 class Car():
-    # Pretend there is car
+    # Simulate there is car
     def __init__(self, make, model, year):
         self.make = make
         self.model = model
@@ -171,7 +171,7 @@ class Car():
         self.odometer_reading = 0
     
     def get_descriptive_name(self):
-        # Return a neat descritpive info
+        # Return a neat descriptive info
         long_name = str(self.year) + " " + self.make + " " + self.model
         return long_name.title()
 
@@ -188,3 +188,444 @@ my_new_car.read_odometer()
 * So, we will add a way to edit the value
 
 # 9.2.3 Edit Property's Value
+There are three different ways to edit the property's value
+1. Edit the value through instance
+1. Edit the value through setting a rule inside a method
+3. Edit the value through adding value inside a method
+
+#### 1. Edit the Value Directly
+```python
+class Car():
+    # Simulate there is a car
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    
+    def get_descriptive_name(self):
+        # Return a neat descriptive info
+        long_name = str(self.year) + " " + self.make + " " + self.model
+        return long_name.title()
+
+    def read_odometer(self):
+        # Print message about car mile
+        print('This car has ' + str(self.odometer_reading) + ' miles on it.')
+
+my_new_car = Car('audi', 'a4', 2016)
+print(my_new_car.get_descriptive_name()) 
+my_new_car.odometer_reading = 23 (This line)
+my_new_car.read_odometer()
+```
+>      2016 Audi A4
+>      This car has 23 miles on it.
+We used `. period` to get access to the car's property `odometer_reading` 
+* **This line** of code will let python to find `odometer_reading` property from instance `my_new_car` and set the value to 23
+* Sometimes we can access the property directly, but sometimes we need to update the property inside the method
+
+##### 2. Edit The Value Through Method
+# having update method is much better, you don't need to access the property
+# it allows you to pass the value to the method, and update it inside 
+```python
+class Car():
+    # Simulate there is a car
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    
+    def get_descriptive_name(self):
+        # Return a neat descriptive info
+        long_name = str(self.year) + " " + self.make + " " + self.model
+        return long_name.title()
+
+    def read_odometer(self):
+        # Print message about car mile
+        print('This car has ' + str(self.odometer_reading) + ' miles on it.')
+   
+    ### Added a new method
+    def update_odometer(self, mileage):
+        # Assign a specific value to the mile reading
+        self.odometer_reading = mileage
+
+my_new_car = Car('audi', 'a4', 2016)
+print(my_new_car.get_descriptive_name())
+my_new_car.update_odometer(23)
+my_new_car.read_odometer()
+```
+>      2016 Audi A4
+>      This car has 23 miles on it.
+We have added a new method `update_odometer()` to let this method to receive a mileage value, then store in `self.odometer_reading`
+* Then, we call the `update_odometer()` and provide it with a value 23
+* We can even expand the `update_odometer()` method to do more works
+* Here, we will stop anyone to edit the mile reading downward
+```python
+class Car():
+    # Simulate there is a car
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    
+    def get_descriptive_name(self):
+        # Return a neat descriptive info
+        long_name = str(self.year) + " " + self.make + " " + self.model
+        return long_name.title()
+
+    def read_odometer(self):
+        # Print message about car mile
+        print('This car has ' + str(self.odometer_reading) + ' miles on it.')
+
+    def update_odometer(self, mileage):
+        # Assign a specific value to the mile reading
+        # Stop anyone edits the value downward
+        ### Added a new logical statement
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+
+my_new_car = Car('audi', 'a4', 2016)
+print(my_new_car.get_descriptive_name())
+my_new_car.update_odometer(23)
+my_new_car.read_odometer()
+```
+Now, `update_odometer()` will check if the value makes sense before changing the value
+* If the new value `mileage` is greater than or equal to`self.odometer_reading, we will assign that value
+* If not, we give a warning
+
+#### 3. Edit The Value Through Method Adding 
+Sometimes, we will need to increase the value of the property instead assigning a new value
+* For example, we purchase a second-hand car, from purchase to registration we increased 100 mileage
+* The following method can help us to pass that increase and add that into mileage variable
+```python
+class Car():
+    # Simulate there is a car
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    
+    def get_descriptive_name(self):
+        # Return a neat descriptive info
+        long_name = str(self.year) + " " + self.make + " " + self.model
+        return long_name.title()
+
+    def read_odometer(self):
+        # Print message about car mile
+        print('This car has ' + str(self.odometer_reading) + ' miles on it.')
+
+    def update_odometer(self, mileage):
+        # Assign a specific value to the mile reading
+        # Stop anyone edits the value downward
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+    
+    ### Added a new method
+    def increment_odometer(self, miles):
+        # Add specific value to the mile reading
+        self.odometer_reading += miles
+
+my_new_car = Car('subaru', 'outback', 2013)
+print(my_new_car.get_descriptive_name())
+
+my_new_car.update_odometer(23500)
+my_new_car.read_odometer()
+
+my_new_car.increment_odometer(100)
+my_new_car.read_odometer()
+```
+>     2013 Subaru Outback
+>     This car has 23500 miles on it.
+>     This car has 23600 miles on it.
+We have added a new method `increment_odometer()` to receive a unit of miles as a number and store that into self.odometer_reading
+* Then, we created an instance, `my_used_car`
+* Third, we called the method `update_odometer()` and pass the value 23500
+* Lastly, we called the method `increase_odometer()` and pass the value 100
+
+You can edit this value to make sure the increase is positive only not negative
+
+# 9.3 Inheritance
+When writing class, you don't need to start from the zero
+* If you are **writing a class** that is a special version for the class that **already exists**, you can use **inheritance**
+* When a class inherit from another class, that class can get all the properties and methods from another class
+* The original class is called the **father** class, and the new class is called **son** class
+* The son class will inherit all the properties and methods from the father class and can also define its own property and method
+
+# 9.3.1 Son Object's Method `__init()`
+When creating the son object instance, python will first need to complete the task, which passing all methods and properties to the son class
+* Therefore, the son class needs the method `__init__()`  to inherit father class's methods and properties
+* For example, we stimulate an electric car, but an electric car is a special car different than the traditional cars, so we will need to create a new class first based on previous class `Car()`
+* Then, we just need to provide special property or behavior only for the electric car, but the electric car also has the common properties as other traditional cars cars
+```python
+class Car():
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    
+    def get_descriptive_name(self):
+        long_name = str(self.year) + " " + self.make + " " + self.model
+        return long_name.title()
+
+    def read_odometer(self):
+        print('This car has ' + str(self.odometer_reading) + ' miles on it.')
+
+    def update_odometer(self, mileage):
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+            
+    def increment_odometer(self, miles):
+        self.odometer_reading += miles
+
+class ElectricCar(Car):
+    # The Specialty of An Electric Car
+    def __init__(self, make, model, year):
+        # Inherit father class's property = Initial property for son
+        super().__init__(make, model, year)
+
+my_tesla = ElectricCar('tesla', 'model s', 2016)
+print(my_tesla.get_descriptive_name())
+```
+>     2016 Tesla Model S
+Part 1 Creating
+1. When creating son class, the father class must be included in the current file, and **at the front** of the son class
+1. Also, when we have defined son class, the parenthesis much include the father class, **ElectricCar(Car)** and `__iniit__()` is to receive info from the instance when creating a car (inherit)
+1. `super() function` is a special function to help to associate son class and father class (connect, passing)
+1. This function let python to call `ElectricaCar` method `__init__()` from the father's method `__init__()`, let `ElectricCar` instance include all the properties from the father class (father class also known as superclass, there is name super coming from)
+
+Part 2 Testing
+* To test if the inherit works, we have tried to create an electric car, but providing the same info like creating a normal car
+* We have created an instance, and stored in the variable name `my_tesla`
+* It will call the `ElectricCar` class's method, `__init__()`, which let python to use/call father class `Car`'s method `__init()__`
+* We provided arguments 'tesla`, `model s`, and `2016`.
+* Except that, the electric car has not yet been provided with a special property, we just want to confirm if the electric car has the same properties as a normal car
+
+# 9.3.3 Define Son Class's Property and Method
+After the inheritance, we can add new property and method to distinguish the son and the father class
+* We are adding a special property for an electric car, and a method that describes it
+```python
+class Car():
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    
+    def get_descriptive_name(self):
+        long_name = str(self.year) + " " + self.make + " " + self.model
+        return long_name.title()
+
+    def read_odometer(self):
+        print('This car has ' + str(self.odometer_reading) + ' miles on it.')
+
+    def update_odometer(self, mileage):
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+            
+    def increment_odometer(self, miles):
+        self.odometer_reading += miles
+
+class ElectricCar(Car):
+    # The Specialty of An Electric Car
+
+    def __init__(self, make, model, year):
+        # Inherit father class's property = Initial property for son
+        # Add the initiation value for son class's special property
+        super().__init__(make, model, year)
+        self.battery_size = 70
+
+    def describe_battery(self):
+        # Print a message to describe battery volume
+        print('This car has a ' + str(self.battery_size) + '-kWh battery.')
+
+my_tesla = ElectricCar('tesla', 'model s', 2016)
+
+print(my_tesla.get_descriptive_name())
+my_tesla.describe_battery()
+```
+>     2016 Tesla Model S
+>     This car has a 70-kWh battery.
+We add the new property, `self.battery_size` and set the default value to 70
+* The instance created under the `ElectricCar()` class will include that battery property, but other traditional cars won't include that
+* We also added a method `describe_battery()`, to print the battery information.
+
+There is no limitation for creating special things, you can base on the need to add property or method
+1. If a property or method also have in common with all other cars, then it should be added under `Car` class, not the `ElectricCar` class       
+
+# 9.3.4 Rewrite Father Class Method
+For the father class's method, if it doesn't match with the son class's behavior, then we can always **rewrite it**
+* So, we can define a method in the son class, that method has the **same name** as the one in the father class method
+* Then, python will not consider father class's method, only follow the rule on son class's new defined method
+
+For example, if a `Car` class has a method called `fill_gas_tank()`, it is pointless to the electric car, we can rewrite as below
+```python
+class ElectricCar(Car):
+    # --snip--
+
+    def fill_gas_tank(self):
+        # electic car has no gas tank
+        print("This car doesn't need a gas tank!")
+```
+In Inheritance, son class can keep father class's good property, and ignore the bad ones
+* Now, if someone calls that method for an electric car, python will ignore the `Car` class's method, and run the above code `print` only
+
+# 9.3.5 Use Instance as Property
+When using code to stimulate an instance in real life, you may realize you have added more and more details, such as property, and method, the file getting longer and longer
+* Under this circumstance, we may need to take out a part of the class as a special class, which dividing the class into small classes
+* For example, when we adding details for the electric car, we may realize that there are so many special properties and methods to be added
+* Then, we can take these properties and methods out, and put that into a new class name `Battery`
+* And, using `Battery` instance as a property in `ElectricCar()` class
+
+```python
+class Car():
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    
+    def get_descriptive_name(self):
+        long_name = str(self.year) + " " + self.make + " " + self.model
+        return long_name.title()
+
+    def read_odometer(self):
+        print('This car has ' + str(self.odometer_reading) + ' miles on it.')
+
+    def update_odometer(self, mileage):
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+            
+    def increment_odometer(self, miles):
+        self.odometer_reading += miles
+
+class Battery():
+    # Simulate battery for an electric car
+    
+    def __init__(self, battery_size=70):
+        # Initiation value for battery property
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        # Print a message to describe battery volume
+        print('This car has a ' + str(self.battery_size) + '-kWh battery.')
+
+class ElectricCar(Car):
+    # The Specialty of An Electric Car
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+        #### Create new battery instance 
+        self.battery = Battery()
+
+my_tesla = ElectricCar('tesla', 'model s', 2016)
+
+print(my_tesla.get_descriptive_name())
+my_tesla.battery.describe_battery()
+```
+We have defined a new class name `Battery`, it didn't inherit anything from any other class
+* `__init__()`, includes `self`, and another parameter name `battery_size`, this parameter is selectable
+* When no argument is provided, the **default value is 70**
+* Also, the `describe_batttery()` method **moved to** the `Battery` class
+
+In `ElectricCar()` clas's we added a property called `self.battery`, this allows python to create a new `Battery` instance
+* Because no value is provided, the default value is 70, and store that instance in `self.battery`
+* Every time the method `__init__()` is being called, it will automatically create `Battery` instance for every `ElectricCar` instance
+```python
+`my_tesla.battery.describe_battery()` 
+```
+>     2016 Tesla Model S
+>     This car has a 70-kWh battery. 
+This line of code let python find battery property inside the instance `my_tesla`, and use describe_battery() to call the property from the `Battery` instance
+* Even though it seems like there are more works, but now we can add as many as details we want for the electric car without messing up the `ElectricCar` class
+
+Next we are adding one more method under `Battery` class to describe how far the electric car can go base on the volume of the batter
+```python
+class Car():
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    
+    def get_descriptive_name(self):
+        long_name = str(self.year) + " " + self.make + " " + self.model
+        return long_name.title()
+
+    def read_odometer(self):
+        print('This car has ' + str(self.odometer_reading) + ' miles on it.')
+
+    def update_odometer(self, mileage):
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+            
+    def increment_odometer(self, miles):
+        self.odometer_reading += miles
+
+class Battery():
+    def __init__(self, battery_size=70):
+        # initation of battery property
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        print('This car has a ' + str(self.battery_size) + '-kWh battery.')  
+        
+    ### Added a new method for car's range
+    def get_range(self):
+        # Print a message to describe how far the electric car can go
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+
+        message = 'This car can go approximately ' + str(range)
+        message += ' miles on full charge.'
+        print(message)
+
+class ElectricCar(Car):
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+        self.battery = Battery()
+
+my_tesla = ElectricCar('tesla', 'model s', 2016)
+print(my_tesla.get_descriptive_name())
+my_tesla.battery.describe_battery()
+my_tesla.battery.get_range()
+```
+* We have added a simple `if-elif statement` under the method `get_range()`, then print out the message
+* We used property `battery` to call the method
+
+>     2016 Tesla Model S
+>     This car has a 70-kWh battery.
+>     This car can go approximately 240 miles on a full charge.
+
+# 9.3.6 Simulate Creating A Real World Instance
+Simulate creating a real object is always difficult, like range mile is a property for `Battery` or `ElectricCar`
+* For example, under the production line perspective, we should move `get_range()` under `ElectricCar` class; so `get_range` will base on battery volume to determine range mile, but report only ONE type of car with different batteries
+* We can also keep `get_range` under `Battery`, but passing a reference like `car_model`, so `get_range` will base on battery volume and car's model to report range mile
+
+When you get into this level, you have to think in a higher logical layer
+* You will not only focus on python grammar but also need to think about how to use code to present the real object
+* In the real world, the method of creating a model has no right or wrong answer
+* Only with a model more efficient than others, so you have to practice to find the best one
+
+# 9.4 Load the Class
+As your file getting longer and longer, we can store class in the module
+
+## 9.4.1 Load Single Class
+We will create a module that only includes Class` Car` in a file name `car.py`
+* From now on, any file that uses the module from the file name `car.py` has to be renamed differently to avoid having the same file name
+
