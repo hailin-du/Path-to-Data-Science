@@ -577,7 +577,7 @@ class Car():
 
 class Battery():
     def __init__(self, battery_size=70):
-        # initation of battery property
+        # Initiation value of battery property
         self.battery_size = battery_size
 
     def describe_battery(self):
@@ -594,6 +594,27 @@ class Battery():
         message = 'This car can go approximately ' + str(range)
         message += ' miles on full charge.'
         print(message)
+
+class Battery():
+    def __init__(self, battery_size=70):
+        # Initiation value of battery property
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        print('This car has a ' + str(self.battery_size) + '-kWh battery.')  
+        
+    ### Added a new method for car's range
+    def get_range(self):
+        # Print a message to describe how far the electric car can go
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+
+        message = 'This car can go approximately ' + str(range)
+        message += ' miles on full charge.'
+        print(message)
+
 
 class ElectricCar(Car):
     def __init__(self, make, model, year):
@@ -628,4 +649,353 @@ As your file getting longer and longer, we can store class in the module
 ## 9.4.1 Load Single Class
 We will create a module that only includes Class` Car` in a file name `car.py`
 * From now on, any file that uses the module from the file name `car.py` has to be renamed differently to avoid having the same file name
+
+**car.py**
+```python
+# A module to represent Car 
+
+class Car():
+    # Simulate there is a car
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    
+    def get_descriptive_name(self):
+        # Return a neat descriptive info
+        long_name = str(self.year) + " " + self.make + " " + self.model
+        return long_name.title()
+
+    def read_odometer(self):
+        # Print message about car mile
+        print('This car has ' + str(self.odometer_reading) + ' miles on it.')
+
+    def update_odometer(self, mileage):
+        # Assign a specific value to the mile reading
+        # Stop anyone edits the value downward
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+    
+    def increment_odometer(self, miles):
+        # Add specific value to the mile reading
+        self.odometer_reading += miles
+```
+We should always give a brief introduction about what the class does, and with a simple description of what each function do
+
+**my_car.py**
+```python
+from car import Car
+
+my_new_car = Car('audi', 'a4', 2016)
+print(my_new_car.get_descriptive_name())
+
+my_new_car.odometer_reading = 23
+
+my_new_car.read_odometer()
+```
+Similar, we use `import statement` to import the whole `Car` class
+* By importing the class, we can keep the file short and focus on the logic of the current file
+* After you have determined how the class should work, you can ignore that class file and focus on a higher logical layer
+
+# 9.4.2 Saving Multiple Class in a Module
+We can save as many as class we want
+* We are adding `Battery` and `ElectricCar` in the Module
+
+**car.py**
+```python
+# A module to represent Traditional Car and Electric Car 
+
+class Car():
+    # Simulate there is a car
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    
+    def get_descriptive_name(self):
+        # Return a neat descriptive info
+        long_name = str(self.year) + " " + self.make + " " + self.model
+        return long_name.title()
+
+    def read_odometer(self):
+        # Print message about car mile
+        print('This car has ' + str(self.odometer_reading) + ' miles on it.')
+
+    def update_odometer(self, mileage):
+        # Assign a specific value to the mile reading
+        # Stop anyone edits the value downward
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+    
+    def increment_odometer(self, miles):
+        # Add specific value to the mile reading
+        self.odometer_reading += miles
+ 
+ class Battery():
+    # Simulate battery for an electric car
+    def __init__(self, battery_size=70):
+        # Initiation value of battery property
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        print('This car has a ' + str(self.battery_size) + '-kWh battery.')  
+        
+    def get_range(self):
+        # Print a message to describe how far the electric car can go
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+
+        message = 'This car can go approximately ' + str(range)
+        message += ' miles on full charge.'
+        print(message)
+
+class ElectricCar(Car):
+    # The Specialty of An Electric Car
+    def __init__(self, make, model, year):
+        # Inherit father class's property = Initial property for son
+        super().__init__(make, model, year)
+        # Create new battery instance 
+        self.battery = Battery()
+```
+Now, we will create new file name `my_electric_car.py`and load the ElectricCar class to create an electric car
+
+**my_electric_car.py**
+```python
+from car import ElectricCar
+
+my_tesla = ElectricCar('tesla', 'model s',  2016)
+
+print(my_tesla.get_descriptive_name())
+my_tesla.battery.describe_battery()
+my_tesla.battery.get_range()
+```
+>     2016 Tesla Model S 
+>     This car has a 70-kWh battery. 
+>     This car can go approximately 240 miles on full charge.
+
+## 9.4.3 Import Multiple Class from A Module
+```python
+from car import Car, ElectricCar
+
+my_beetle = Car('volkswagen', 'beetle', 2016)
+print(my_beetle.get_descriptive_name())
+
+my_tesla = ElectricCar('tesla', 'roadster', 2016)
+print(my_tesla.get_descriptive_name())
+```
+We have loaded multiple `class`, and use comma to separate them. Then we can build as many as instances we want base on the need
+* In the following example, we have created a Beetle Car, and a Tesla Electric Car
+>     2016 Volkswagen Beetle
+>     2016 Tesla Roadster
+
+## 9.4.4 Import the Whole Module
+You can import the whole module and use `.` period to get access to the class you want
+* So when you use the `car` module, python won't have conflicts with any variable name in the current file
+```python
+import car 
+
+my_beetle = car.Car('volkswagen', 'beetle', 2016)
+print(my_beetle.get_descriptive_name())
+
+my_tesla = car.ElectricCar('tesla', 'roadster', 2016)
+print(my_tesla.get_descriptive_name())
+```
+We have loaded the whole module, and use the below code to access the class. And we have created two instances as the previous block of codes
+```python
+module_name.class
+```
+
+## 9.4.5 Import All the Class in the Module
+To import every class we can use below code
+```python
+from module_name import *
+```
+However, such an import method is **not recommended**. There are two reasons
+1. One, if you are being specific on what class being imported at the beginning, other programmers can read the list immediately
+      1. If you import all, there may be confusion for other programmer thinking about what class you have imported
+2. Plus, if you imported a class that has the same name as other variables in the current file, there will be difficult finding a bug
+      1.The reason introducing this method is because you may see someone using it
+
+The best way is to use `module_name.class_name` to get access to the class
+* So even you didn't list what class you have imported at the beginning, at least you know the location where you have used the class inside the file and avoid variable name conflicts
+
+## 9.4.6 In A Module Import Another Module
+Sometimes, we have to separate `class` into different modules to avoid the module getting too large
+* Or, we will store irrelevant class in the same module
+* Also, you may find out that sometimes a module depends on another module's class
+* Therefore, we can import a module from one module to another
+
+Below, we have saved the `Car` class in a module and saved the `ElectricCcar` and `Battery` in another module (file) name as `electric_car.py`
+**electric_car.py**
+```python
+# Class that represent Electric Car
+
+from car import Car
+
+class Battery():
+    # Simulate battery for an electric car
+    def __init__(self, battery_size=70):
+        # Initiation value of battery property
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        print('This car has a ' + str(self.battery_size) + '-kWh battery.')  
+        
+    def get_range(self):
+        # Print a message to describe how far the electric car can go
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+
+        message = 'This car can go approximately ' + str(range)
+        message += ' miles on full charge.'
+        print(message)
+
+class ElectricCar(Car):
+    # The Specialty of An Electric Car
+    def __init__(self, make, model, year):
+        # Inherit father class's property = Initial property for son
+        super().__init__(make, model, year)
+        # Create new battery instance 
+        self.battery = Battery()
+```
+`ElectricCar` need to get access to its father class `Car`, so we will import `Car` directory into the module to `electric_car.py`
+* If we forgot to import, there will be an error when we try to create `ElectricCar` instance.
+* Don't forget updating the `car.py` module with a new brief introduction
+
+**car.py**
+```python
+# A module to represent Car 
+
+class Car():
+    # Simulate there is a car
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    
+    def get_descriptive_name(self):
+        # Return a neat descriptive info
+        long_name = str(self.year) + " " + self.make + " " + self.model
+        return long_name.title()
+
+    def read_odometer(self):
+        # Print message about car mile
+        print('This car has ' + str(self.odometer_reading) + ' miles on it.')
+
+    def update_odometer(self, mileage):
+        # Assign a specific value to the mile reading
+        # Stop anyone edits the value downward
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+    
+    def increment_odometer(self, miles):
+        # Add specific value to the mile reading
+        self.odometer_reading += miles
+```
+Now, we can import different class from different modules, base on the need to create any type of car
+```python
+from car import Car
+from electric import ElectricCar
+
+my_beetle = Car('volkswagen', 'beetle', 2016)
+print(my_beetle.get_descriptive_name())
+
+my_tesla = ElectricCar('tesla', 'roadster', 2016)
+print(my_tesla.get_descriptive_name())
+```
+>     2016 Volkswagen Beetle
+>     2016 Tesla Roadster
+We have imported the `Car` class from `car.py` module, and imported `ElectricCar` class from `electric_car.py` module
+
+## 9.4.7 Define Your Work Flow
+
+As you see, when organizing a big project of codes, python provides many options
+* Understanding these options allow to your organize your project and also understand how other programmers develop their projects
+* First, we should keep the code structure as simple as possible and complete everything in one single documents
+* Then we can separate them into different modules
+
+## 9.5 Python Package
+Python Package is a series of modules. They are included when you installed python.
+* These modules are completed by other programmers, we can use any function or class by using the `import` statement
+
+Dictionary allows you to associate with value, but **not record the order** of adding your paired values
+* To create a dictionary and record the order, we can use the module called `collections` and use its class `OrderedDict`
+* `OrderedDict` will do the same thing as the dictionary does, except recording the order of added values
+
+**favorite_languages.py**
+```python
+from collections import OrderedDict
+
+favorite_languages = OrderedDict()
+
+favorite_languages['jen'] = 'python'
+favorite_languages['sarah'] = 'c'
+favorite_languages['edward'] = 'ruby'
+favorite_languages['phil'] = 'python'
+
+for name, language in favorite_languages.items():
+    print(name.title() + "'s favorite language is " + language.title() + '.')
+```
+1. We have imported the `OrderedDict` class from module `collections`
+1. Then we created an `OrderedDict` instance and stored in `favorite_languages` variable	
+      1. Pay attention here, we didn't use bracket `{}`, instead we use `OrderedDict()` to create an empty ordered dictionary and stored in `favorite_languges`
+1. Then we can add each paired name - language
+1. When we go over the `favorite_languages` dictionary, the output is showed by order
+
+>     Jen's favorite language is Python. 
+>     Sarah's favorite language is C. 
+>     Edward's favorite language is Ruby. 
+>     Phil's favorite language is Python.
+It is a very good class that includes the feature of dictionary and list, but also keeping the value in order
+
+As you develop your skill, you may realize that an ordered dictionary will solve some of your coding questions
+
+# 9.6 Style of Coding A Class
+You have to be familiar with the style of coding a class, especially when you coding something very complicated
+* The class name should follow **Camel-Case** rule, which 
+1. Every class name first letter of a word should be capital not underline
+1. Instance name and module name should use lowercase format and underline between each word
+
+After defining a class, you should include 
+1. A brief description of the class feature 
+1. A brief description of what the function does
+1. A brief description of the purpose of the module
+
+We can use space to separate or organize code but do not abuse it
+* Inside the class, we can use single space to separate functions
+* In the module, we can use double space to separate class
+
+When importing class, you should
+1. Import the standard module's class first,
+1. Then add a space, and import the class from your well-written module
+* So when others reading the program, they know which module belongs to where
+
+# 9.7 Conclusion
+In this chapter, you learned:
+* How to write class,
+* How to use class's property to store information
+* How to write method, to let the class include necessary behaviors
+* How to write method `__init__()` to base on what value is needed for an instance
+* How to edit instance's value
+     * Directly edit the value
+     * Use method to edit value
+* How to use inheritance to create relevant class 
+     * Use an instance from another class as a property to another class (neat and easy to read)
+* How store class in a module and load them (organize)
+* How to use Python Packages (`collections` module - `OrderedDict` class)
+* How to follow Python's rule
+
 
