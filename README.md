@@ -50,7 +50,7 @@ Notes for Python Beginners
 * 3.4 Avoid Error in the List
 
 
-### Chapter4 Working With Lists
+### Chapter4 
 * 4.1 Looping Through the Whole List
     * Getting Deepper in (Understanding) the `for loop`
     * Adding More Works In a `for loop`
