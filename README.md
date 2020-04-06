@@ -3,8 +3,8 @@ Python Crash Course
 Notes for Python Beginners
 
 ## Content
-* [Chapter2 ](#Chapter2) Variables And Simple Data Types
-* [Chapter3](#Chapter3) Introducing Lists
+* [Chapter2](#Chapter2) 
+* [Chapter3](#Chapter3) 
 * [Chapter4 Working With Lists](#Chapter4) 
 * [Chapter5](#Chapter5)
 * [Chapter6](#Chapter6)
@@ -13,7 +13,7 @@ Notes for Python Beginners
 * [Chapter9](#Chapter9)
 * [Chapter10](#Chapter10)
 
-### Chapter2 Variables And Simple Data Types
+### Chapter2
 * `print()` function
 * 2.1 Variable
     * Variable Naming Rule
@@ -30,7 +30,7 @@ Notes for Python Beginners
     * Using `str()` Function to Aviod Data Type Error
     * `import` The Zen of Python
 
-### Chapter3 Introducing Lists
+### Chapter3
 * 3.1 List（What is a List?)
     * Access List's Elements
     * Slicing Index Positions - Start with 0 not 1
