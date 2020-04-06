@@ -3,9 +3,10 @@ Python Crash Course
 Notes for Python Beginners
 
 ## Content
+* 
 * [Chapter2](#Chapter2) 
 * [Chapter3](#Chapter3) 
-* [Chapter4 Working With Lists](#Chapter4) 
+* [Chapter4](#Chapter4) 
 * [Chapter5](#Chapter5)
 * [Chapter6](#Chapter6)
 * [Chapter7](#Chapter7)
@@ -13,7 +14,7 @@ Notes for Python Beginners
 * [Chapter9](#Chapter9)
 * [Chapter10](#Chapter10)
 
-### Chapter2
+### Chapter2 
 * `print()` function
 * 2.1 Variable
     * Variable Naming Rule
