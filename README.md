@@ -3,7 +3,6 @@ Python Crash Course
 Notes for Python Beginners
 
 ## Content
-* 
 * [Chapter2](#Chapter2) 
 * [Chapter3](#Chapter3) 
 * [Chapter4](#Chapter4) 
