@@ -5,7 +5,7 @@ Notes for Python Beginners
 ## Content
 * [Chapter2 ](#Chapter2) Variables And Simple Data Types
 * [Chapter3](#Chapter3) Introducing Lists
-* [Chapter4 - Working With Lists](#Chapter4) Working With Lists
+* [Chapter4](#Chapter4 Working With Lists) 
 * [Chapter5](#Chapter5)
 * [Chapter6](#Chapter6)
 * [Chapter7](#Chapter7)
