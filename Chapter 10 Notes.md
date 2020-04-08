@@ -158,7 +158,7 @@ with open(filename) as file_object:
 
 Now the output has the same content has the file
 
-# 10.1.4 Create A List That Contain Each Line From A File
+## 10.1.4 Create A List That Contain Each Line From A File
 When using keywords `with`, `open()`, return the file object only can be used **inside `with` block**
 * To access the file object content outside the `with` block, we need to store the content of every line into a list and use the list outside `with` block
 * We can process parts of the file immediately, or process then later
@@ -177,7 +177,7 @@ for line in lines: #2
 * Outside the `with` block, we can still use the variable `line`
 * Then we create a simple `for loop` to read each line, since each line is an element of a list, so the content will be print it exactly as the file
 
-# 10.1.5 Use File's Content
+## 10.1.5 Use File's Content
 After reading the file into the memory, we can access the data in any method
 * Below is an example to use pi's value
 * We will create a string, it contains every digit from the file and without spaces
@@ -269,7 +269,7 @@ The simplest way to store data is by writing the data into a file
 1. By manually adding the data, even you close the entire program in the terminal, the data you input still exist
 1. You can review the data after the program is closed, and even share the data or edit the data afterward
 
-# 10.2.1 Writing A Emtpy File
+## 10.2.1 Writing A Emtpy File
 In order to write text into a file, we need to provide another argument to the `open()` function, which telling python you are writing the text in the current opened file
 * We will store a simple message into a file but not printing it
 ```python
