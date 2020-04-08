@@ -850,11 +850,12 @@ The newly added function `get_stored_username` perform a clearer task
 * If the file `username.json` does not exist, then function return `None`
 * This will help us either return a value you are expecting, or return nothing
 * Allow us to do a simple test with the return value of the function <br>
-<br>
+
 If we able to retrieve the data of the username, then we print out a welcome back message
 * Otherwise, we ask the user to input a username value
 * We can even split the `greet_user()` into another block of codes
 * If the username does not exist, we ask the user to input one
+
 ```python
 import json
 def get_stored_username():
