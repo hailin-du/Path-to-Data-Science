@@ -678,7 +678,7 @@ Many programs require the user to input certain information
 
 The JSON (JavaScript Object Notation) format was originally developed for JavaScript. However, it has since become a common format used by many languages, including Python
 
-# 10.4.1 Using `json.dump()` And `json.load()`
+## 10.4.1 Using `json.dump()` And `json.load()`
 We first write a short program to store a list of numbers and then write another program that reads these numbers back into memory
 * We will use `json.dump()` to store this list of numbers in the first program
 * Then, use `json.load()` for the second program <br>
@@ -789,7 +789,7 @@ If the program is running for the first time, it will shows
 If not, then
 > Welcome back, Eric!
 
-# 10.4.3 Restrcutre/Refactor Codes
+## 10.4.3 Restrcutre/Refactor Codes
 You will always encounter a situation that the code can run normally, but you can improve the code<br>
 <br>
 Which, splitting a series of functions to let each function perform a specific task
