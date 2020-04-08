@@ -791,7 +791,6 @@ If not, then
 
 ## 10.4.3 Restrcutre/Refactor Codes
 You will always encounter a situation that the code can run normally, but you can improve the code<br>
-<br>
 Which, splitting a series of functions to let each function perform a specific task
 * Such a process is known as refactoring, making the code more understandable, clear, and easier to expand
 * To refactor the code we just wrote, we can put the majority of logic into one or multiple functions
@@ -817,7 +816,6 @@ greet_user()
 ```
 We have given a new notation to tell the task of this function is carrying; This program is a little be clearer
 * The `greet_user()` function is not only greeting the user, but also retrieving a stored username and ask the user to input one if the file doesn't exist <br>
-<br>
 Next, we will refactor the `greet_user()` function to not perform so many tasks
 * We will be moving the part getting the user's input into another function
 ```python
