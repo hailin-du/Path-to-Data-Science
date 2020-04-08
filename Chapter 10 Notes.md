@@ -885,6 +885,7 @@ def greet_user():
     else:
         username = get_new_username()
         print("We'll remember you when you come back, " + username + "!")
+        
 greet_user()
 ```
 In the above code, each function perform a specific task
