@@ -1,4 +1,5 @@
-# 5.1 Simple `if` Statement
+# `if` Statements
+# 5.1 A Simple `if` Statement
 ```python
 cars = ['audi', 'bmw', 'subaru', 'toyota']
 for car in cars:
@@ -13,7 +14,7 @@ for car in cars:
 >     Toyota
 ***
 ***
-# 5.2 Condition Testing
+# 5.2 Conditional Tests
 * True & False
 * True - execute the code
 * Flase - ignore the code
@@ -48,9 +49,9 @@ print(car)
 > Audi
 * Didn't affect the car variable
 * For Website Development purpose, we save users' usernames, then we can convert them to compare if values are matching
-* For example, John, covert to lower case, john == john (if john already exist), then reject user during the registration
+* For example, John, convert to lower case, john == john (if john already exist), then reject user during the registration
 
-## 5.2.3 Checking if Elements (Values) are Unequal
+## 5.2.3 Checking if Elements (Values) are Inequal
 ```python
 requested_topping = 'mushrooms'
 ```
@@ -72,7 +73,7 @@ if answer != 42:
     print('That is not the correct answer. Please try again!')
 ```
 > That is not the correct answer. Please try again!
-#### Can include less than <, greather than > or others such as >= or <=
+#### Can include less than <, greater than > or others such as >= or <=
 ```python
 age = 19
 print(age<21) 
@@ -88,7 +89,7 @@ print(age>=21)
 ## 5.2.5 Checking Multiple Conditions
 ### And
 * Use and to combine two conditions
-* If one of the condition didn't pass, the whole expression is False
+* If one of the condition didn't pass, the whole expression is `False`
 ```python
 age_0 = 22
 age_1 = 18
@@ -102,8 +103,8 @@ print(age_0 >= 21 and age_1 >= 21) # True
 >     True
 ### OR
 * Use or to check at least one condition meets
-* If one of the condition pass, the whole epxression is True
-* If both conditions didn't pass, then the whole expression is False
+* If one of the condition passes, the whole expression is `True`
+* If both conditions didn't pass, then the whole expression is `False`
 ```python
 age_0 = 22
 age_1 = 18
@@ -116,7 +117,7 @@ print(age_0 >= 21 or age_1 >= 21)
 ```
 > Flase
 
-## 5.2.6 Check if a Specific Element within the List
+## 5.2.6 Checking Whether a Specific Element in the List
 #### In the real case, we can check to see if the username already exist in the username list
 ### `in`
 * Use in to check if a element exist in the list
@@ -130,9 +131,9 @@ print('pepperoni' in requested_toppings) # False
 ```
 > False
 
-## 5.2.7 Check if a Specific Element NOT in the List
+## 5.2.7 Checking Whether a Specific Element NOT in the List
 ### `not in`
-* In the real case, we can check which user is not beining banned to speak in the forums
+* In the real case, we can check which user is not being banned to speak in the forums
 ```python
 banned_users = ['andrew','carolina','david']
 user ='marie'
@@ -141,7 +142,7 @@ if user not in banned_users: #### if user not in the list, which is True, then e
 ```
 > Marie, you can post a response if you wish.
 
-## 5.2.8 Boolean Expression
+## 5.2.8 Boolean Expressions
 * Same as condition, either True or False
 * Boolean expression usually is used for recording condition
 * Such as, if the game is ruunning normally, or if the user can edit the webpage
@@ -149,10 +150,10 @@ if user not in banned_users: #### if user not in the list, which is True, then e
 game_active = True
 can_edit = False
 ```
-#### Boolean Expression provides a effective way to track a program status
+#### Boolean Expressions provides an effective way to track a program status
 ***
 ***
-# 5.3 if Statement
+# 5.3 `if` Statement
 ```python
 if conditional_test:
   do something
@@ -164,8 +165,8 @@ if age >= 18:
     print('Have you registered to vote yet?')
 ```
 > You are old enough to vote!
-## 5.3.2 if-else Statment
-#### if a condition didn't pass, we use else (another) condition to excute another operation
+## 5.3.2 `if-else` Statement
+#### If a condition didn't pass, we use else (another) condition to execute another operation
 ```python
 age = 17
 if age >= 18: # Condition True - excute this part
@@ -178,9 +179,9 @@ else: # Condition False - excute this park
 >     Sorry, you are too young to vote.
 >     Please register to vote as oon as you turn 18!
 
-## 5.3.3 if-elif-else Strcuture
+## 5.3.3 `if-elif-else` Structure
 * More than two conditions
-* Test every structure within the if-elif-else and check every condition until it pass the condition
+* Test every structure within the `if-elif-else` and check every condition until it passes the condition
 
 #### Case: Ticket Admissions
 * Below Age 4 = Free Admission
@@ -206,11 +207,11 @@ elif age < 18:
 else: 
     price = 10
 ```
-#### Easier to change the code and more efficent
+#### Easier to change the code and more efficient
 ```python
 print('Your admission cost is $' + str(price) + '.') # Outside the if-else statement
 ```
-## 5.3.4 Using Multiple elif Block
+## 5.3.4 Using Multiple `elif` Blocks
 #### Adding elderly price
 ```python
 age = 12
@@ -225,8 +226,8 @@ else:
 print('Your admission cost is $' + str(price) + '.')
 ```
 
-## 5.3.5 Avoid Using else 
-#### We don't have to use else at the end, we can change to elif to make the code more clearly
+## 5.3.5 Avoid Using `else` Block 
+#### We don't have to use else at the end, we can change to `elif` to make the code more clearly
 ```python
 age = 12
 if age < 4: 
@@ -262,7 +263,7 @@ print('\nFinished making your pizza!')
 >
 >     Finished making your pizza!
 
-* Below code cannnot execute normally
+* Below codes can't execute normally
 * When Checking the first if, the list contains mushroom
 * So it will skip the rest of the code (lines)
 ```python
@@ -281,8 +282,8 @@ print('\nFinished making your pizza!')
 >     Finished making your pizza!
 ***
 ***
-# 5.4 Using if to Handle List
-## 5.4.1 Checking Specific Element
+# 5.4 Using `if` Statement to Handle List
+## 5.4.1 Checking for Specific Element
 #### Pizza Toppings
 ```python
 requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']
@@ -329,8 +330,8 @@ else:
     print('Are you sure you want a plain pizza?')
 ```
 > Are you sure you want a plain pizza?
-#### In Python, when you are using a if condition with list
-* If the list contain `at least ONE element` return **True**
+#### In Python, when you are using an `if` condition with a list
+* If the list contains `at least ONE element` return **True**
 * If the list has nothing inside, return **False**
 
 ## 5.4.3 Using Mutiple List
@@ -357,7 +358,7 @@ print('\nFinished making your pizza!')
 * If requested topping element is not exist in the available_topping list, then we tell the customer we don't provide that element (topping)
 
 
-# 5.5 if Statement Format
+# 5.5 `if` Statement Format
 * When setting if statement with condition like ==, >= and <=
 * It is better to include space (acorrding to PEP 8), like if age < 4 
 * Not if age<4 
