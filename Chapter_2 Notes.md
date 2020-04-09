@@ -169,11 +169,11 @@ print(message)
 ***
 ***
 # `import this` The Zen of Python
-## Simple > Complex
-## Complex > Complicated
-## Readability Count!
-## Same Solution (Choose Simple One)
-## Now Begin!! (Now is better than never)
+#### Simple > Complex
+#### Complex > Complicated
+#### Readability Count!
+#### Same Solution (Choose Simple One)
+#### Now Begin!! (Now is better than never)
 ```
 Beautiful is better than ugly.
 Explicit is better than implicit.
