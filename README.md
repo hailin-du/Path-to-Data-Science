@@ -193,4 +193,46 @@ Notes for Python Beginners
 * 8.7 Function Writing Guide（Styling Function)
 * 8.8 Conclusion
 ### Chapter 9 - Class
+* Object-Oriented Programming
+* 9.1 Create and Use a `class`
+    * Create the `Dog` Class
+        * `__init__()` method 
+            * `self` must have
+    * Based on Class to Create Instance
+        * Accessing Attribute
+        * Calling the Method
+        * Create Multiple Instances
+* 9.2 Working with Class and Instance
+    * The `car` Class
+    * Assign Default Value to Attribute
+    * Edit Attribute's Value
+        * Edit the Value Directly    
+        * Edit The Value Through Method
+        * Edit The Value Through Method Adding 
+* 9.3 Inheritance
+    * Son (Child) Object's Method `__init()`
+        * `super.__init__()` - superclass    
+    * Define Son Class's Attribute and Method
+    * Rewrite Father (Parent) Class Method
+    * Use Instance as Attribute
+    * Simulate Creating A Real World Instance (Object)
+* 9.4 Importing Class
+    * Import a Single Class
+        * `from module_name import class_name`
+    * Saving Multiple Class in a Module
+    * Import Multiple Classes from A Module
+    * Import a Single Class
+        * `from module_name import class_0, class_2`
+    * Import the Entire Module
+        * `import module_name`  
+    * Import All the Classes from a Module
+        * `from module_name import *`
+    * In A Module Import Another Module
+        * `from module_0 import class_0`
+        * `from module_1 import class_1`
+     * Define Your Work Flow
+* 9.5 Python Package (Python Standard Library) 
+* 9.6 Style of Coding A Class
+* 9.7 Conclusion
 ### Chapter 10 - Files and Exception
+
