@@ -365,3 +365,13 @@ print('\nFinished making your pizza!')
 * When setting `if` statement with condition like `==`, `>=` and `<=`
 * It is better to include space (acorrding to PEP 8), like if `age < 4`
 * Not if `age<4`
+
+
+# Comparison Operators
+The comparison operators compare the values of 2 objects and return `True` or `False`
+* <
+* <=
+* >
+* >=
+* ==
+* !=
