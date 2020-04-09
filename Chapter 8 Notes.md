@@ -1,4 +1,4 @@
-Functions
+# Functions
 # 8.1 Defining a Function
 * When you have defined a function, you can use that function
 * By doing that, you don't need to write the code repeatedly
