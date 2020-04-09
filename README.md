@@ -11,7 +11,7 @@ Notes for Python Beginners
 * [Chapter 7 - User Input and while Loop](#Chapter-7---User-Input-and-while-Loop)
 * [Chapter 8 - Function](#Chapter-8---Function)
 * [Chapter 9 - Class](#Chapter-9---Class)
-* [Chapter 10 - Files and Exception](#Chapter-10---Files and Exception)
+* [Chapter 10 - Files and Exception](#Chapter-10---Files-and-Exception)
 
 ### Chapter 2 - Variables And Simple Data Types
 * `print()` function
