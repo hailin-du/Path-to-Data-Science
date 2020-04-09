@@ -288,8 +288,10 @@ Notes for Python Beginners
      * Analyzing Text
         * `split()` - Split a Long String 
         * `len()` - To Count Length 
-     * Working with Multiple Files
-        * Put Flies in a List
-        * filenames = ['file_0.txt', 'file_1.txt', file_2.txt`]
-        * `for filename in filenames:`
-     * Working with Multiple Files
+     * Working with Multiple Files 
+        * Put Flies in a List 
+        * `filenames = ['file_0.txt', 'file_1.txt', file_2.txt`]` 
+        * `for filename in filenames:` 
+      * Failing Silently 
+        * `pass` Statement 
+      * Deciding Which Errors to Report 
