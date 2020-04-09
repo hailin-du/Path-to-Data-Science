@@ -1,4 +1,4 @@
-# Functions
+# Chapter 8 - Functions
 # 8.1 Defining a Function
 * When you have defined a function, you can use that function
 * By doing that, you don't need to write the code repeatedly
@@ -78,7 +78,7 @@ describe_pet('hamster','harry')
 * `'harry'` as a argument, stored in `pet_nam` in a parameter
 * In the function, it used both paremeter
 
-#### 1 Using the Function Multiple Time
+#### 1 Using the Function Multiple Times
 ```python
 describe_pet('dog','willie')
 ```
