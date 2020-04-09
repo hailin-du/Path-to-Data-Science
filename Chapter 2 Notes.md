@@ -1,3 +1,4 @@
+# Variables And Simple Data Types
 # 2.1 `print()` is a function
 ```print('Hello Python World!')```
 
