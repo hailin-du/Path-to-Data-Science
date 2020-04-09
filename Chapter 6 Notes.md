@@ -1,4 +1,4 @@
-# Dictionary
+# Chapter 6 - Dictionary 
 # 6.1 A Simple Dictionary
 Let's take a look at a game, it includes some aliens, aliens have different colors and points.
 ```python
