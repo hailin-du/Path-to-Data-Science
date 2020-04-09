@@ -716,7 +716,7 @@ The best way is only to import the function you need or import the module with a
 from module_name import *
 ```
 
-## 8.7 Function Writing Guide （Styling Function)
+## 8.7 Function Writing Guide（Styling Function)
 There are a few things you should remember when writing a function
 * Give a descriptive name to the function, and only using lower case and `_` underline - this will help you and others to understand what does the function do
 * Every function should include notation/comments to describe its task -
