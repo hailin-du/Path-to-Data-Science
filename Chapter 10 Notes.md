@@ -1,4 +1,4 @@
-# Files and Exceptions
+# Chapter 10 - Files and Exceptions
 In this chapter, you will learn how to handle a large amount of data, handle mistake (exceptions) to avoid the program crashing
 1. You will also learn how to use exceptions as special objects to manage mistakes while running the program (the code)
 2. You will also learn the module `json`, which allows you to store user data, avoid losing the data after the program stop running
@@ -474,7 +474,7 @@ while True:
 By predicting possible errors, we can write a healthy program.
 * Even the program has encountered invalid data or lacking certain value resources, the program can still run, prevent innocent user mistakes and malicious attacks
 
-## 10.3.5 Handle `FileNotFOundError` Exception
+## 10.3.5 Handle `FileNotFoundError` Exception
 The most common exception when handling a file is cannot find the file
 * The file you  want to get access to probably store in other places or named differently, or maybe the file just don't exist
 * We can always use `try-except` block to handle those situations <br>
