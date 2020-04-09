@@ -1,4 +1,4 @@
-# Introducing Lists
+# Chapter 3 - Introducing List
 # 3.1 List（What is a List?)
 * Can be 0-9, family names, or elements have no relationship
 * use bracket [] to create a list
@@ -17,7 +17,7 @@ print(bicycles[0].title())
 
 > Trek
 
-## 3.1.2 Slicing Start at 0 Not 1
+## 3.1.2 Slicing Index Positions - Start with 0 not 1
 ```print(bicycles[1])```
 > cannondale
 
