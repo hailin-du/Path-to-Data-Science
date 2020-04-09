@@ -369,9 +369,9 @@ print('\nFinished making your pizza!')
 
 # Comparison Operators
 The comparison operators compare the values of 2 objects and return `True` or `False`
-* <
-* <=
-* >
-* >=
-* ==
-* !=
+* `<`
+* `<=`
+* `>`
+* `>=`
+* `==`
+* `!=`
