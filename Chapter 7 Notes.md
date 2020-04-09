@@ -1,4 +1,4 @@
-User Input and `while` Loop
+# User Input and `while` Loop
 # 7.1 Understanding `input()` function
 * `input()` function stop the program and wait for the user to input (enter) text 
 * Then python will save the value in a variable
