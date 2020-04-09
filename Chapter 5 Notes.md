@@ -1,5 +1,5 @@
-# `if` Statements
-# 5.1 A Simple `if` Statement
+# Chapter 5 - `if` Statement
+# 5.1 A Simple `if` Statement Example
 ```python
 cars = ['audi', 'bmw', 'subaru', 'toyota']
 for car in cars:
@@ -154,6 +154,8 @@ can_edit = False
 ***
 ***
 # 5.3 `if` Statement
+After understanding condtional test, we can start writing a `if` statement
+# 5.3.1 Simple `if` Statement Format 
 ```python
 if conditional_test:
   do something
@@ -283,6 +285,7 @@ print('\nFinished making your pizza!')
 ***
 ***
 # 5.4 Using `if` Statement to Handle List
+By combing `if` statement and list, we can handle specific tasks or do some interesting works
 ## 5.4.1 Checking for Specific Element
 #### Pizza Toppings
 ```python
@@ -334,7 +337,7 @@ else:
 * If the list contains `at least ONE element` return **True**
 * If the list has nothing inside, return **False**
 
-## 5.4.3 Using Mutiple List
+## 5.4.3 Using Mutiple Lists
 ```python
 available_toppings = ['mushrooms', 'olives', 'green peppers', 'pepperoni', 'pineapple', 'extra cheese']
 requested_toppings = ['mushroom', 'french fries', 'extra cheese']
@@ -358,7 +361,7 @@ print('\nFinished making your pizza!')
 * If requested topping element does not exist in the available_topping list, then we tell the customer we don't provide that element (topping)
 
 
-# 5.5 `if` Statement Format
+# 5.5 Style of `if` Statement 
 * When setting `if` statement with condition like `==`, `>=` and `<=`
 * It is better to include space (acorrding to PEP 8), like if `age < 4`
 * Not if `age<4`
