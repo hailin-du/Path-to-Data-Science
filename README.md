@@ -4,9 +4,9 @@ Notes for Python Beginners
 
 ## Content
 * [Chapter 2 - Variables And Simple Data Types](#Chapter-2---Variables-And-Simple-Data-Types) 
-* [Chapter3](#Chapter3) 
-* [Chapter4](#Chapter4) 
-* [Chapter5](#Chapter5)
+* [Chapter 3 - Introducing List](#Chapter-3---Introducing-List) 
+* [Chapter 4 - Working with List](#Chapter-4---Working-with-List) 
+* [Chapter 5 - `if` Statements](#Chapter-5---`if`-Statement)
 * [Chapter6](#Chapter6)
 * [Chapter7](#Chapter7)
 * [Chapter8](#Chapter8)
@@ -30,7 +30,7 @@ Notes for Python Beginners
     * Using `str()` Function to Aviod Data Type Error
     * `import` The Zen of Python
 
-### Chapter3
+### Chapter 3 - Introducing List
 * 3.1 List（What is a List?)
     * Access List's Elements
     * Slicing Index Positions - Start with 0 not 1
@@ -50,7 +50,7 @@ Notes for Python Beginners
 * 3.4 Avoid Error in the List
 
 
-### Chapter4 
+### Chapter 4 - Working with List
 * 4.1 Looping Through the Whole List
     * Getting Deepper in (Understanding) the `for loop`
     * Adding More Works In a `for loop`
@@ -77,7 +77,7 @@ Notes for Python Beginners
     * Separation
     * PEP 8
     
-### Chapter5 To Be Continued... 
+### Chapter 5 - `if` Statements
 ### Chapter6 To Be Continued... 
 ### Chapter7 To Be Continued... 
 ### Chapter8 To Be Continued... 
