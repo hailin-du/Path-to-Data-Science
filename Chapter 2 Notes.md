@@ -101,7 +101,7 @@ favorite_language.strip() # begin and end space remove
 ```
 >     'python ' 
 >     'python'
-## 2.3.5 Aviod String (Symtax) Error
+## 2.3.5 Aviod String (Syntax) Error
 ```python
 message = 'One of Pthon's strengths is its diverse community'
 print(message) # quotation
