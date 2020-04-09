@@ -1,5 +1,5 @@
-# 4.1 Go Over the Whole List
-### Using for loop: to Handle Repeat Work
+# 4.1 Looping Through an Entire List
+### Using `for loop:` to Handle Repeat Work
 ```python
 magicians = ['alice','david','carolina']
 for magician in magicians:
@@ -9,7 +9,7 @@ for magician in magicians:
 >     david
 >     carolina
 
-## 4.1.1 Getting Deepper in (Understanding) the for loop:
+## 4.1.1 Getting Deepper in (Understanding) the `for loop:`
 1. for magician in magicians: --- getting the first element
 2. print(magician) --- print alice
 3. then go back to for magician in magicians: --- getting the second element
@@ -21,7 +21,7 @@ for magician in magicians:
 * for dog in dogs:
 * for item in list_of_items:
 
-## 4.1.2 Adding Works In for loop:
+## 4.1.2 Adding More Works in a `for loop:`
 ```python
 magicians = ['alice','david','carolina']
 for magician in magicians:
@@ -30,9 +30,9 @@ for magician in magicians:
 >     Alice, that was a great trick!
 >     David, that was a great trick!
 >     Carolina, that was a great trick!
-#### in for loop:, you can include as many as codes you want
+#### In `for loop:`, you can include as many as codes you want
     print("I can't wait to see your next trick, " + magician.title() + ".\n")
-#### New line inserted everytime for clean and neat purpose
+#### Newline inserted everytime for clean and neat purpose
 >     Alice, that was a great trick!
 >     I can't wait to see your next trick
 >
@@ -42,7 +42,7 @@ for magician in magicians:
 >     Carolina, that was a great trick!
 >     I can't wait to see your next trick
 
-## 4.1.3 After the for loop:
+## 4.1.3 Doing Something After the `for loop:`
 ```python
 print('Thank you, everyone. That was a great magic show!') # outside the for loop:
 ```
@@ -50,7 +50,7 @@ print('Thank you, everyone. That was a great magic show!') # outside the for loo
 #### Using for loop: - go over the character list (every game character), then after the loop add play now module
 ***
 ***
-# 4.2 Avioding Indent Error
+# 4.2 Avioding Indentation Error
 #### Must indent!!
 
 ## 4.2.1 Forget Indent
@@ -83,7 +83,7 @@ message = "Hello Python world!"
 ```
 > IndentationError: unexpected indent
 
-## 4.2.4 Unnecessary Indent After the for loop:
+## 4.2.4 Unnecessary Indent After the `for loop:`
 ```python
 magicians = ['alice', 'david', 'carolina']
 for magician in magicians:
@@ -117,11 +117,11 @@ This type of error is not easy to discover, sometimes takes an hour to find out
 #### Invalid Syntax: Missing Colon
 ***
 ***
-# 4.3 Create A Number List
+# 4.3 Create a Numerical List
 #### Storing a number has many reasons
 #### For example: tracking characters' positions, tracking players' score
 
-## 4.3.1 Using `range() function`
+## 4.3.1 Using `range()` Function
 ```python
 for value in range(1,5):
     print(value) 
@@ -142,8 +142,8 @@ for value in range(1,6):
 >     5
 #### When using range, but it didn't meet you expectation, you can try adding 1 or substrating 1 
 
-## 4.3.2 Using Range to Create a Number List
-#### When creating a number list, we can use list() to change range() into a list
+## 4.3.2 Using `range()` to Create a List of Numbers
+#### When creating a number list, we can use `list()` to change range() into a list
 ```python
 number = list(range(1,6))
 print(number)
@@ -176,7 +176,7 @@ print(squares)
 ```
 #### While writing code, try to make sure the code is readable, then we can combine them like the one above
 
-## 4.3.3 Using Number List for Calculation
+## 4.3.3 Simple Statistics Functions with a List of Numbers
 ```python
 digits = [1,2,3,4,5,6,7,8,9,0]
 print(min(digits))
@@ -203,8 +203,8 @@ print(squares2)
 6. for loop in this logic did not contain colon
 ***
 ***
-# 4.4 Using Part from The List - Slicing
-## 4.4.1 Slicing
+# 4.4 Working with Part of a List - Slicing
+## 4.4.1 Slicing 
 ```python
 players = ['charles', 'martina', 'michael', 'florence', 'eli']
 print(players[0:3]) # return 0,1,2 elements
@@ -227,7 +227,7 @@ print(players[-3:]) # getting the last three players
 ```
 > ['michael', 'florence', 'eli']
 
-## 4.4.2 Goving Over the List for Slicing
+## 4.4.2 Loopingg Through a List for Slicing
 ```python
 players = ['charles','martina','michael','florence','eli']
 print('Here are the first three players on my team:')
@@ -241,7 +241,7 @@ for player in players[:3]:
 
 #### In real case, we can store players' the best score and add them into list
 
-## 4.4.3 Copying the List
+## 4.4.3 Copying a List
 #### Using [:] to copy the whole list - start to end
 #### For example - a list include your favorite food, and a list include yours and your friend's food
 ```python
@@ -304,7 +304,7 @@ print(friend_foods)
 # 4.5 Tuple
 #### Elements in List are changable, but Not in Tuple
 
-## 4.5.1 Define Tuple
+## 4.5.1 Defining Tuple
 #### Tuple is parentheses ( ) instead bracket [ ], after assigning the values, we can get access to tuple as list
 #### Create a dimension that is unchangeable
 ```python
@@ -320,7 +320,7 @@ dimensions[0] = 250
 > TypeError: 'tuple' object does not support item assignment
 ### Error - cannot change element in tuple
 
-## 4.5.2 Go Over the Whole Tuple
+## 4.5.2 Looping Through an Entire Tuple
 #### Use for loop:
 ```python
 dimensions = (200,50)
