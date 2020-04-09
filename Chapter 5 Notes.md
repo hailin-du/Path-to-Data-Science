@@ -73,7 +73,7 @@ if answer != 42:
     print('That is not the correct answer. Please try again!')
 ```
 > That is not the correct answer. Please try again!
-#### Can include less than <, greater than > or others such as >= or <=
+#### Can include less than `<`, greater than `>` or others such as `>=` or `<=`
 ```python
 age = 19
 print(age<21) 
@@ -143,9 +143,9 @@ if user not in banned_users: #### if user not in the list, which is True, then e
 > Marie, you can post a response if you wish.
 
 ## 5.2.8 Boolean Expressions
-* Same as condition, either True or False
+* Same as condition, either `True` or `False`
 * Boolean expression usually is used for recording condition
-* Such as, if the game is ruunning normally, or if the user can edit the webpage
+* Such as, if the game is running normally, or if the user can edit the webpage
 ```python
 game_active = True
 can_edit = False
@@ -227,7 +227,7 @@ print('Your admission cost is $' + str(price) + '.')
 ```
 
 ## 5.3.5 Avoid Using `else` Block 
-#### We don't have to use else at the end, we can change to `elif` to make the code more clearly
+#### We don't have to use `else` at the end, we can change to `elif` to make the code more clearly
 ```python
 age = 12
 if age < 4: 
@@ -240,8 +240,8 @@ elif age >=65: # assigning the condition
     price = 5
 print('Your admission cost is $' + str(price) + '.')
 ```
-#### else can be anything!
-#### If you know the end-result is, you should consider using elif instead of else
+#### `else` can be anything!
+#### If you know the end-result is, you should consider using `elif` instead of `else`
 
 ## 5.3.6 Testing Multiple Conditions
 ```python
@@ -352,13 +352,13 @@ print('\nFinished making your pizza!')
 >     Adding extra cheese.
 >     
 >     Finished making your pizza!
-* If available toppings is **Fixed**, we can use **Tuple**
+* If available toppings are **Fixed**, we can use **Tuple**
 * Second list is the customer order list - pay attention to french fries
 * We have to go over the requested_toppings list to see if the topping available in the available_toppings list
-* If requested topping element is not exist in the available_topping list, then we tell the customer we don't provide that element (topping)
+* If requested topping element does not exist in the available_topping list, then we tell the customer we don't provide that element (topping)
 
 
 # 5.5 `if` Statement Format
-* When setting if statement with condition like ==, >= and <=
-* It is better to include space (acorrding to PEP 8), like if age < 4 
-* Not if age<4 
+* When setting `if` statement with condition like `==`, `>=` and `<=`
+* It is better to include space (acorrding to PEP 8), like if `age < 4`
+* Not if `age<4`
