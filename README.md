@@ -155,5 +155,36 @@ Notes for Python Beginners
     * Allowing the User to Input Values to Fill Up A Dictionary
 * 7.4 Conclusion
 ### Chapter 8 - Function
+* 8.1 Defining a Function
+    * Passing Data (Element) to the Function
+    * Argument (Data (Element) You Pass) and Parameter (Variable - Data (Element) Needed to Perform A Specific Task)
+* 8.2 Passing Argument (Data)
+    * Argument Position (Position/Order) Association 
+        1. Using the Function Multiple Times
+        1. The Order of Argument is Important
+    * Key-Word Argument Association   
+    * A Default Element/Value
+    * Using the Function Other Ways (Equivalent Function Calls)
+    * Avoiding Argument Error
+* 8.3 Return Element/Value
+    * Return Simple Element/Value
+    * Making Arguments Selectable
+    * Returning a Dictionary
+    * Combining Function with a `while` Loop
+* 8.4 Passing a List
+    * Editing a List inside a Function
+    * Preventing the Function From Editing the List
+* 8.5 Passing Arbitrary Numbers (As Many As You Want) of Arguments
+    * Combine Argument Position Association with Arbitrary Numbers of Arguments You Want
+    * Use Key-Word Association With Arbitrary Numbers of Arguments You Want
+* 8.6 * Saving Function in the Module
+    * Importing a Saved Module You Just Created
+    * `import` Specifc Function `import module_name`
+        *  To use `module_name.function_name()` 
+    * Using `as` to Assign Different Function Name 
+        * `from module_name import function_name as mp`
+    * Using `as` to Assign Different Module Name 
+         * `import module_name as mn`
+    * `import` All the Functions from a Module 
 ### Chapter 9 - Class
 ### Chapter 10 - Files and Exception
