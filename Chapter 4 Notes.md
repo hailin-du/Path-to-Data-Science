@@ -1,4 +1,4 @@
-# Working with Lists
+# Chapter 4 - Working with List
 # 4.1 Looping Through an Entire List
 ### Using `for loop:` to Handle Repeat Work
 ```python
