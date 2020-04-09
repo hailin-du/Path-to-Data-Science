@@ -292,6 +292,20 @@ Notes for Python Beginners
         * Put Flies in a List 
         * `filenames = ['file_0.txt', 'file_1.txt', file_2.txt`]` 
         * `for filename in filenames:` 
-      * Failing Silently 
+     * Failing Silently 
         * `pass` Statement 
-      * Deciding Which Errors to Report 
+     * Deciding Which Errors to Report 
+* 10.4 Storing Data
+     * JSON Module - `import json`
+     * Using `json.dump()` And `json.load()`
+        * `filename = 'numbers.json'`
+        * `with open(filename, 'w') as f_obj:`
+        * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`json.dump(variable_name, f_obj)`
+        * 
+        * `filename = 'numbers.json'`
+        * `with open(filename) as f_obj:`
+        * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`variable_name = json.load(f_obj)`
+        * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`print(ariable_name)`
+     * Saving and Reading User-Generated Data
+     * Restrcutre/Refactor Codes
+* 10.5 Conclusion
