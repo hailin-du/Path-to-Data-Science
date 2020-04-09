@@ -23,7 +23,7 @@ message_1 NOT 1_message
 * Not too short
 * Be careful with 1 and small "l", 0 and  captial "O"
 
-## 2.2.2 Aviod Varibale Nameing Error
+## 2.2.2 Aviod Varibale Naming Error
 ```python
 message = 'Hello Python Crash Course World!'
 print(mesage) 
@@ -44,7 +44,7 @@ print(mesage)
 "One of Python's strengths is its diverse and supportive community."
 ```
 
-## 2.3.1 Change String with Lower and Upper Case
+## 2.3.1 Changing String with Lower and Upper Case
 ```python
 name = 'ada lovelace'
 print(name.title())
@@ -57,7 +57,7 @@ print(name.lower())
 ```
 >     ADA LOVELACE
 >     ada lovelace
-## 2.3.2 Combine String
+## 2.3.2 Combining String
 ```python
 first_name = 'ada'
 last_name = 'lovelace'
@@ -71,7 +71,7 @@ message = "Hello, " + full_name.title() + "!"
 print(message)
 ```
     Hello, Ada Lovelace!
-## 2.3.3 Add Space with Tab and New Line
+## 2.3.3 Add Whitespace with Tab and Newline
 ```python
 print('Python')
 print('\tPython') # tab
@@ -91,7 +91,7 @@ print("Languages:\n\tPython\n\tC\n\tJavaScript") # tab + new line
 >         Python
 >         C
 >         JavaScript
-## 2.3.4 Delete Space
+## 2.3.4 Delete Whitespace
 ```python
 favorite_language = 'python '
 favorite_language = favorite_language.rstrip() # assign - end space remove
@@ -101,7 +101,7 @@ favorite_language.strip() # begin and end space remove
 ```
 >     'python ' 
 >     'python'
-## 2.35 Aviod String Error
+## 2.3.5 Aviod String (Symtax) Error
 ```python
 message = 'One of Pthon's strengths is its diverse community'
 print(message) # quotation
@@ -154,7 +154,7 @@ Using '   ""   ' within the space
 3 * 0.1 # 0.30000000000000004
 ```
 
-## 2.4.3 Using String to Aviod Data Type Error
+## 2.4.3 Using `str()` Function to Aviod Data Type Error
 ```python
 age = 23
 message = "Happy " + age + "rd Birthday!"
@@ -168,7 +168,7 @@ print(message)
 >     Happy 23rd Birthday!
 ***
 ***
-# import this (The Zen of Python)
+# `import this` The Zen of Python
 ## Simple > Complex
 ## Complex > Complicated
 ## Readability Count!
