@@ -177,14 +177,20 @@ Notes for Python Beginners
 * 8.5 Passing Arbitrary Numbers (As Many As You Want) of Arguments
     * Combine Argument Position Association with Arbitrary Numbers of Arguments You Want
     * Use Key-Word Association With Arbitrary Numbers of Arguments You Want
-* 8.6 * Saving Function in the Module
-    * Importing a Saved Module You Just Created
-    * `import` Specifc Function `import module_name`
-        *  To use `module_name.function_name()` 
+* 8.6 Saving Function in the Module
+    * Importing an Entire Module You Just Created 
+        * `import module_name`
+        * `module_name.function_name()` = using function
+    * `import` Specifc Function 
+        * `from module_name import function_name`
+        * `from module_name import function_0, function1, function2`
     * Using `as` to Assign Different Function Name 
-        * `from module_name import function_name as mp`
+        * `from module_name import function_name as fn`
     * Using `as` to Assign Different Module Name 
-         * `import module_name as mn`
+        * `import module_name as mn`
     * `import` All the Functions from a Module 
+        * `from module_name import *`
+* 8.7 Function Writing Guide（Styling Function)
+* 8.8 Conclusion
 ### Chapter 9 - Class
 ### Chapter 10 - Files and Exception
