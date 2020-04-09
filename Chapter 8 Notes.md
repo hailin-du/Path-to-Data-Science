@@ -1,4 +1,5 @@
-# 8.1 Defining Function
+Functions
+# 8.1 Defining a Function
 * When you have defined a function, you can use that function
 * By doing that, you don't need to write the code repeatedly
 * You can call the function to run a specific task
@@ -42,8 +43,8 @@ greet_users('jesse')
 
 ## 8.1.2 Argument (Data (Element) You Pass) and Parameter (Variable - Data (Element) Needed to Perform A Specific Task)
 * `username` is a **parameter**, data you are going to pass
-* Data is `jesse`, which is a **argument**
-* Argument is used when using the function, it pass data to the function
+* Data is `jesse`, which is an **argument**
+* Argument is used when using the function, it passes data to the function
 * When we are using the function, we need to put data inside the parentheses ()
 * In `greet-user('jesse')`, we are passing 'jesse' to `greet_user()` function, and the value will be stored in `username`
 ***
@@ -107,7 +108,7 @@ Both function calls will return the same outputs, the order does not matter
 
 ## 8.2.3 A Default Element/Value
 We can give the parameter a default value
-* When we use the function, unless we provide an arugment, the function will use the default element
+* When we use the function, unless we provide an argument, the function will use the default element
 * We can skip the part giving an argument to `animal_type`
 
 ```python
@@ -139,8 +140,9 @@ We have provided an argument, so the function will **ignore** the default elemen
 * In this case, we put `pet_name` first, `animal_type='dog'` at the end
 
 
-## 8.2.4 Using the Function Other Ways
-We can use Argument Position Association, Key-Word Argument Association, and set Default Element/Value at the same time
+
+## 8.2.4 Using the Function Other Ways (Equivalent Function Calls)
+We can use Argument Position Association, Key-Word Argument Association, and set the Default Element/Value at the same time
 ```python
 def describe_pet(pet_name, animal_type='dog')
 ```
@@ -249,7 +251,7 @@ Python read any **non-empty string as True**
 
 However, make sure the `middle_name` is at the **END** (the last position) when defining your function
 
-## 8.3.3 Return Dictionary
+## 8.3.3 Returning a Dictionary
 Function can return any type of element/value, including list, dictionary or even a more complicated data structure
 ```python
 def build_person(first_name, last_name):
@@ -275,7 +277,7 @@ print(musician)
 ```
 We have used `if statement`, if no argument is provided to `age`, the function will still save a person's first name and last name
 
-## 8.3.4 Combining Function with `while` Loop
+## 8.3.4 Combining Function with a `while` Loop
 ```python
 def get_formatted_name(first_name, last_name):
     full_name = first_name + ' ' + last_name
@@ -332,7 +334,7 @@ We have added a message to tell the user when to quit. Every time the user input
 ***
 ***
 
-# 8.4 Passing the List
+# 8.4 Passing a List
 Sometimes, passing the list to a function is very efficient. The list can include any possible data, such as name, number, or even a complicated object like the dictionary
 * After passing the list, the function can access the element directly
 
@@ -353,7 +355,7 @@ greet_user(usernames)
 * We created a `greet_user(names)` function, the function will receive a list of names and stored in `names`
 * The function will go over the list and print a greeting message for each user
 
-## 8.4.1 Editing the List inside the Function
+## 8.4.1 Editing a List inside a Function
 We can edit list inside a function
 
 The edit/change is **forever**, it is helpful to manage a large amount of data
@@ -450,7 +452,7 @@ This allows us to understand the code easily, and easy to expand or maintain the
 * If need to print other design models, we can just call the `print_models()` function again
 * Each function will handle one specific task
 
-## 8.4.2 Stopping the Function to Edit the List
+## 8.4.2 Preventing the Function From Editing the List
 Sometimes, we need to stop the function to edit the list
 
 For example, we may want to keep the `unprinted_designs` list for future references
@@ -470,7 +472,7 @@ print_models(unprinted_designs[:], completed_models)
 ***
 ***
 
-# 8.5 Passing Any Amount of Arguments
+# 8.5 Passing Arbitrary Numbers (As Many As You Want) of Arguments
 Sometimes, you don't know the function will receive how many arguments
 * Python function allows you to collect as many as arguments you want
 * For example, a function to make a pizza, it needs to take many toppings
@@ -518,8 +520,8 @@ make_pizza('mushrooms', 'green peppers', 'extra cheese')
 
 No matter how many arguments the function is receiving, this grammar will always work!
 
-## 8.5.1 Combine Argument Position Association with Any Amount of Arguments You Want
-* For function to receive different types of arguments, we must put the parameters that receive any amount of arguments **at the end**
+## 8.5.1 Combine Argument Position Association with Arbitrary Numbers of Arguments You Want
+* For function to receive different types of arguments, we must put the parameters that receive arbitrary numbers of arguments **at the end**
 * Python will first match the position argument or key-word argument
 * Then, put the rest of the arguments into the last parameters
 
@@ -546,12 +548,12 @@ make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 Python will first receive the argument and store that into `size`, and put the rest into a tuple named `toppings`
 * First is `size`, then is `toppings`
 
-## 8.5.2 Use Any Amount of Arguments with Key-Word 
-Sometimes, a function needs to receive any amount of arguments without knowing what kind of elements will be passed
-* Under this condition, we can define the function to receive any amount of key-value paired element (no matter how many amounts being passed)
+## 8.5.2 Use Key-Word Association With Arbitrary Numbers of Arguments You Want
+Sometimes, a function needs to receive arbitrary numbers of arguments without knowing what kind of elements will be passed
+* Under this condition, we can define the function to receive arbitrary numbers of key-value paired elements (no matter how many of them being passed)
 * For example, creating a user profile - you know that you will receive user's info, but not knowing what kind of info you will be receiving
 
-Below is the code show the `build_profile()` function to receive first and last name, and any amount of key-word arguments
+Below is the code show the `build_profile()` function to receive first and last name, and arbitrary numbers of key-word arguments
 
 ```python
 def build_profile(first, last, **user_info):
@@ -601,6 +603,7 @@ By giving a descriptive name to the function, the main program can understand th
 * We can save that function as a module in a separate file, and load that module into the main program
 * `import statement` allows you to use the code of a module at your current program file
 
+## 8.6.1 Importing a Saved Module You Just Created
 By saving the function in a separate file, we can **hide the detail** of the code, and focus on **a higher logical layer**
 * It also allows you to use the function repeatedly
 * Plus, you can share the module with different programmers instead of sharing the whole program file
@@ -713,7 +716,7 @@ The best way is only to import the function you need or import the module with a
 from module_name import *
 ```
 
-## 8.7 Function Writing Guide
+## 8.7 Function Writing Guide （Styling Function)
 There are a few things you should remember when writing a function
 * Give a descriptive name to the function, and only using lower case and `_` underline - this will help you and others to understand what does the function do
 * Every function should include notation/comments to describe its task -
@@ -752,7 +755,7 @@ Every `import statement` should be put at the beginning of the file, except the 
 * You learned how to write a function
 * Passing arguments, and let the function access the arguments
 * Understand the Arguments Positions and Key-Word Arguments Associations
-* Receive Any Amount of Arguments
+* Receive Arbitrary Numbers of Arguments
 * Function that handles input and function shows the output
 * Combine function with list, dictionary, if statement, and while loop
 * Store function in a separate file known as module
