@@ -139,6 +139,21 @@ Notes for Python Beginners
     * Storing Dictionary Inside the Dictionary
 * 6.5 Conclusion
 ### Chapter 7 - User Input and while Loop
+* 7.1 Understanding `input()` function
+    * Use `int()` fucntion to Get Numerical Input Value
+    * Accessing `%` (Operator) Modulo
+* 7.2 `while` Loop Introduction
+    * Use `while` Loop
+    * Letting the User to Choose When to Quit
+    * Use Sign (Flag/Mark)
+    * Use `break` Statement to Exist the `while` Loop = (`break` *will not* execute the remaining code)
+    * Use `continue` Statement Inside a Loop = pass = (`continue` statement allows us to go back to the beginning of the loop)
+    * Avoiding Infinite Loop (press ctrl+c to quit the loop)
+* 7.3 Use `while` Loop to Handle List and Dictionary
+    * Moving Items Between Lists
+    * Delete Specific Element in the List
+    * Allowing the User to Input Values to Fill Up A Dictionary
+* 7.4 Conclusion
 ### Chapter 8 - Function
 ### Chapter 9 - Class
 ### Chapter 10 - Files and Exception
