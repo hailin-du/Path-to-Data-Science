@@ -10,12 +10,12 @@ for magician in magicians:
 >     david
 >     carolina
 
-## 4.1.1 Getting Deepper in (Understanding) the `for loop:`
-1. for magician in magicians: --- getting the first element
-2. print(magician) --- print alice
-3. then go back to for magician in magicians: --- getting the second element
-4. print(magician) again - print david - repeat again - until carolina
-5. if the list contain 1 million elements, it repeat 1 million times
+## 4.1.1 Getting Deeper in (Understanding) the `for loop:`
+1. `for magician in magicians:` --- getting the first element
+2. `print(magician)` --- print alice
+3. then go back to `for magician in magicians:` --- getting the second element
+4. `print(magician)` again - print david - repeat again - until carolina
+5. if the list contains 1 million elements, it repeats 1 million times
 
 #### Using Similar Variable Name to Name for loop: Function
 * for cat in cats:
@@ -33,7 +33,7 @@ for magician in magicians:
 >     Carolina, that was a great trick!
 #### In `for loop:`, you can include as many as codes you want
     print("I can't wait to see your next trick, " + magician.title() + ".\n")
-#### Newline inserted everytime for clean and neat purpose
+#### Newline inserted every time for the clean and neat purpose
 >     Alice, that was a great trick!
 >     I can't wait to see your next trick
 >
@@ -47,11 +47,11 @@ for magician in magicians:
 ```python
 print('Thank you, everyone. That was a great magic show!') # outside the for loop:
 ```
-#### Only excute once
+#### Only execute once
 #### Using for loop: - go over the character list (every game character), then after the loop add play now module
 ***
 ***
-# 4.2 Avioding Indentation Error
+# 4.2 Avoiding Indentation Error
 #### Must indent!!
 
 ## 4.2.1 Forget Indent
@@ -74,8 +74,8 @@ print("I can't wait to see your next trick, " + magician.title() + ".\n")
 >     Carolina, that was a great trick!
 >     I can't wait to see your next trick, Carolina.
 
-#### The last element is carolina, therefore, only her can receive the last message
-#### This is an logical error, the code only executed for carolina
+#### The last element is `carolina`, therefore, only she can receive the last message
+#### This is a logical error, the code only executed for `carolina`
 
 ## 4.2.3 Unnecessary Indent
 ```python
@@ -105,8 +105,8 @@ for magician in magicians:
 >
 >     Thank you, everyone. That was a great magic show!
 
-#### Because ('Thank you,...) was indented within the for loop:, it will show to every time the loop runs
-#### Similarly, this an logical error!
+#### Because `'Thank you,...` was indented within the `for loop:`, it will show to every time the loop runs
+#### Similarly, this a logical error!
 
 ## 4.2.5 Forget Colon
 ```python
@@ -141,7 +141,7 @@ for value in range(1,6):
 >     3
 >     4
 >     5
-#### When using range, but it didn't meet you expectation, you can try adding 1 or substrating 1 
+#### When you are using `range()`, if it didn't meet your expectation, you can try adding 1 or substrating 1 
 
 ## 4.3.2 Using `range()` to Create a List of Numbers
 #### When creating a number list, we can use `list()` to change range() into a list
@@ -187,7 +187,7 @@ print(sum(digits))
 >     0
 >     9
 >     45
-#### Can apply to list that contains millions numbers
+#### Can apply to list that contains millions of numbers
 
 ## 4.3.4 List Comprehension - Complex
 #### List comprehension only allow you to write one line of code.
@@ -196,11 +196,11 @@ print(sum(digits))
 squares2 = [value ** 2 for value in range(1,11)]
 print(squares2)
 ```
-1. While using this logic, you have to assign a list name ex: squares2
-2. Then, use a left bracket [start with expression, which create elements you want to store
-3. In this case, expression is value ** 2
-4. Next, write a for loop, provide the value, end with a righr bracket]
-5. for loop in this case provide values in range(1,11), which values 1 to 10 to the expression
+1. While using this logic, you have to assign a list name ex: `squares2`
+2. Then, use a left bracket `[` start with expression, which creates elements you want to store
+3. In this case, the expression is value ** 2`
+4. Next, write a for loop using by providing the value, `for value in range(1,11)`, end with a right bracket `]`
+5. `for` loop, in this case, provide values `in range(1,11)`, which values 1 to 10 to the expression
 6. for loop in this logic did not contain colon
 ***
 ***
@@ -240,10 +240,10 @@ for player in players[:3]:
 >     Martina
 >     Michael
 
-#### In real case, we can store players' the best score and add them into list
+#### In the real case, we can store players' the best score and add them into a list
 
-## 4.4.3 Copying a List
-#### Using [:] to copy the whole list - start to end
+## 4.4.3 Copying a List Using `[:]`
+#### Using `[:]` to copy the whole list - start to end
 #### For example - a list include your favorite food, and a list include yours and your friend's food
 ```python
 my_foods = ['pizza', 'falafel', 'carrote cake']
@@ -261,7 +261,7 @@ print(friend_foods)
 >     My friend's favorite foods are:
 >     ['pizza', 'falafel', 'carrote cake']
 
-#### To vertify we have two identical list, we will add a food in each list
+#### To verify we have two identical lists, we will add a new food in each list
 ```python
 my_foods.append('cannoli')
 friend_foods.append('ice cream')
@@ -297,16 +297,16 @@ print(friend_foods)
 >     ['pizza', 'falafel', 'carrote cake', 'cannoli', 'ice cream']
 
 #### It won't work 
-* We assign my_foods to friend_foods instead store a copy into friend_foods
-* This logic creates the new variable friend_foods associate with the list
-* Therefore, when we change the original list (my_foods list), both variables (both lists) got changed at the same time
+* We assign `my_foods` to `friend_foods` instead store a copy into `friend_foods`
+* This logic creates the new variable `friend_foods` **associate** with the list
+* Therefore, when we change the original list `my_foods` list, both variables (both lists) got changed at the same time
 ***
 ***
 # 4.5 Tuple
-#### Elements in List are changable, but Not in Tuple
+#### Elements in List are changeable, but Not in Tuple
 
 ## 4.5.1 Defining Tuple
-#### Tuple is parentheses ( ) instead bracket [ ], after assigning the values, we can get access to tuple as list
+#### Tuple is parentheses `( )` instead bracket `[ ]`, after assigning the values, we can get access to tuple as list
 #### Create a dimension that is unchangeable
 ```python
 dimensions = (200,50)
@@ -319,7 +319,7 @@ print(dimensions[1])
 dimensions[0] = 250
 ```
 > TypeError: 'tuple' object does not support item assignment
-### Error - cannot change element in tuple
+### Error - cannot change element in the tuple
 
 ## 4.5.2 Looping Through an Entire Tuple
 #### Use for loop:
@@ -362,8 +362,8 @@ for dimension in dimensions:
 * Try to limit all your code line to a maximum of 79 characters
 
 ## 4.6.4 Separation
-* New line can seperate code without affecting it, but carefuly using it
-* For example, you can seperate your codes using a new line between createing lists and execute lists, so people understand the order of your codes
+* Newline space can separate code without affecting it, but carefully using it
+* For example, you can separate your codes using a newline space between creating lists and execute lists, so people understand the order of your codes
 
 ## 4.6.5 PEP 8
 * For more details please click this link below
