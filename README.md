@@ -3,7 +3,7 @@ Python Crash Course
 Notes for Python Beginners
 
 ## Content
-* [Chapter2](#Chapter2) 
+* [Chapter 2 - Variables And Simple Data Types](#Chapter-2---Variables-And-Simple-Data-Types) 
 * [Chapter3](#Chapter3) 
 * [Chapter4](#Chapter4) 
 * [Chapter5](#Chapter5)
@@ -13,7 +13,7 @@ Notes for Python Beginners
 * [Chapter9](#Chapter9)
 * [Chapter10](#Chapter10)
 
-### Chapter2 
+### Chapter 2 - Variables And Simple Data Types
 * `print()` function
 * 2.1 Variable
     * Variable Naming Rule
