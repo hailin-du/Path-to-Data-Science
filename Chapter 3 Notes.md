@@ -1,7 +1,7 @@
 # Introducing Lists
 # 3.1 List（What is a List?)
 * Can be 0-9, family names, or elements have no relationship
-* use bracket [] to create list
+* use bracket [] to create a list
 ```python
 bicycles = ['trek','cannondale','redline','specialized']
 print(bicycles)
@@ -107,7 +107,7 @@ print(motorcycle)
 popped_motorcycle = motorcycle.pop() 
 ```
 #### Taking out the last element
-#### For example - if motorcycle is being purchased based on time (oldest to latest), using pop() to take the latest one
+#### For example - if `motorcycle` is being purchased based on time (oldest to latest), using pop() to take the latest one
 ```python
 print(motorcycle)
 print(popped_motorcycle)
@@ -128,7 +128,8 @@ print('The first motorcycle I owned was a ' + first_owned.title() + '.')
 ```
 > The first motorcycle I owned was a Honda.
 
-* remember once you used `pop()`, the element is NOT in the list anymore
+**Remember** <br>
+* Once you used `pop()`, the element is **NOT** in the list anymore
 * Del - not going to use element anymore (deleting it forever)
 * Pop - after the delete you still want to use the element (stored)
 
@@ -144,7 +145,7 @@ print(motorcycle)
 ```
 ['honda', 'yamaha', 'suzuki']
 
-#### Using remove() to delete element, we can still keep it and continue to use it
+#### Using `remove()` to delete an element, we can still keep it and continue to use it
 #### pointing the reason why you delete it
 ```python
 motorcycle = ['honda', 'yamaha','suzuki', 'ducati']
@@ -160,13 +161,13 @@ print('\nA ' + too_expensive.title() + ' is too expensive for me.')
 > 
 > A Ducati is too expensive for me.
 
-#### `remove()` can only delete ONE single element at a time, if the element in the list appear mutliple times, you may need a LOOP to decide if you are going to delete all of them.
+#### `remove()` can only delete **ONE** single element at a time, if the element in the list appear multiple times, you may need a LOOP to decide if you are going to delete all of them
 
 ### Position always change when you are using `pop()` or `del()` [delete function]
 ***
 ***
 # 3.3 Organize A List
-#### List order is unpredicatble baaed on the input of a user, you can adjust the order 
+#### List order is unpredictable baaed on the input of a user, you can adjust the order 
 
 ## 3.3.1 Use `sort()` Function to Sort a List Permanently
 ```python
@@ -181,7 +182,7 @@ print(cars)
 ```
 > ['toyota', 'subaru', 'bmw', 'audi']
 
-### 3.3.2 Use `sorted()` Function to Sort a List Temporarily (sort the list without affecting the original list)
+### 3.3.2 Use `sorted()` Function to Sort a List Temporarily (Sort the List Without Affecting the Original List)
 ```python
 cars = ['bmw','audi','toyota','subaru']
 print('Here is the original list:')
@@ -199,7 +200,7 @@ print(cars)
 >
 >     Here is the original list again:
 >     ['bmw','audi','toyota','subaru']
-#### Sometimes lower case and upper case order are more complicated in sorting
+#### Sometimes lower case and upper case orders are more complicated in sorting
 
 ### 3.3.3 Use `reverse()` Function to Reverse the Order of a List
 #### for example - assume car is being purchased based on time (oldest to latest)
@@ -211,7 +212,7 @@ print(cars)
 ```
 >     ['bmw', 'audi', 'toyota', 'subaru']
 >     ['subaru', 'toyota', 'audi', 'bmw']
-#### revese() will forever changing the order of a list
+#### `revese()` function will forever change the order of a list
 
 ### 3.3.4 Use `len()` Function to Find the Length of a List (Count the Length of the List)
 ```python
@@ -229,7 +230,7 @@ print(motorcycle[3])
 ```
 > IndexError: list index out of range
 
-Error - out of range - always remeber start from 0, in this case, only 0, 1, and 2
+Error - out of range - always remember start from 0, in this case, only 0, 1, and 2
 
 ```python
 print(motorcycle[-1])
@@ -244,4 +245,4 @@ print(motorcycle[-1])
 ```
 > IndexError: list index out of range
 
-Error - when error happened - check the length of the list
+Error - when an error happened - check the length of the list
