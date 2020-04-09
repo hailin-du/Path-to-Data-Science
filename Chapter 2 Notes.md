@@ -19,10 +19,10 @@ print(message)
 ```python
 message_1 NOT 1_message
 ```
-* No space between wording
-* Not using key word or function name 
-* Not too short
-* Be careful with 1 and small "l", 0 and  captial "O"
+No space between the wording
+Not using keyword or function name
+Not too short
+Be careful with 1 and small "l", 0 and capital "O"
 
 ## 2.2.2 Aviod Varibale Naming Error
 ```python
