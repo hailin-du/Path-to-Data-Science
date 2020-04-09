@@ -107,12 +107,12 @@ Notes for Python Beginners
     * Making Sure the List is Not Empty
     * Using Mutiple Lists
     * Style of `if` Statement 
-        * <
-        * <=
-        * >
-        * >=
-        * ==
-        * !=
+       * `<`
+       * `<=`
+       * `>`
+       * `>=`
+       * `==`
+       * `!=`
 ### Chapter 6 - Dictionary 
 * 6.1 A Simple Dictionary
 * 6.2 Using Dictionary
