@@ -230,9 +230,66 @@ Notes for Python Beginners
     * In A Module Import Another Module
         * `from module_0 import class_0`
         * `from module_1 import class_1`
-     * Define Your Work Flow
+    * Define Your Work Flow
 * 9.5 Python Package (Python Standard Library) 
 * 9.6 Style of Coding A Class
 * 9.7 Conclusion
 ### Chapter 10 - Files and Exception
-
+* 10.1 Reading Data From File
+     * Reading an Entire File
+        * `with oepn('file_name.file_format') as file_object:`
+        * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`variable_name = file_object.read()`
+        * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`print(variable_name)`
+        * Use `r.strip())` - `variable_name.rstrip()`
+     * File Paths/Directory
+        * `file_path = 'C:\Users\your_name\your_folder\your_folder2\filename.txt'`
+        * `with open(file_path) as file_object:`
+    * Reading Line by Line
+        * `filename = 'file_name.file_format'`
+        * `with oepn(filename) as file_object:`
+        * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`for line in file_object:`
+        * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`print(line)`
+        * Use `rstrip()` - `line.rstrip()`
+    * Create A List That Contain Each Line From A File 
+        * Access Line Outside the `with` Block
+            * `filename = 'file_name.file_format'`
+            * `with oepn(filename) as file_object:`
+            * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`lines = file_object.readlines()`
+            * `for line in lines:`
+            * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`print(line)`
+            * Use `rstrip()` - `line.rstrip()`
+     * Use File's Content       
+            * Use `strip()` - `line.strip()`
+     * Reading A Large File: One Million Digits
+            * print(variable_name[:52]) - Slicing
+     * Does Pi's Value Include Your Birthday?       
+* 10.2 Writing A File
+     * Writing A Emtpy File
+        * `filename = 'file_name.file_format'`
+        * `with oepn(filename, 'w') as file_object:`
+        * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`file_object.write("sentence_0`)
+        * `r` reading mode
+        * `w` writing mode
+        * `a` appending mode
+        * `r+` reading and writing mode
+     * Writing Multiple Lines
+        * Use \n newline
+        * `file_object.write("sentence_0\n`)
+        * `file_object.write("sentence_1\n`)
+     * Append to A File
+        *  Use `a` Appending Mode - `with open(filename, 'a') as file_object:`    
+* 10.3 Exceptions         
+     * Handle `ZeroDivisonError` Exception
+     * Use `try-except` Block 
+     * Use Excpetion to Avoid Crashing
+     * `else` block
+        * Codes that rely on the `try` block should be placed on `else` block
+     * Handle `FileNotFoundError` Exception
+     * Analyzing Text
+        * `split()` - Split a Long String 
+        * `len()` - To Count Length 
+     * Working with Multiple Files
+        * Put Flies in a List
+        * filenames = ['file_0.txt', 'file_1.txt', file_2.txt`]
+        * `for filename in filenames:`
+     * Working with Multiple Files
