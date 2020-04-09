@@ -1,4 +1,4 @@
-# 3.1 List （What is a List?)
+# 3.1 List（What is a List?)
 * Can be 0-9, family names, or elements have no relationship
 * use bracket [] to create list
 ```python
@@ -16,7 +16,7 @@ print(bicycles[0].title())
 
 > Trek
 
-## 3.1.2 Slicing Start with 0 not 1
+## 3.1.2 Slicing Start at 0 Not 1
 ```print(bicycles[1])```
 > cannondale
 
@@ -41,7 +41,7 @@ print(message)
 ***
 ***
 # 3.2 Change, Add, Delete Elements from the List
-## 3.2.1 Change
+## 3.2.1 Changing Elements
 ```python
 motorcycle = ['honda', 'yamaha', 'suzuki']
 print(motorcycle)
@@ -53,7 +53,7 @@ print(motorcycle)
 ```
 > ['ducati', 'yamaha', 'suzuki']
 
-## 3.2.2 Add
+## 3.2.2 Adding Elements
 ```python
 motorcycle.append('ducati')
 print(motorcycle)
@@ -81,7 +81,7 @@ print(motorcycle)
 ```
 > ['ducati, 'honda', 'yamaha', 'suzuki']
 
-## 3.2.3 Delete
+## 3.2.3 Deleting Elements
 ```python
 motorcycle = ['honda', 'yamaha', 'suzuki']
 del motorcycle[0] 
@@ -95,8 +95,8 @@ print(motorcycle)
 ```
 > ['honda', 'suzuki']
 
-`pop() function` (using pop to delete)
-#### pop() allow you to delete the last element but still able to use it (taking it out)
+`pop()` function (using pop to delete)
+#### `pop()` allows you to delete the last element but still able to use it (taking it out)
 ```python
 motorcycle = ['honda', 'yamaha', 'suzuki']
 print(motorcycle)
@@ -120,18 +120,18 @@ last_owned = motorcycle.pop()
 print('The last motocrcyle I owned was a ' + last_owned.title() + ".")
 ```
 > The last motocrcyle I owned was a Suzuki.
-#### You can use pop() to delete any element you want by adding position space
+#### You can use `pop()` to delete any element you want by adding position space
 ```python
 first_owned = motorcycle.pop(0)
 print('The first motorcycle I owned was a ' + first_owned.title() + '.')
 ```
 > The first motorcycle I owned was a Honda.
 
-* remember once you used pop(), the element is NOT in the list anymore
+* remember once you used `pop()`, the element is NOT in the list anymore
 * Del - not going to use element anymore (deleting it forever)
 * Pop - after the delete you still want to use the element (stored)
 
-### `remove() function` (don't know the element position)
+### `remove()` function (don't know the element position)
 ```python
 motorcycle = ['honda', 'yamaha', 'suzuki', 'ducati']
 print(motorcycle)
@@ -159,15 +159,15 @@ print('\nA ' + too_expensive.title() + ' is too expensive for me.')
 > 
 > A Ducati is too expensive for me.
 
-#### remove() can only delete ONE single element at a time, if the element in the list appear mutliple times, you may need a LOOP to decide if you are going to delete all of them.
+#### `remove()` can only delete ONE single element at a time, if the element in the list appear mutliple times, you may need a LOOP to decide if you are going to delete all of them.
 
 ### Position always change when you are using `pop()` or `del()` [delete function]
 ***
 ***
-## 3.3 Organize List
+## 3.3 Organize A List
 #### List order is unpredicatble baaed on the input of a user, you can adjust the order 
 
-## 3.3.1 `sort() function`
+## 3.3.1 Use `sort()` Function to Sort a List Permanently
 ```python
 cars = ['bmw', 'audi', 'toyota',' subaru']
 cars.sort() # sorted based on alphabet
@@ -180,7 +180,7 @@ print(cars)
 ```
 > ['toyota', 'subaru', 'bmw', 'audi']
 
-### 3.3.1 `sorted() function` (sort the list without affecting the original list)
+### 3.3.1 Use `sorted()` Function to Sort a List Temporarily (sort the list without affecting the original list)
 ```python
 cars = ['bmw','audi','toyota','subaru']
 print('Here is the original list:')
@@ -200,7 +200,7 @@ print(cars)
 >     ['bmw','audi','toyota','subaru']
 #### Sometimes lower case and upper case order are more complicated in sorting
 
-### 3.3.3 `reverse() function`
+### 3.3.3 Use `reverse()` Function to Reverse the Order of a List
 #### for example - assume car is being purchased based on time (oldest to latest)
 ```python
 cars = ['bmw','audi','toyota','subaru']
@@ -212,7 +212,7 @@ print(cars)
 >     ['subaru', 'toyota', 'audi', 'bmw']
 #### revese() will forever changing the order of a list
 
-### 3.3.4 len() fcuntion - count the length of the list
+### 3.3.4 Use `len()` Function to Find the Length of a List (Count the Length of the List)
 ```python
 cars = ['bmw','audi','toyota','subaru']
 len(cars)
