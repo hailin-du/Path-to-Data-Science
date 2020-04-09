@@ -164,7 +164,7 @@ print('\nA ' + too_expensive.title() + ' is too expensive for me.')
 ### Position always change when you are using `pop()` or `del()` [delete function]
 ***
 ***
-## 3.3 Organize A List
+# 3.3 Organize A List
 #### List order is unpredicatble baaed on the input of a user, you can adjust the order 
 
 ## 3.3.1 Use `sort()` Function to Sort a List Permanently
@@ -180,7 +180,7 @@ print(cars)
 ```
 > ['toyota', 'subaru', 'bmw', 'audi']
 
-### 3.3.1 Use `sorted()` Function to Sort a List Temporarily (sort the list without affecting the original list)
+### 3.3.2 Use `sorted()` Function to Sort a List Temporarily (sort the list without affecting the original list)
 ```python
 cars = ['bmw','audi','toyota','subaru']
 print('Here is the original list:')
