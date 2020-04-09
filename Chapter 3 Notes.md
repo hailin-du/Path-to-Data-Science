@@ -1,3 +1,4 @@
+# Introducing Lists
 # 3.1 List（What is a List?)
 * Can be 0-9, family names, or elements have no relationship
 * use bracket [] to create list
