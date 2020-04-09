@@ -415,7 +415,7 @@ for name, languages in favorite_languages.items():
             print('\t' + language.title())
 ```
 
-## 6.4.3 Store Dictionary Inside the Dictionary
+## 6.4.3 Storing Dictionary Inside the Dictionary
 * Complicated but happen
 * Username as key, and store each user info inside the dictionary
 ```python
