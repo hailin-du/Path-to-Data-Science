@@ -168,7 +168,7 @@ for key, value in user_0.items():
 >     Key: username
 >     Value: efermi
 * Created two variables to call key and pair, named as key or k, value or v to 
-* `items() function` is calling (returning) the key-pair list
+* `items()` function is calling (returning) the key-pair list
 * Each loop assign the value of key into Key, and the value of paired-value into Value
 ```python
 favorite_languages = {
@@ -189,7 +189,7 @@ for name, language in favorite_languages.items():
 
 
 ## 6.3.2 Looping Through Each Key
-Use `keys() function`
+#### Use `keys() function`
 ```python
 for name in favorite_languages.keys():
     print(name.title())
@@ -229,7 +229,7 @@ if 'erin' not in favorite_languages.keys(): # checking if Erin in the dictionary
 > Erin, please take our poll!
 
 ## 6.3.3 Looping Through Each Key by Order
-Use `orted function`
+Use `sorted function`
 ```python
 for name in sorted(favorite_languages.keys()):
     print(name.title() + ", thank you for taking the poll.")
