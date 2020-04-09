@@ -1,4 +1,4 @@
-# Class
+# Chapter 9 - Class
 # Object-Oriented Programming 
 An object can represent a thing or a scenario from the real world
 
@@ -133,7 +133,7 @@ your_dog.sit()
 1. Either edit the attribute directly
 1. Or write a way inside the method to edit it
 
-## 9.21 The `car` Class
+## 9.2.1 The `car` Class
 ```python
 class Car():
     # Simulate there is a car
@@ -362,7 +362,7 @@ When writing class, you don't need to start from the zero
 * The original class is called the **father** class, and the new class is called **son** class
 * The son class will inherit all the properties and methods from the father class and can also define its own attribute and method
 
-## 9.3.1 Son Object's Method `__init()`
+## 9.3.1 Son (Child) Object's Method `__init()`
 When creating the son object instance, python will first need to complete the task, which passing all methods and properties to the son class
 * Therefore, the son class needs the method `__init__()`  to inherit father class's methods and properties
 * For example, we stimulate an electric car, but an electric car is a special car different than the traditional cars, so we will need to create a new class first based on previous class `Car()`
@@ -468,7 +468,7 @@ We add the new attribute, `self.battery_size` and set the default value to 70
 There is no limitation for creating special things, you can base on the need to add attribute or method
 1. If a attribute or method also have in common with all other cars, then it should be added under `Car` class, not the `ElectricCar` class       
 
-## 9.3.4 Rewrite Father Class Method
+## 9.3.4 Rewrite Father (Parent) Class Method
 For the father class's method, if it doesn't match with the son class's behavior, then we can always **rewrite it**
 * So, we can define a method in the son class, that method has the **same name** as the one in the father class method
 * Then, python will not consider father class's method, only follow the rule on son class's new defined method
