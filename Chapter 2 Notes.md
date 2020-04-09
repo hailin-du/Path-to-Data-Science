@@ -1,4 +1,4 @@
-# Variables And Simple Data Types
+# Chapter 2 - Variables And Simple Data Types
 # 2.1 `print()` is a function
 ```print('Hello Python World!')```
 
@@ -24,7 +24,7 @@ Not using keyword or function name
 Not too short
 Be careful with 1 and small "l", 0 and capital "O"
 
-## 2.2.2 Aviod Varibale Naming Error
+## 2.2.2 Avoiding Varibale Naming Error
 ```python
 message = 'Hello Python Crash Course World!'
 print(mesage) 
@@ -72,7 +72,7 @@ message = "Hello, " + full_name.title() + "!"
 print(message)
 ```
     Hello, Ada Lovelace!
-## 2.3.3 Add Whitespace with Tab and Newline
+## 2.3.3 Adding Whitespace with Tab and Newline
 ```python
 print('Python')
 print('\tPython') # tab
