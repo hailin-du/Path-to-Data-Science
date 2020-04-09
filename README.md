@@ -6,7 +6,7 @@ Notes for Python Beginners
 * [Chapter 2 - Variables And Simple Data Types](#Chapter-2---Variables-And-Simple-Data-Types) 
 * [Chapter 3 - Introducing List](#Chapter-3---Introducing-List) 
 * [Chapter 4 - Working with List](#Chapter-4---Working-with-List) 
-* [Chapter 5 - `if` Statement](#Chapter-5---`if`-Statement)
+* [Chapter 5 - if Statement](#Chapter-5---if-Statement)
 * [Chapter6](#Chapter6)
 * [Chapter7](#Chapter7)
 * [Chapter8](#Chapter8)
@@ -77,7 +77,7 @@ Notes for Python Beginners
     * Separation
     * PEP 8
     
-### Chapter 5 - `if` Statement
+### Chapter 5 - if Statement
 ### Chapter6 To Be Continued... 
 ### Chapter7 To Be Continued... 
 ### Chapter8 To Be Continued... 
