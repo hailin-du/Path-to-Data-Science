@@ -1,5 +1,6 @@
+# Dictionary
 # 6.1 A Simple Dictionary
-Lets take a look of a game, it includes some aliens, aliens have different colors and points.
+Let's take a look at a game, it includes some aliens, aliens have different colors and points.
 ```python
 alien_0 = {'color':'green','points':5}
 print(alien_0['color'])
@@ -12,11 +13,11 @@ print(alien_0['points'])
 # 6.2 Using Dictionary
 * Dictionary = a series of keys, each key associate with value(s)
 * Assciated value(s) can be number, string, list, or dictionary itself
-* Using {} (bracket not [] but {}) to make key and value associate together
-* Connect with : (colon), to differentiate key and value
+* Using `{ }` (bracket not `[ ]` but `{ }`) to make key and value associate together
+* Connect with `:` (colon), to differentiate key and value
 
 
-#### In dictionary, you can save as many key-value pairs as you want
+#### In a dictionary, you can save as many key-value pairs as you want
 ```python
 alien_0 = {'color': 'green', 'points': 5}
 ```
@@ -32,9 +33,9 @@ Return color's associated value, which is green
 ```python
 alien_0 = {'color': 'green', 'points': 5} 
 ```
-Dictionary can included multiple key-value pair 
+Dictionary can include multiple key-value pair 
 
-#### Case: If a player eliminated an alien, then you can use below code to ensure how many point the player scored
+#### Case: If a player eliminated an alien, then you can use below code to ensure how many points the player scored
 ```python
 new_points = alien_0['points'] # calling the paired element from 'points'
 print('You just earned ' + str(new_points) + ' points!')
@@ -44,7 +45,7 @@ print('You just earned ' + str(new_points) + ' points!')
 * Use this dictionary to get the associated value, points, and save it into new_points
 * Convert the number into string type, then print out the message
 
-## 6.2.1 Adding Key-Value Pair
+## 6.2.2 Adding New Key-Value Pair
 * Dictionary is dynamic, you can always add a key-value pair
 * To add a pair, use dictionary name with a key ending with bracket, then assign the element (value) to the key
 * Adding alien's coordinate, so we can display the alien in a specific position
@@ -61,8 +62,8 @@ print(alien_0)
 * Total 4 key-value pairs
 * Python **does not care** the **order** of pair
 
-## 6.2.3 Create a Empty Dictionary First
-* Sometime we need to create a empty dictionary first
+## 6.2.3 Create an Empty Dictionary First
+* Sometimes we need to create an empty dictionary first
 * Then we add key and value step by step
 ```python
 alien_0 = {}
@@ -72,7 +73,7 @@ alien_0['points'] = 5
 print(alien_0)
 ```
 
-## 6.2.4 Changing Dictionary's Values
+## 6.2.4 Changing a Dictionary's Values
 ```python
 alien_0 = {'color': 'green'}
 print('The alien is ' + alien_0['color'] + '.')
@@ -87,7 +88,7 @@ alien_0 = {'x_position':0,'y_position': 25, 'speed':'medium'}
 print('Original x-position: ' + str(alien_0['x_position']))
 ```
 * Moving the alien to the right
-* Moving speed determine how far the alien should move
+* Moving speed determines how far the alien should move
 ```python
 if alien_0['speed'] == 'slow':
     x_increment = 1
@@ -97,7 +98,7 @@ else:
     # This Alien is very fast
     x_increment = 3
 ```
-* New position = old position plus increment
+* New position = old position plus the increment
 ```python
 alien_0['x_position'] = alien_0['x_position'] + x_increment
 print('New x-position: ' + str(alien_0['x_position']))
@@ -106,13 +107,13 @@ print('New x-position: ' + str(alien_0['x_position']))
 >     New x-position: 2
 
 * First, we created a dictionary, including x and y position
-* Then, we are using if-elif-else strcuture to determine how fast the alien should move
+* Then, we are using `if-elif-else` structure to determine how fast the alien should move
 * 1 = moving one unit, 2 = moving two units, 3 = moving three units
 * We can change the Alien to move fast
-* alien_0['speed'] = 'fast'
+* `alien_0['speed'] = 'fast'`
 
-## 6.2.5 Delete Key-Pair in the Dictionary
-We can use del statement to delete 
+## 6.2.5 Delete Key-Pair in a Dictionary
+We can use `del` statement to delete 
 ```python
 alien_0 = {'color':'green','points': 5}
 print(alien_0)
@@ -142,10 +143,10 @@ print("Sarah's favorite language is " +
 We used favorite_languages['sarah'] to call Sarah's paired element (value), C
 ***
 ***
-# 6.3 Going Over the Dictionary
+# 6.3 Looping Through an Entire Dictionary
 Dictionary can have millions of keys and pairs
 
-## 6.3.1 Going Over Each Key-Pair
+## 6.3.1 Looping Through Each Key-Pair
 ```python
 user_0 = {
     'username':'efermi',
@@ -187,7 +188,7 @@ for name, language in favorite_languages.items():
 >     Edward's favorite language is Ruby.
 
 
-## 6.3.2 Going Over Each Key
+## 6.3.2 Looping Through Each Key
 Use `keys() function`
 ```python
 for name in favorite_languages.keys():
@@ -202,7 +203,7 @@ for name in favorite_languages.keys():
 for name in favorite_languages:
     print(name.title())
 ```
-The reason using keys() is to allow the code to be more reable and comprehensive
+The reason using `keys()` is to allow the code to be more readable and comprehensive
 ```python
 friends = ['phil','sarah']
 for name in favorite_languages.keys():
@@ -227,7 +228,7 @@ if 'erin' not in favorite_languages.keys(): # checking if Erin in the dictionary
 ```
 > Erin, please take our poll!
 
-## 6.3.3 Going Over the Key by Order
+## 6.3.3 Looping Through Each Key by Order
 Use `orted function`
 ```python
 for name in sorted(favorite_languages.keys()):
@@ -239,7 +240,7 @@ for name in sorted(favorite_languages.keys()):
 >     Sarah, thank you for taking the poll.
 Sorted the key **by order**
 
-## 6.3.4 Going Over Each Paired Value
+## 6.3.4 Looping Through Each Paired Value
 Use `values() function`
 ```python
 print('The following languages have been mentioned:')
@@ -253,7 +254,7 @@ for language in favorite_languages.values():
 >     Ruby
 * Values maybe repeated
 
-Use `set() function` to avoid repeated values
+Use `set()` function to avoid repeated values
 ```python
 for language in set(favorite_languages.values()):
     print(language.title())
@@ -262,18 +263,18 @@ for language in set(favorite_languages.values()):
 >     Python
 >     C
 >     Ruby
-`set() function` only return unique value
+`set()` function only return unique value
 ***
 ***
-# 6.4 Storing 
-#### Saving a series of dictionary in a list or, saving a list as a paired value in dictionary
+# 6.4 Nesting 
+#### Saving a series of dictionary in a list or, saving a list as a paired value in a dictionary
 You can:
-* Store a dictionray in a list
-* Store a list in a dictionray
-* Store a dictionary in a dictionray
+* Store a dictionary in a list
+* Store a list in a dictionary
+* Store a dictionary in a dictionary
 
-## 6.4.1 Dictionray List
-Creating a list inclue every alien, every alien is a dictionary
+## 6.4.1 A List of Dictionaries
+Creating a list include every alien, every alien is a dictionary
 ```python
 alien_0 = {'color':'green','points':5}
 alien_1 = {'color':'yellow','points':10}
@@ -342,13 +343,14 @@ for alien in aliens[2:5]:
 for alien in aliens[:5]:
     print(alien)
 ```
-* We may always need to crreate a list that contains a large amount of dictionary
+* We may always need to create a list that contains a large amount of dictionary
 * For example - a website need to create a dictionary for every user
 * Every user will be stored in the users list
-* The strcuture of the dictionary of every user are the same
+* The structure of the dictionary of every user is the same
 * So you can go over the list with the same method
-## 6.4.2 Storing List Inside the Dictionray
-We can include other infomration for a pizza, not just its toppings
+
+## 6.4.2 Storing List Inside a Dictionary
+We can include other information for a pizza, not just its toppings
 ```python
 pizza = {
     'crust':'thick',
@@ -363,9 +365,9 @@ for topping in pizza['toppings']:
 >     You ordered a thick-crust pizza with the following toppings:
 >        mushrooms
 >        extra cheese
-* When we need a a dictionray that contains key with multiple values, we can can use lists
+* When we need to create a dictionary that contains key with multiple values, we can use lists
 * For example, each key has multiple values
-* When we go over the dictionary, each person associate with a list that contains multiple values
+* When we go over the dictionary, each person associated with a list that contains multiple values
 ```python
 favorite_languages = {
     'jen':['python','ruby'],
@@ -395,11 +397,11 @@ for name, languages in favorite_languages.items():
 >       Go
 
 * We notice that some people only like one language, while others like multiple languages
-* We have go over the dictionray first, which going over key and pairs
+* We have to go over the dictionary first, which going over key and pairs
 * Then we go over the list and call each **single value**
 
-We are adjusing the code for Sarah, because she only liked one language, so we use "is" instead of "are"
-* Adjusting the Code for Sarah - use `len() function`
+We are adjusting the code for Sarah, because she only liked one language, so we use "is" instead of "are"
+* Adjusting the Code for Sarah - use `len()` function
 
 ```python
 for name, languages in favorite_languages.items():
@@ -447,14 +449,14 @@ for username, user_info in users.items():
 >       LOcation: Paris
 * Defined users dictionary, that has two keys
 * Each key itself is a dictionary - include first name, last name, and location
-* Then, we store key in username, store paired-values in user_info, and using `users.item() function` to call these values
-* We are calling the values from user_info = using the key from the user_info to get the value of first name, last name, and location
+* Then, we store the key in `username`, store paired-values in `user_info`, and use `users.item()` function to call these values
+* We are calling the values from `user_info()` = (equal to) using the key from the `user_info` to get the value of first name, last name, and location
 
 If the structure key of each user is **different**, the for loop will be more complicated
 ***
 ***
 # 6.5 Conclusion
-This chapter include:
+This chapter includes:
 * Defining Dictionary
 * Using Dictionary to store elements (values)
 * Calling and editing Dictionary's elements
