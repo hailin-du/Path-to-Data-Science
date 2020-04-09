@@ -1,4 +1,5 @@
-# Object-Oriented Programming
+# Class
+# Object-Oriented Programming 
 An object can represent a thing or a scenario from the real world
 
 1. You will define a `class`, and objects will belong to this `class`
@@ -7,7 +8,7 @@ An object can represent a thing or a scenario from the real world
 
 1. Based on the `class` to create an object,  this process is also known as instantiation, it allows you to use `class`'s instance.
 
-# 9.1 Create and Use `class`
+# 9.1 Create and Use a `class`
  `class` can simulate to be anything
 * For example, a `class` = `dog`, it means it can be any type of dog but not a specific dog
 * For most dogs, they will have a name and age
@@ -15,13 +16,13 @@ An object can represent a thing or a scenario from the real world
 * Our class, `dog` will include all these data
 * The class `dog` will let python knows how to create the dog's objects
 
-## 9.1.1 Create `Dog` Class
+## 9.1.1 Create the `Dog` Class
 Based on `Dog` Class, each instance will store name and age, and assign the ability of `sit()`` and `rollover()`
 ```python
 class Dog():
     # First try simulating training a dog
     def __init__(self, name, age):
-        # initial property of name and age
+        # initial attribute of name and age
         self.name = name
         self.age = age
 
@@ -45,7 +46,7 @@ There are things we need to pay attention here!
 * age
 
 1. While python calls the `__init__()` method (function) to create `Dog` instance, it will pass the arguments to `self`
-1. Any method (function) related to this class will also pass the arguments to `self`, which `self` is a way that leads to the instance, let the instance to get access to the class's inside property and method  
+1. Any method (function) related to this class will also pass the arguments to `self`, which `self` is a way that leads to the instance, let the instance to get access to the class's inside attribute and method  
 1. While we create a dog instance, python calls the `Dog` class method `__init__()`
 1. We will pass arguments `name` and `age` to `Dog()`, and let `self` to pass these arguments (you can think arguments are temporarily stored in `self` and pass them), so we don't need to pass them by ourselves
 1. When we based on class `Dog` to create an instance, all we need is provide arguments to parameters `name` and `age` 
@@ -54,7 +55,7 @@ There are things we need to pay attention here!
 * Both variables `self.name` and `self.age` have `self`， any variable with `self` at the front can be used inside the `class` or get access these variables by instance (data stored in `name` and `age`)
 * `self.name = name` get element from the parameter `name` and stored in the variable called `name`
 * So `name` variable will be associated with the current instance. 
-* `self.age` is doing the same thing, anything using this method to store data, the data will also be called as property
+* `self.age` is doing the same thing, anything using this method to store data, the data will also be called as attribute
 
 #### Understanding the Method
 * Class `Dog` also defined other two methods (functions), `sit()` and `roll_over`
@@ -75,19 +76,19 @@ print('My dog is ' + str(my_dog.age) + ' years old.')
 
 We create a dog, name `willie` and age `6`
 * Python will use these arguments and call the Class `Dog`'s method `__init__()` to create a specific instance
-* Then it will base on the arguments to create `name` and `age` 's property
+* Then it will base on the arguments to create `name` and `age` 's attribute
 * `__init__()` does not include `return statement`, but it will return this dog instance automatically
 * We then save this instance in the variable name `my_dog`
 * We can use upper case for class, like `Dog`, and lower case for instance like `my_dog` to store the instance 
 
-#### 1. Accessing Property (We Use Period - Grammar)
+#### 1. Accessing Attribute (We Use Period - Grammar)
 ```python
 'my_dog.name'
 ```
 
-* This grammar shows how python access the value from the property
-* Python will first find the instance `my_dog`, and find the property `name` that matches with this instance
-* In class `Dog`, the way to refer to this property is `self.name`
+* This grammar shows how python access the value from the attribute
+* Python will first find the instance `my_dog`, and find the attribute `name` that matches with this instance
+* In class `Dog`, the way to refer to this attribute is `self.name`
 * Then, in the `print statement`, we changed the `name` to be uppercase `title()`, and the `age` to be a string `str()`
 
 #### 2. Calling the Method
@@ -97,7 +98,7 @@ We can also use `.` period to use any other methods inside the class `Dog`
 my_dog.sit()
 my_dog.roll_over()
 ```
-Even though we don't know what the property or method do, by giving the descriptive name, like `name`， 'age', 'sit()', 'roll_over',  we can predict what does the function do
+Even though we don't know what the attribute or method do, by giving the descriptive name, like `name`， 'age', 'sit()', 'roll_over',  we can predict what does the function do
 
 #### 3. Create Multiple Instances
 ```python
@@ -125,12 +126,14 @@ your_dog.sit()
 * Or **take a space** of a `list` or `dictionary`
 ***
 ***
-# 9.2 Use Class and Instance
+# 9.2 Working with Class and Instance
 1. You can use `class` to simulate any scenario in the real world
 1. After you have finished defining your class, most of the time will be using `class` to create an instance
-1. One important thing is that you need to edit your instance property
-1. Either edit the property directly
+1. One important thing is that you need to edit your instance attribute
+1. Either edit the attribute directly
 1. Or write a way inside the method to edit it
+
+## 9.21 The `car` Class
 ```python
 class Car():
     # Simulate there is a car
@@ -152,14 +155,14 @@ print(my_new_car.get_descriptive_name())
 
 We used the similar method `__init__()` to receive three parameters `make`, `model`, `year` and stored them inside the instance `my_new_car` created by this class
 * When we create `Car` instance, we have to provide company, model, and production year
-* We created a get_descriptive_name() method, and use the property `year`, `make` and `model` with `self` to get the access
+* We created a get_descriptive_name() method, and use the attribute `year`, `make` and `model` with `self` to get the access
 * Based on class `Car`, we store the instance in `my_new_car`
 * Then we call the method `get_descriptive_name()` to see which kind of car we are having
 
-## 9.2.2 Assign Default Value to Property
-Every property inside a class must have an initial value, no matter it is a 0 or empty string
-1. Under some circumstances, we can set a default value inside `__init__()`, so we don't need to provide an initial value to that property
-     * We will add `odometer_reading` property, given a default value `0`
+## 9.2.2 Assign Default Value to Attribute
+Every attribute inside a class must have an initial value, no matter it is a 0 or empty string
+1. Under some circumstances, we can set a default value inside `__init__()`, so we don't need to provide an initial value to that attribute
+     * We will add `odometer_reading` attribute, given a default value `0`
      * We also added a `read_odometer()` method, to read the mile of a car
      
 ```python
@@ -184,12 +187,12 @@ my_new_car = Car('audi', 'a4', 2016)
 print(my_new_car.get_descriptive_name())
 my_new_car.read_odometer()
 ```
-* The method `__init__()` will store the properties for `make`, 'model`, 'year` but also create a property called `odometer_reading`
+* The method `__init__()` will store the properties for `make`, 'model`, 'year` but also create a attribute called `odometer_reading`
 * However, not all the car have a 0 mile when the car arrives at the distributor
 * So, we will add a way to edit the value
 
-## 9.2.3 Edit Property's Value
-There are three different ways to edit the property's value
+## 9.2.3 Edit Attribute's Value
+There are three different ways to edit the attribute's value
 1. Edit the value through instance
 1. Edit the value through setting a rule inside a method
 3. Edit the value through adding value inside a method
@@ -220,12 +223,12 @@ my_new_car.read_odometer()
 ```
 >      2016 Audi A4
 >      This car has 23 miles on it.
-We used `. period` to get access to the car's property `odometer_reading` 
-* **This line** of code will let python to find `odometer_reading` property from instance `my_new_car` and set the value to 23
-* Sometimes we can access the property directly, but sometimes we need to update the property inside the method
+We used `. period` to get access to the car's attribute `odometer_reading` 
+* **This line** of code will let python to find `odometer_reading` attribute from instance `my_new_car` and set the value to 23
+* Sometimes we can access the attribute directly, but sometimes we need to update the attribute inside the method
 
 ##### 2. Edit The Value Through Method
-# having update method is much better, you don't need to access the property
+# having update method is much better, you don't need to access the attribute
 # it allows you to pass the value to the method, and update it inside 
 ```python
 class Car():
@@ -298,7 +301,7 @@ Now, `update_odometer()` will check if the value makes sense before changing the
 * If not, we give a warning
 
 #### 3. Edit The Value Through Method Adding 
-Sometimes, we will need to increase the value of the property instead assigning a new value
+Sometimes, we will need to increase the value of the attribute instead assigning a new value
 * For example, we purchase a second-hand car, from purchase to registration we increased 100 mileage
 * The following method can help us to pass that increase and add that into mileage variable
 ```python
@@ -357,13 +360,13 @@ When writing class, you don't need to start from the zero
 * If you are **writing a class** that is a special version for the class that **already exists**, you can use **inheritance**
 * When a class inherit from another class, that class can get all the properties and methods from another class
 * The original class is called the **father** class, and the new class is called **son** class
-* The son class will inherit all the properties and methods from the father class and can also define its own property and method
+* The son class will inherit all the properties and methods from the father class and can also define its own attribute and method
 
 ## 9.3.1 Son Object's Method `__init()`
 When creating the son object instance, python will first need to complete the task, which passing all methods and properties to the son class
 * Therefore, the son class needs the method `__init__()`  to inherit father class's methods and properties
 * For example, we stimulate an electric car, but an electric car is a special car different than the traditional cars, so we will need to create a new class first based on previous class `Car()`
-* Then, we just need to provide special property or behavior only for the electric car, but the electric car also has the common properties as other traditional cars cars
+* Then, we just need to provide special attribute or behavior only for the electric car, but the electric car also has the common properties as other traditional cars cars
 ```python
 class Car():
     def __init__(self, make, model, year):
@@ -391,29 +394,29 @@ class Car():
 class ElectricCar(Car):
     # The Specialty of An Electric Car
     def __init__(self, make, model, year):
-        # Inherit father class's property = Initial property for son
+        # Inherit father class's attribute = Initial attribute for son
         super().__init__(make, model, year)
 
 my_tesla = ElectricCar('tesla', 'model s', 2016)
 print(my_tesla.get_descriptive_name())
 ```
 >     2016 Tesla Model S
-Part 1 Creating
+#### Part 1 Creating
 1. When creating son class, the father class must be included in the current file, and **at the front** of the son class
 1. Also, when we have defined son class, the parenthesis much include the father class, **ElectricCar(Car)** and `__iniit__()` is to receive info from the instance when creating a car (inherit)
 1. `super() function` is a special function to help to associate son class and father class (connect, passing)
 1. This function let python to call `ElectricaCar` method `__init__()` from the father's method `__init__()`, let `ElectricCar` instance include all the properties from the father class (father class also known as superclass, there is name super coming from)
 
-Part 2 Testing
+#### Part 2 Testing
 * To test if the inherit works, we have tried to create an electric car, but providing the same info like creating a normal car
 * We have created an instance, and stored in the variable name `my_tesla`
 * It will call the `ElectricCar` class's method, `__init__()`, which let python to use/call father class `Car`'s method `__init()__`
 * We provided arguments 'tesla`, `model s`, and `2016`.
-* Except that, the electric car has not yet been provided with a special property, we just want to confirm if the electric car has the same properties as a normal car
+* Except that, the electric car has not yet been provided with a special attribute, we just want to confirm if the electric car has the same properties as a normal car
 
-## 9.3.3 Define Son Class's Property and Method
-After the inheritance, we can add new property and method to distinguish the son and the father class
-* We are adding a special property for an electric car, and a method that describes it
+## 9.3.3 Define Son Class's Attribute and Method
+After the inheritance, we can add new attribute and method to distinguish the son and the father class
+* We are adding a special attribute for an electric car, and a method that describes it
 ```python
 class Car():
     def __init__(self, make, model, year):
@@ -442,8 +445,8 @@ class ElectricCar(Car):
     # The Specialty of An Electric Car
 
     def __init__(self, make, model, year):
-        # Inherit father class's property = Initial property for son
-        # Add the initiation value for son class's special property
+        # Inherit father class's attribute = Initial attribute for son
+        # Add the initiation value for son class's special attribute
         super().__init__(make, model, year)
         self.battery_size = 70
 
@@ -458,12 +461,12 @@ my_tesla.describe_battery()
 ```
 >     2016 Tesla Model S
 >     This car has a 70-kWh battery.
-We add the new property, `self.battery_size` and set the default value to 70
-* The instance created under the `ElectricCar()` class will include that battery property, but other traditional cars won't include that
+We add the new attribute, `self.battery_size` and set the default value to 70
+* The instance created under the `ElectricCar()` class will include that battery attribute, but other traditional cars won't include that
 * We also added a method `describe_battery()`, to print the battery information.
 
-There is no limitation for creating special things, you can base on the need to add property or method
-1. If a property or method also have in common with all other cars, then it should be added under `Car` class, not the `ElectricCar` class       
+There is no limitation for creating special things, you can base on the need to add attribute or method
+1. If a attribute or method also have in common with all other cars, then it should be added under `Car` class, not the `ElectricCar` class       
 
 ## 9.3.4 Rewrite Father Class Method
 For the father class's method, if it doesn't match with the son class's behavior, then we can always **rewrite it**
@@ -479,15 +482,15 @@ class ElectricCar(Car):
         # electic car has no gas tank
         print("This car doesn't need a gas tank!")
 ```
-In Inheritance, son class can keep father class's good property, and ignore the bad ones
+In Inheritance, son class can keep father class's good attribute, and ignore the bad ones
 * Now, if someone calls that method for an electric car, python will ignore the `Car` class's method, and run the above code `print` only
 
-## 9.3.5 Use Instance as Property
-When using code to stimulate an instance in real life, you may realize you have added more and more details, such as property, and method, the file getting longer and longer
+## 9.3.5 Use Instance as Attribute
+When using code to stimulate an instance in real life, you may realize you have added more and more details, such as attribute, and method, the file getting longer and longer
 * Under this circumstance, we may need to take out a part of the class as a special class, which dividing the class into small classes
 * For example, when we adding details for the electric car, we may realize that there are so many special properties and methods to be added
 * Then, we can take these properties and methods out, and put that into a new class name `Battery`
-* And, using `Battery` instance as a property in `ElectricCar()` class
+* And, using `Battery` instance as a attribute in `ElectricCar()` class
 
 ```python
 class Car():
@@ -517,7 +520,7 @@ class Battery():
     # Simulate battery for an electric car
     
     def __init__(self, battery_size=70):
-        # Initiation value for battery property
+        # Initiation value for battery attribute
         self.battery_size = battery_size
 
     def describe_battery(self):
@@ -541,7 +544,7 @@ We have defined a new class name `Battery`, it didn't inherit anything from any 
 * When no argument is provided, the **default value is 70**
 * Also, the `describe_batttery()` method **moved to** the `Battery` class
 
-In `ElectricCar()` clas's we added a property called `self.battery`, this allows python to create a new `Battery` instance
+In `ElectricCar()` clas's we added a attribute called `self.battery`, this allows python to create a new `Battery` instance
 * Because no value is provided, the default value is 70, and store that instance in `self.battery`
 * Every time the method `__init__()` is being called, it will automatically create `Battery` instance for every `ElectricCar` instance
 ```python
@@ -549,7 +552,7 @@ In `ElectricCar()` clas's we added a property called `self.battery`, this allows
 ```
 >     2016 Tesla Model S
 >     This car has a 70-kWh battery. 
-This line of code let python find battery property inside the instance `my_tesla`, and use describe_battery() to call the property from the `Battery` instance
+This line of code let python find battery attribute inside the instance `my_tesla`, and use `describe_battery()` to call the attribute from the `Battery` instance
 * Even though it seems like there are more works, but now we can add as many as details we want for the electric car without messing up the `ElectricCar` class
 
 Next we are adding one more method under `Battery` class to describe how far the electric car can go base on the volume of the batter
@@ -579,7 +582,7 @@ class Car():
 
 class Battery():
     def __init__(self, battery_size=70):
-        # Initiation value of battery property
+        # Initiation value of battery attribute
         self.battery_size = battery_size
 
     def describe_battery(self):
@@ -599,7 +602,7 @@ class Battery():
 
 class Battery():
     def __init__(self, battery_size=70):
-        # Initiation value of battery property
+        # Initiation value of battery attribute
         self.battery_size = battery_size
 
     def describe_battery(self):
@@ -629,14 +632,14 @@ my_tesla.battery.describe_battery()
 my_tesla.battery.get_range()
 ```
 * We have added a simple `if-elif statement` under the method `get_range()`, then print out the message
-* We used property `battery` to call the method
+* We used attribute `battery` to call the method
 
 >     2016 Tesla Model S
 >     This car has a 70-kWh battery.
 >     This car can go approximately 240 miles on a full charge.
 
-## 9.3.6 Simulate Creating A Real World Instance
-Simulate creating a real object is always difficult, like range mile is a property for `Battery` or `ElectricCar`
+## 9.3.6 Simulate Creating A Real World Instance (Object)
+Simulate creating a real object is always difficult, like range mile is a attribute for `Battery` or `ElectricCar`
 * For example, under the production line perspective, we should move `get_range()` under `ElectricCar` class; so `get_range` will base on battery volume to determine range mile, but report only ONE type of car with different batteries
 * We can also keep `get_range` under `Battery`, but passing a reference like `car_model`, so `get_range` will base on battery volume and car's model to report range mile
 
@@ -646,10 +649,10 @@ When you get into this level, you have to think in a higher logical layer
 * Only with a model more efficient than others, so you have to practice to find the best one
 ***
 ***
-# 9.4 Load the Class
+# 9.4 Importing Class
 As your file getting longer and longer, we can store class in the module
 
-## 9.4.1 Load Single Class
+## 9.4.1 Import a Single Class
 We will create a module that only includes Class` Car` in a file name `car.py`
 * From now on, any file that uses the module from the file name `car.py` has to be renamed differently to avoid having the same file name
 
@@ -743,7 +746,7 @@ class Car():
  class Battery():
     # Simulate battery for an electric car
     def __init__(self, battery_size=70):
-        # Initiation value of battery property
+        # Initiation value of battery attribute
         self.battery_size = battery_size
 
     def describe_battery(self):
@@ -763,7 +766,7 @@ class Car():
 class ElectricCar(Car):
     # The Specialty of An Electric Car
     def __init__(self, make, model, year):
-        # Inherit father class's property = Initial property for son
+        # Inherit father class's attribute = Initial attribute for son
         super().__init__(make, model, year)
         # Create new battery instance 
         self.battery = Battery()
@@ -784,7 +787,7 @@ my_tesla.battery.get_range()
 >     This car has a 70-kWh battery. 
 >     This car can go approximately 240 miles on full charge.
 
-## 9.4.3 Import Multiple Class from A Module
+## 9.4.3 Import Multiple Classes from A Module
 ```python
 from car import Car, ElectricCar
 
@@ -799,7 +802,7 @@ We have loaded multiple `class`, and use comma to separate them. Then we can bui
 >     2016 Volkswagen Beetle
 >     2016 Tesla Roadster
 
-## 9.4.4 Import the Whole Module
+## 9.4.4 Import the Entire Module
 You can import the whole module and use `.` period to get access to the class you want
 * So when you use the `car` module, python won't have conflicts with any variable name in the current file
 ```python
@@ -816,7 +819,7 @@ We have loaded the whole module, and use the below code to access the class. And
 module_name.class
 ```
 
-## 9.4.5 Import All the Class in the Module
+## 9.4.5 Import All the Classes from a Module
 To import every class we can use below code
 ```python
 from module_name import *
@@ -847,7 +850,7 @@ from car import Car
 class Battery():
     # Simulate battery for an electric car
     def __init__(self, battery_size=70):
-        # Initiation value of battery property
+        # Initiation value of battery attribute
         self.battery_size = battery_size
 
     def describe_battery(self):
@@ -867,7 +870,7 @@ class Battery():
 class ElectricCar(Car):
     # The Specialty of An Electric Car
     def __init__(self, make, model, year):
-        # Inherit father class's property = Initial property for son
+        # Inherit father class's attribute = Initial attribute for son
         super().__init__(make, model, year)
         # Create new battery instance 
         self.battery = Battery()
@@ -932,7 +935,7 @@ As you see, when organizing a big project of codes, python provides many options
 * Then we can separate them into different modules
 ***
 ***
-## 9.5 Python Package
+## 9.5 Python Package (Python Standard Library)
 Python Package is a series of modules. They are included when you installed python.
 * These modules are completed by other programmers, we can use any function or class by using the `import` statement
 
@@ -969,7 +972,7 @@ It is a very good class that includes the feature of dictionary and list, but al
 As you develop your skill, you may realize that an ordered dictionary will solve some of your coding questions
 ***
 ***
-# 9.6 Style of Coding A Class
+# 9.6 Style of Coding A Class 
 You have to be familiar with the style of coding a class, especially when you coding something very complicated
 * The class name should follow **Camel-Case** rule, which 
 1. Every class name first letter of a word should be capital not underline
@@ -993,14 +996,14 @@ When importing class, you should
 # 9.7 Conclusion
 In this chapter, you learned:
 * How to write class,
-* How to use class's property to store information
+* How to use class's attribute to store information
 * How to write method, to let the class include necessary behaviors
 * How to write method `__init__()` to base on what value is needed for an instance
 * How to edit instance's value
      * Directly edit the value
      * Use method to edit value
 * How to use inheritance to create relevant class 
-     * Use an instance from another class as a property to another class (neat and easy to read)
+     * Use an instance from another class as a attribute to another class (neat and easy to read)
 * How store class in a module and load them (organize)
 * How to use Python Packages (`collections` module - `OrderedDict` class)
 * How to follow Python's rule
