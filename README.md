@@ -126,11 +126,11 @@ Notes for Python Beginners
     * Looping Through Each Key-Pair
         * `for key, value in variable_name.items():` - returning the key-pair list
     * Looping Through Each Key
-        * `for key in variable_name.key():` - retruning the key value
+        * `for key in variable_name.key():` - returning the key value
     * Looping Through Each Key by Order
         *  `for key in sorted(variable_name.key()):`
     * Looping Through Each Paired Value
-        * `for value in variable_name.values():` - retruning the paired value
+        * `for value in variable_name.values():` - returning the paired value
         * `set()` function - avoid repeated value (return unique value)
             * `for value in set(variable_name.values()):`
 * 6.4 Nesting 
